@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<!--<mainColors>
+		<color name="white" hex="0xffffff"/>
+		
+	</mainColors>-->
+	
+	<!--panes background-->
+	<color id="contactUsBG" hex="0x5c5c5c"/>
+	<color id="whatWeDoBG" hex="0x5c5c5c"/>
+	<color id="whoWeAreBG" hex="0x5c5c5c"/>
+	<color id="creditsPaneBG" hex="0x5c5c5c"/>
+	<color id="clientsPaneBG" hex="0x5c5c5c"/>
+	<color id="workProjectPaneBG" hex="0x5c5c5c"/>
+	<color id="workPaneBG" hex="0x5c5c5c"/>
+	
+	<color id="animationPreloader" hex="0xffd800"/>
+	<color id="creditsThumbBG" hex="0xffd800"/>
+	
+	<color id="closeText" hex="0xffffff"/>
+	<color id="closeTextHover" hex="0x5c5c5c"/>
+	<color id="closeBG" hex="0xffd800"/>
+	<color id="closeBGHover" hex="0xffd800"/>
+	
+	<color id="maximizeButton" hex="0xffd800"/>
+	<color id="maximizeButtonHover" hex="0xffd800"/>
+	
+	<!--text colors-->
+	<color id="defaultNavItem" hex="0xffffff"/>
+	<color id="defaultNavItemHover" hex="0xffffff"/>
+	
+	<color id="footerNavItem" hex="0xffffff"/>
+	<color id="footerNavItemHover" hex="0xffffff"/>
+	
+	<color id="leftNavItem" hex="0xffffff"/>
+	<color id="leftNavItemHover" hex="0x000000"/>
+	
+	<color id="contentBlockHeader" hex="0xffffff"/>	
+	<color id="contentBlockCopy" hex="0xffffff"/>
+	
+	<color id="teamThumbName" hex="0xffffff"/>
+	<color id="teamThumbTitle" hex="0xffffff"/>
+	
+	<color id="teamMemberTitle" hex="0xffffff"/>
+	<!--<color id="workDescriptionToggleHighlight" hex="0x00ff00"/>-->
+	<color id="workNavItemHover" hex="0x000000"/>
+	<color id="workNavItem" hex="0xffffff"/>
+	
+	<color id="workGalleryThumbText" hex="0x5c5c5c"/>
+	<color id="workGalleryThumbTextHover" hex="0x000000"/>
+	<color id="workGalleryThumbBG" hex="0xcccccc"/>
+	<color id="workGalleryThumbBGHover" hex="0xffd800"/>
+	
+	
+	<color id="workProjectHeader" hex="0xffffff"/>
+	<color id="workProjectSubHeader" hex="0xffffff"/>
+	<color id="workProjectCopy" hex="0xffffff"/>
+	
+	<color id="contactUsCopy" hex="0xffffff"/>
+	
+	<color id="ourClientsHeader" hex="0xffffff"/>
+	<color id="ourClientsCopy" hex="0xffffff"/>	
+	
+	<color id="projectPhotoLabelText" hex="0x5c5c5c"/>
+	<color id="projectPhotoLabelTextHover" hex="0x5c5c5c"/>
+	<color id="projectPhotoLabelBG" hex="0xcccccc"/>
+	<color id="projectPhotoLabelBGHover" hex="0xffd800"/>
+	
+	<color id="creditsThumbText" hex="0x5c5c5c"/>
+	<color id="creditsThumbTextHover" hex="0x5c5c5c"/>
+	<color id="creditsThumbBG" hex="0xcccccc"/>
+	<color id="creditsThumbBGHover" hex="0xffd800"/>	
+</data>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<player>
+		<file path="content/SpiderSol.swf" />
+		<image path="images/1.jpg" click="http://www.yahoo.com" />
+		<settings preroll="true" minTime="2500">
+			<adv>
+				<preroll path="adv.xml" crossdomain="bla"/>
+			</adv>
+		</settings>
+	</player>
+</xml>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fxpProperties abbreviated="false" authoringTool="Flex Builder" compiles="true" parentProject="75d0b14f-4a33-486e-8874-c3b70de5237e" projectUUID="75d0b14f-4a33-486e-8874-c3b70de5237e" sdkVersion="4.0.0" uuid="531ce9a5-bab5-43ac-b559-96900b126f9e" version="3">
+  <projects/>
+  <src/>
+  <swc>
+    <linked location="sdkPlaceHolder" path="sdkPlaceHolder" position="0" uuid="531ce9a5-bab5-43ac-b559-96900b126f9e"/>
+    <linked location="D:/project/!flex4/AccountManager/libs" path="/libs" position="1" uuid="531ce9a5-bab5-43ac-b559-96900b126f9e"/>
+  </swc>
+  <misc/>
+  <theme/>
+</fxpProperties>

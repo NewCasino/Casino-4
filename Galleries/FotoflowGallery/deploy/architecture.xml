@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<photos path="gallery/th/">
+	<photo name="Church with Brass Doorknob" url="church-with-brass-doorknob.jpg" imageUrl="gallery/church-with-brass-doorknob.jpg" href="html.html">Description...</photo>
+	<photo name="Swan View Ranch Dining" url="dining-room.jpg" imageUrl="gallery/dining-room.jpg">Photo description... this could be included here or as an XML attribute, whatever is easiest.</photo>
+	<photo name="Swan View Ranch Library" url="library.jpg" imageUrl="gallery/library.jpg">Description...</photo>
+	<photo name="Swan View Ranch Master Bathroom" url="mbath.jpg" imageUrl="gallery/mbath.jpg">Description...</photo>
+	<photo name="Swan View Ranch Theatre I" url="theatre-1.jpg" imageUrl="gallery/theatre-1.jpg">Description...</photo>
+	<photo name="Swan View Ranch Theatre II" url="theatre-2.jpg" imageUrl="gallery/theatre-2.jpg">Description...</photo>
+	<photo name="Swan View Ranch Kitchen" url="kitchen.jpg" imageUrl="gallery/kitchen.jpg">Description...</photo>
+	<photo name="Swan View Ranch Game Room" url="game-room.jpg" imageUrl="gallery/game-room.jpg">Description...</photo>
+	<photo name="Duckworth House" url="duckworth-house-front.jpg" imageUrl="gallery/duckworth-house-front.jpg">Description...</photo>
+	<photo name="Caruso Staircase" url="caruso-staircase.jpg" imageUrl="gallery/caruso-staircase.jpg">Description...</photo>
+</photos>

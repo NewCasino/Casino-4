@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo" 
+		  x="0" y="0" right="10" top="10" left="10" bottom="10" 
+		  width="100%" height="100%" creationComplete="group1_creationCompleteHandler(event)"
+		  xmlns:sqlite="com.peterelst.air.sqlite.*" 
+		  xmlns:dialog="com.adobe.cairngorm.view.dialog.*" 
+		  xmlns:components="com.adobe.cairngorm.view.components.*">
+	
+	<fx:Script>
+		<![CDATA[
+			/* import com.adobe.cairngorm.view.components.PrintPassModel; */
+			import com.adobe.cairngorm.view.components.PrintPassModel;
+			import com.adobe.cairngorm.event.CustomDataGridEvent;
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			import com.adobe.cairngorm.view.skins.FiltroRigBtnSkin;
+			import com.adobe.cairngorm.view.skins.NuovoNuentePassBtnSkin;
+			
+			import flash.events.MouseEvent;
+			import flash.events.SQLEvent;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			import mx.events.FlexEvent;
+			import mx.events.ListEvent;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+			[Bindable]
+			private var usersData:ArrayCollection;
+			
+			[Bindable]			
+			private var matchesData:ArrayCollection;
+			
+			[Bindable]			
+			private var seasonsData:ArrayCollection;
+			
+			[Bindable]
+			private var companiessData:ArrayCollection;
+			
+			public function refreshData():void {
+				getCompanies_query.execute();
+				newPassDialog.close();
+			}
+			
+			protected function btnNewPass_clickHandler(event:MouseEvent):void {
+				newPassDialog.visible = true;
+			}
+
+			protected function seasons_changeHandler(event:ListEvent):void {
+				model.searchPassesBySeason = seasons.selectedLabel;
+				this.searchPasses();
+			}
+			
+			protected function getAccesses_query_resultHandler(event:SQLEvent):void {				
+				passes.dataProvider = event.target.data;
+				getSeasons_query.execute();
+			}			
+
+			protected function getCompanies_query_resultHandler(event:SQLEvent):void {				
+				model.companiesData = new ArrayCollection(event.target.data);
+				getAccesses_query.execute();
+			}
+
+
+			protected function getSeasons_query_resultHandler(event:SQLEvent):void {				
+				model.seasonsData = new ArrayCollection(event.target.data);
+				getMatches_query.execute();
+			}
+
+
+			protected function matches_changeHandler(event:ListEvent):void {				
+				model.searchPassesByMatchName = matches.selectedLabel;
+				this.searchPasses();
+			}
+
+
+			protected function passes_deleteActionHandler(event:CustomDataGridEvent):void {
+				Alert.yesLabel = "sì";
+				Alert.noLabel = "no";
+				Alert.show('Sei sicuro di voler cancellare questo pass?', 
+					'', 
+					(Alert.YES | Alert.NO), 
+					null, 
+					function(evt:CloseEvent):void {
+						if (evt.detail == Alert.YES) {
+							updatePassDeletedStutus_query.parameters = [1, event.item.id];
+							updatePassDeletedStutus_query.execute();
+						} else {
+							return;
+						}
+					});
+			}
+
+			protected function passes_editActionHandler(event:CustomDataGridEvent):void {
+				newPassDialog.editPass(event.item);
+			}
+
+			protected function passes_printActionHandler(event:CustomDataGridEvent):void {
+				var printWindow:PrintPassModel = new PrintPassModel()
+				printWindow.open();
+				printWindow.printPass(event.item); 
+			}
+
+			protected function btnFilter_clickHandler(event:MouseEvent):void {
+				// TODO Auto-generated method stub
+			}
+
+			protected function btnClearSearchFields_clickHandler(event:MouseEvent):void {
+				seasons.selectedIndex = -1;
+				matches.selectedIndex = -1;
+				searchName.text = '';
+				searchLastname.text = '';
+				model.searchPassesByUserName = '';
+				model.searchPassesByUserLastName = '';
+				model.searchPassesBySeason = '';
+				model.searchPassesByMatchName = '';
+				model.searchPassByUserID = -1;
+				model.searchPassByMatchID = -1;
+				this.searchPasses();
+			}
+			
+			public function searchPasses():void {				
+				searchPasses_query.parameters = [model.searchPassesByUserName, 
+					model.searchPassesByUserLastName,
+					model.searchPassByUserID,
+					model.searchPassesBySeason, 
+					model.searchPassesByMatchName,
+					model.searchPassByMatchID];
+				searchPasses_query.execute(); 
+			}
+
+			protected function searchPasses_query_resultHandler(event:SQLEvent):void {
+				passes.dataProvider = event.currentTarget.data;					
+			}
+
+
+			protected function searchName_enterHandler(event:FlexEvent):void {
+				if (searchName.text == "") {
+					this.refreshData();
+					return;
+				} 
+				model.searchPassesByUserName = searchName.text + "%";
+				this.searchPasses();
+			}
+
+
+			protected function searchLastname_enterHandler(event:FlexEvent):void {
+				if (searchLastname.text == "") {
+					this.refreshData();
+					return;
+				} 
+				model.searchPassesByUserLastName = searchLastname.text + "%";
+				this.searchPasses();
+			}
+
+
+			protected function getMatches_query_resultHandler(event:SQLEvent):void {
+				model.matchesData = new ArrayCollection(event.target.data);
+				if (model.searchPassByUserID != -1) {
+					this.fillSearchUser(model.searchPassByUserID);
+					this.searchPasses();
+				} else if (model.searchPassByMatchID != -1) {
+					this.fillSearchMatch(model.searchPassByMatchID);
+					this.searchPasses();
+				}
+			}
+			
+			private function fillSearchUser(userId:int):Boolean {
+				for (var i:int = 0; i < model.usersData.length; i++) {
+						if (model.usersData.getItemAt(i).id == userId) {
+							searchName.text = model.usersData.getItemAt(i).name;
+							searchLastname.text = model.usersData.getItemAt(i).lastname;
+							return true;
+						}
+					}
+				return false;
+			}
+			
+			private function fillSearchMatch(matchId:int):Boolean {
+				var aData:ArrayCollection = matches.dataProvider as ArrayCollection;
+				for (var i:int = 0; i < aData.length; i++) {
+					if (aData.getItemAt(i).id == matchId) {
+						matches.selectedItem = aData.getItemAt(i);
+						this.selectSeason(aData.getItemAt(i).season);						
+						return true;
+					}
+				}
+				return false;
+			}
+			
+			private function selectSeason(seasonName:String):Boolean {
+				var aData:ArrayCollection = seasons.dataProvider as ArrayCollection;
+				for (var i:int = 0; i < aData.length; i++) {
+					if (aData.getItemAt(i).season == seasonName) {
+						seasons.selectedItem = aData.getItemAt(i);												
+						return true;
+					}
+				}
+				return false;
+			}
+			
+
+			protected function group1_creationCompleteHandler(event:FlexEvent):void {
+				model.watchComboBox(matches);
+				model.watchComboBox(seasons);
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<sqlite:Query id="getCompanies_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM companies WHERE deleted = 0"
+					  result="getCompanies_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="getMatches_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT DISTINCT * FROM matches WHERE deleted=0"
+					  result="getMatches_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="getSeasons_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT DISTINCT * FROM seasons"
+					  result="getSeasons_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="getAccesses_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT a.*, m.matchname AS match, 
+					  					m.season AS season, 
+					  					u.name AS username, 
+					  					u.lastname AS userlastname, 
+					  					u.company_id AS company_id 
+					  						FROM accesses a  
+					  						INNER JOIN matches m, users u ON a.matches_id = m.id AND a.user_id = u.id 
+					  						WHERE a.deleted = 0"
+					  result="getAccesses_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="updatePassDeletedStutus_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="UPDATE accesses SET deleted=@DELETED WHERE id = @ID"
+					  result="refreshData()"/>
+		
+		<sqlite:Query id="searchPasses_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT a.*, m.matchname AS match, 
+						  m.season AS season, 
+						  u.name AS username, 
+						  u.lastname AS userlastname, 
+						  u.company_id AS company_id 
+							  FROM accesses a  
+							  INNER JOIN matches m, 
+					  					users u ON a.matches_id = m.id 
+					  					AND a.user_id = u.id 
+							  WHERE a.deleted = 0 AND
+					  				a.user_id IN 
+					  				(SELECT id FROM users 
+					  				WHERE ((name LIKE @SEARCHNAME) OR @SEARCHNAME = '') AND 
+					  						((lastname LIKE @SEARCHLASTNAME) OR @SEARCHLASTNAME = '') AND
+					  						((id = @USERID) OR (@USERID = -1))) AND matches_id IN 
+					  					(SELECT id FROM matches 
+					  					WHERE ((season LIKE @SEASON) OR @SEASON = '') AND 
+					  							((matchname LIKE @MATCHNAME) OR @MATCHNAME = '') AND
+					  							((id = @MATCHID) OR (@MATCHID = -1)))"
+					  result="searchPasses_query_resultHandler(event)"/>
+		
+		
+		
+	</fx:Declarations>
+	
+	
+	<s:VGroup width="100%" height="100%">
+		
+		<s:HGroup width="100%" height="30">
+			<mx:Spacer/>
+			
+			<s:Button id="btnShowFilter" label="FILTRO RICERCA" 
+					  skinClass="com.adobe.cairngorm.view.skins.FiltroRigBtnSkin" styleName="iconButton"/>
+			
+			<s:Button id="btnNewPass" label="NUOVO PASS" 
+					  skinClass="com.adobe.cairngorm.view.skins.NuovoNuentePassBtnSkin" styleName="iconButton"
+					  click="btnNewPass_clickHandler(event)"/>
+			
+		</s:HGroup>
+		<s:Border width="100%" backgroundColor="#DDDDDD" height="65">
+			<s:HGroup right="10" top="10" left="10" bottom="10"
+					  verticalAlign="middle"
+					  gap="15">
+				
+				<s:VGroup>
+					<s:Label text="Nome" styleName="windowLabel"/>
+					<s:TextInput id="searchName" enter="searchName_enterHandler(event)"/>
+				</s:VGroup>
+				
+				<s:VGroup>
+					<s:Label text="Cognome" styleName="windowLabel"/>
+					<s:TextInput id="searchLastname" enter="searchLastname_enterHandler(event)"/>
+				</s:VGroup>
+				
+				<s:VGroup>
+					<s:Label text="Stagione" styleName="windowLabel"/>
+					<mx:ComboBox id="seasons" labelField="season"
+								 prompt="Seleziona stagione"
+								 dataProvider="{model.seasonsData}"
+								 change="seasons_changeHandler(event)"/>
+				</s:VGroup>
+				
+				<s:VGroup>
+					<s:Label text="Incontro" styleName="windowLabel"/>
+					<mx:ComboBox id="matches" labelField="matchname"
+								 prompt="Seleziona Incontro"
+								 dataProvider="{model.matchesData}"
+								 change="matches_changeHandler(event)"/>
+				</s:VGroup>
+				<s:VGroup height="100%" bottom="5">
+					<mx:Spacer height="100%"/>
+					<s:HGroup>			
+						<!--<s:Button id="btnFilter" label="Filtra" 
+								  fontSize="11"
+								  click="btnFilter_clickHandler(event)"/>-->
+						<s:Button id="btnClearSearchFields" label="Azzera"
+								  fontSize="11"
+								  click="btnClearSearchFields_clickHandler(event)"/>
+					</s:HGroup>
+				</s:VGroup>
+				
+			</s:HGroup>
+		</s:Border>
+		
+		<components:PassesDataGrid id="passes" width="100%" height="100%"								   
+								   editAction="passes_editActionHandler(event)"
+								   deleteAction="passes_deleteActionHandler(event)"
+								   printAction="passes_printActionHandler(event)"/>
+		
+	</s:VGroup>
+	
+	<dialog:NewPassDialog id="newPassDialog"
+						  newPassAdded="refreshData()"
+						  visible="false"/>
+</s:Group>

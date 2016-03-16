@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Border xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo" 
+		  width="550" height="375"
+		  backgroundAlpha="0.90" backgroundColor="#525050" 
+		  borderColor="#000000" borderStyle="solid"
+		  show="this_showHandler(event)"
+		  xmlns:components="com.adobe.cairngorm.view.components.*" 
+		  xmlns:sqlite="com.peterelst.air.sqlite.*">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			import com.adobe.cairngorm.view.skins.CloseButtonSkin;
+			
+			import flash.events.MouseEvent;
+			import flash.events.SQLEvent;
+			
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+			private var editMode:Boolean = false;
+			private var currentEditMatch:Object;
+			
+			protected function btnSave_clickHandler(event:MouseEvent):void {
+				if (matchName.text == "" ) {
+					Alert.show("Indicare il nome dell'incontro.");
+					return;
+				} else if (matchDate.selectedDate == null) {
+					Alert.show("Selezionare la data dell'incontro.");
+					return;
+				} else if (seasons.selectedItem == null && !seasons.editState) {
+					Alert.show("Selezionare Stagione.");
+					return;
+				} else if (seasons.selectedItem == null && seasons.editState) {
+					seasons.saveSeason();
+					return;
+				}
+				
+				this.saveMatch();				
+			}
+			
+			protected function saveMatch():void {
+				var season:String = (seasons.selectedItem == null)?"":seasons.selectedItem.season;
+				if (editMode) {
+					updateMatchTable_query.parameters = [matchName.text, season, matchDate.selectedDate, currentEditMatch.id];
+					updateMatchTable_query.execute();
+				} else {
+					addMatch_query.parameters = [matchName.text, season, matchDate.selectedDate, 0];
+					addMatch_query.execute();
+				}
+			}
+
+			protected function addMatch_query_resultHandler(event:SQLEvent):void {
+				this.close();
+				this.dispatchEvent(new Event('newMatchAdded'));
+			}
+			
+			public function editMatch(match:Object):void {
+				if (!match) {
+					return;
+				}
+				currentEditMatch = match;
+				editMode = true;
+				this.visible = true;
+			}
+			
+			public function close():void {
+				editMode = false;
+				this.visible = false;
+			}
+
+			protected function this_showHandler(event:FlexEvent):void {
+				seasons.clear();
+				if (editMode) {
+					matchName.text = currentEditMatch.matchname;					
+					matchDate.selectedDate = currentEditMatch.matchdate;
+					seasons.selectSeason(currentEditMatch.season);
+				} else {
+					matchName.text = '';					
+					matchDate.selectedDate = null;					
+				}
+			}			
+
+		]]>
+	</fx:Script>
+	
+	<fx:Metadata>
+		[Event(name="newMatchAdded", type="flash.events.Event")]
+	</fx:Metadata>
+	
+	<fx:Declarations>		
+		<sqlite:Query id="addMatch_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="INSERT INTO matches (matchname, season, matchdate, deleted) VALUES (@MATCHNAME, @SEASON, @MATCHDATE, @DELETED)"
+					  result="addMatch_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="updateMatchTable_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="UPDATE matches SET matchname=@MATCHNAME, season=@SEASON, matchdate=@MATCHDATE WHERE id=@ID"
+					  result="addMatch_query_resultHandler(event)"/>
+		
+	</fx:Declarations>
+	
+	<s:VGroup top="10" bottom="10" left="10" right="10"
+			  width="100%" height="100%" gap="15">
+		
+		<s:HGroup height="20%">
+			<s:Label text="Nuovo Incontro" styleName="dialogHeader"/>
+			<mx:Spacer width="100%"/>			
+		</s:HGroup>	
+		
+		
+		<s:HGroup width="100%">
+			<s:VGroup width="50%">
+				<s:Label text="Incontro" styleName="dialogLabel"/>
+				<s:TextInput id="matchName"/>
+				
+				<s:VGroup width="50%">
+					<s:Label text="Data incontro" styleName="dialogLabel"/>
+					<mx:DateField id="matchDate" yearNavigationEnabled="true"
+								  dayNames="{['D', 'L', 'M', 'M', 'G', 'V', 'S']}" firstDayOfWeek="1"
+								  monthNames="{['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre']}"
+								  formatString="DD/MM/YYYY"
+								  width="120" editable="true"/>
+				</s:VGroup>		
+			</s:VGroup>
+			
+			<s:VGroup width="50%">				
+				<s:Label text="Stagione" styleName="dialogLabel"/>				
+				<components:SeasonsManager id="seasons"
+										   seasonSaved="saveMatch()"/>
+			</s:VGroup>
+		</s:HGroup>
+		
+		<s:HGroup height="100%" verticalAlign="bottom">
+			<s:Button id="btnCancel" label="ANNULLA" click="this.close()"/>
+			<s:Button id="btnSave" label="SALVA" click="btnSave_clickHandler(event)"/>
+			
+		</s:HGroup>
+		
+	</s:VGroup>
+	
+	<s:HGroup width="100%" height="100%"
+			  top="5" right="5"
+			  verticalAlign="top">
+		<s:VGroup width="100%" height="100%"				 
+				  horizontalAlign="right">
+			<s:Button id="btnClose" skinClass="com.adobe.cairngorm.view.skins.CloseButtonSkin"
+					  click="this.close()"/>
+		</s:VGroup>
+	</s:HGroup>
+		
+</s:Border>

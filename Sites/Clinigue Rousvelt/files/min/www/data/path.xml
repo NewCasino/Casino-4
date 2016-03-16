@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title>Pathologies principales</title>
+	<text>
+
+<h2>Cornée</h2> 
+<h4>1. Opacités cornéennes</h4>
+<p></p>
+<h4>2. Dystrophie endothéliale</h4>
+<p></p>
+<h4>3. Kératocône</h4>
+<p></p>
+
+<h2>Cristallin</h2>
+<h4>1. Cataracte</h4>
+<p></p>
+<h4>2. Luxation du cristallin</h4>
+<p></p>
+<h4>3. Déformations du cristallin</h4>
+<p></p>
+
+<h2>Glaucomes</h2>
+<h4>1. Examens</h4>
+<p></p>
+<h4>2. Glaucomes: différents types</h4>
+<p></p>
+<h4>3. Glaucome chronique</h4>
+<p></p>
+<h4>4. Glaucome à angle fermé</h4>
+<p></p>
+
+<h2>Rétine et vitré</h2>
+<h4>1. Décollement de rétine</h4>
+<p></p>
+<h4>2. Hémoragie vitréenne</h4>
+<p></p>
+<h4>3. Membranes pré-rétiniennes</h4>
+<p></p>
+<h4>4. Trous maculaires</h4>
+<p></p>
+<h4>5. DMLA</h4>
+<p></p>
+<h4>6. Rétinopathie diabétique</h4>
+<p></p>
+
+<h2>Paupières</h2>
+<h4>1. Blépharochalazis</h4>
+<p></p>
+<h4>2. Ectropion</h4>
+<p></p>
+<h4>3. Entropion</h4>
+<p></p>
+<h4>4. Tumeurs des paupières</h4>
+<p></p>
+
+<h2>Voies lacrymales</h2>
+<h4>1. Obstruction</h4>
+<p></p>
+
+<br /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	</text>
+	<toc enabled="1" halign="left" valign="top" width="140" margin="20" tag="h2" marker="~~" heading="Mots clés" headspace="3" padding="6" />
+</mostlyText>

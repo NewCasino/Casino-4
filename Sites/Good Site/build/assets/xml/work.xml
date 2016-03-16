@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<work>
+	
+	<folio id="folio1">
+		<label>1</label>
+		<description>Here's some of the good we've been up to lately.</description>
+		
+		<!-- PROJECTS -->
+		<project id="littleFilmsReel" name="Little Films Reel" client="Little Films">
+			<background src="bg-work-lf-reel.jpg" />
+			<description>
+				<p>For sure, ours is a great gig, and we’re very thankful to be able to do what we do. Finding and promoting all things good opens our eyes to causes, initiatives, NGOs, companies, organizations and individuals. And this means we’re continually inspired, and we can’t help but give our hearts and our energy to each one. Here’s a little reel that features some of the places we’ve been, the people we’ve met, and the fun we’ve had lately.</p> 
+			</description>
+			<videos>
+				<video src="lf-reel.flv" width="640" height="360">
+					<label>view movie</label>
+					<thumbnail src="inset-work-lf-reel.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="path" name="Path Teaser" client="Path">
+			<background src="bg-work-path.jpg" />
+			<description>
+				<p>We love PATH! As a member of the Washington Global Health Alliance and one of the preeminent world health NGOs, their work saves countless lives and makes an enormous difference every single day. From global immunization programs, to science and agriculture, to game-changing ideas and simple ingenuity, PATH is just plain smart. Their communications team recently saw our own little films teaser and asked us if we'd be interested in producing something similar for them. Our answer in two words…hell yeah!</p> 
+			</description>
+			<videos>
+				<video src="path-teaser.flv" width="640" height="360">
+					<label>view movie</label>
+					<thumbnail src="inset-work-path.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="globalToLocal" name="Global to Local" client="Swedish Medical Center">
+			<background src="bg-work-g2l.jpg" />
+			<description>
+				<p>It’s a simple idea, and yet so far it hasn’t been attempted - that is, to take a global health approach and apply it locally here at home. We know that common sense solutions, practicality, and prevention work for us in developing nations, but could they also be the answer to our own health care crisis? The partners behind G2L (Swedish Medical, King County Public Health, HealthPoint, Washington Global Health Alliance) aim to find out, and we were thrilled to produce a full assortment of movies to serve their initiative launch.</p> 
+			</description>
+			<videos>
+				<video src="g2l-1-teaser.flv" width="640" height="360">
+					<label>teaser</label>
+					<thumbnail src="inset-work-g2l-1-teaser.jpg" width="466" height="161" />
+				</video>
+				<video src="g2l-2-fullshow.flv" width="640" height="360">
+					<label>full show</label>
+					<thumbnail src="inset-work-g2l-2-fullshow.jpg" width="466" height="161" />
+				</video>
+				<video src="g2l-3-30sec.flv" width="640" height="360">
+					<label>:30 cut</label>
+					<thumbnail src="inset-work-g2l-3-30cut.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="tideCleanStart" name="Tide Clean Start" client="Procter &amp; Gamble">
+			<background src="bg-work-tide.jpg" />
+			<description>
+				<p>P&amp;G always knows how to bring the core of each brand to the specific good that it supports. For Tide, this means bringing clean clothes to the world through the Clean Start initiative. Research alongside Harvard University and others demonstrates that the simple act of having clean clothes brings confidence to individuals and families. In developing nations this singular act can be one of the building blocks for a healthy and successful life. Check out a short teaser we prepared for Tide’s Clean Start initiative.</p> 
+			</description>
+			<videos>
+				<video src="tide-clean-start.flv" width="640" height="360">
+					<label>view movie</label>
+					<thumbnail src="inset-work-tide.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="rwandaDocumentary" name="Rwanda - Documentary" client="Inflatable Film">
+			<background src="bg-work-rwanda.jpg" />
+			<description>
+				<p>A couple years back, while in Kigali, Rwanda, our friends Leah and Chris stumbled across a small film education centre overflowing with aspiring filmmakers. These vibrant young storytellers were all producing movies to show on a giant inflatable screen during a traveling film festival through the remote villages of Rwanda. Naturally Chris and Leah felt the need to tell their story, and we were thrilled to cut some trailers from their glorious footage.</p> 
+			</description>
+			<videos>
+				<video src="rwanda-driven.flv" width="640" height="360">
+					<label>view movie</label>
+					<thumbnail src="inset-work-rwanda.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="revolution" name="(R)evolution" client="Little Films">
+			<background src="bg-work-revolution.jpg" />
+			<description>
+				<p>Saving the world means reducing greenhouse gas emissions, among other things. Here's our own take on how fun it can be to leave the car at home for a change! Worth noting there wasn't a single video camera on set - just a gazillion still images shot by Donna and our good pal Chris Towey. Our thanks as well to the many folks who joined in to make this little grassroots piece a reality. Hey, have you joined the Revolution?</p> 
+			</description>
+			<videos>
+				<video src="revolution.flv" width="640" height="360">
+					<label>view movie</label>
+					<thumbnail src="inset-work-revolution.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="nraNeighbors" name="Restaurant Neighbor Awards" client="National Restaurant Association">
+			<background src="bg-work-nra-neighbors.jpg" />
+			<description>
+				<p>Every year the National Restaurant Association recognizes restaurants and individuals within the industry who set a great example as positive, supportive members of their community. For us, it’s a great assignment, moving from big cities to small towns, visiting with a range of firms and folks who truly care and aren’t afraid to show it. Check out a few of our 2010 award profiles.</p> 
+			</description>
+			<videos>
+				<video src="neighbor-1-dannymeyer.flv" width="640" height="360">
+					<label>danny meyer</label>
+					<thumbnail src="inset-work-nra-neighbors-1-dannymeyer.jpg" width="466" height="161" />
+				</video>
+				<video src="neighbor-2-union.flv" width="640" height="360">
+					<label>union</label>
+					<thumbnail src="inset-work-nra-neighbors-2-union.jpg" width="466" height="161" />
+				</video>
+				<!-- MISSING THIS VIDEO -->
+				<video src="neighbor-3-redrobin.flv" width="640" height="360">
+					<label>red robin</label>
+					<thumbnail src="inset-work-nra-neighbors-3-redrobin.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="littleFilmsGoodTeaser" name="Little Films Good Teaser" client="Little Films">
+			<background src="bg-work-LFgood.jpg" />
+			<description>
+				<p>The choice to think forward is something that we share. But the path we choose, our own individual methods and means, are what define us. This is quite literally the message found within a simple piece we created to promote our new direction. Of course it’s impossible to feature every imaginable type of good in a two minute teaser, so that means you’ll have to contact us! Fill us in on what you’re up to so that we can help share your story.</p> 
+			</description>
+			<videos>
+				<video src="lf-good-teaser.flv" width="640" height="360" >
+					<label>view movie</label>
+					<thumbnail src="inset-work-lfgoodteaser.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+	</folio>
+	
+	
+	
+	<folio id="folio2">
+		<label>2</label>
+		<description>More samples, including some recent corporate work.</description>
+		
+		<project id="sodexo" name="The Sodexo Sharp Partnership" client="Sodexo">
+			<background src="bg-work-sodexo.jpg" />
+			<description>
+				<p>Sharp Health Care is a seriously state of the art hospital system in San Diego that relies heavily on Sodexo to provide support services for everything non-medical. Far more than just a vendor, Sodexo is a partner in every sense, and they approached us to produce a piece to document their unique relationship with Sharp. As it turned out, we were also able to leverage this footage and make their investment go much farther, producing several Sodexo-specific videos as well. The result, several shows from one shoot, and a very happy client!</p> 
+			</description>
+			<videos>
+				<video src="sodexo-1-sharp.flv" width="640" height="360">
+					<label>sharp</label>
+					<thumbnail src="inset-work-sodexo-1-sharpsodexo.jpg" width="466" height="161" />
+				</video>
+				<video src="sodexo-2-02min.flv" width="640" height="360">
+					<label>2:00 cut</label>
+					<thumbnail src="inset-work-sodexo-2-2minpromo.jpg" width="466" height="161" />
+				</video>
+				<!-- MISSING THIS VIDEO -->
+				<video src="sodexo-3-30sec.flv" width="640" height="360">
+					<label>:30 cut</label>
+					<thumbnail src="inset-work-sodexo-3-30secpromo.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="potteryWebMovie" name="Art Matters PSA" client="Pro Bono Project - Client TBD">
+			<background src="bg-work-pottery.jpg" />
+			<description>
+				<p>We recently had the good fortune to have access to a small pottery studio as a shoot location. Of course we couldn’t let that wonderful opportunity pass by, so we quickly contacted a young friend of little films to be our on-camera talent and we shot a little public service announcement, even before we’d found a client. Not to worry, we’re currently talking to a couple different children’s art education groups about donating this piece pro bono.</p> 
+			</description>
+			<videos>
+				<video src="art-matters.flv" width="640" height="360">
+					<label>view movie</label>
+					<thumbnail src="inset-work-potterywebmovie.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="nraSuccessStories" name="Restaurant Success Stories" client="National Restaurant Association">
+			<background src="bg-work-nra-successstories.jpg" />
+			<description>
+				<p>On the business side of our workload it’s no secret that we have a real bond with the restaurant industry. And it makes sense. After all, hospitality is all about community, about caring for others, breaking bread, nourishing and sharing. And it doesn’t hurt that it’s also a particularly diverse and cinematic field, filled with interesting characters! A recent project had us travel across the country meeting restaurateurs of all kinds, as we documented their own unique success stories for the National Restaurant Association.</p> 
+			</description>
+			<videos>
+				<video src="nra-ss-profile-1-tony-packo.flv" width="640" height="360">
+					<label>tony packo</label>
+					<thumbnail src="inset-work-nra-successstories-1-tonypacko.jpg" width="466" height="161" />
+				</video>
+				<video src="nra-ss-profile-2-ts-restaurant.flv" width="640" height="360">
+					<label>ts restaurant</label>
+					<thumbnail src="inset-work-nra-successstories-2-ts.jpg" width="466" height="161" />
+				</video>
+				<video src="nra-ss-profile-3-scott-dickinson.flv" width="640" height="360">
+					<label>scott dickinson</label>
+					<thumbnail src="inset-work-nra-successstories-3-scottdickson.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		
+		<project id="toughCrowd" name="Tough Crowd" client="Pitney Bowes">
+			<background src="bg-work-toughcrowd.jpg" />
+			<description>
+				<p>We’ll be the first to admit, this one is very silly. And we love it! Our friends at Extreme Meetings have worked closely with Pitney Bowes for several years and asked us to produce a tongue-in-cheek, campy host/interview piece. It turned out to be great fun and accomplished the two goals we were after – we delivered the talking head interviews we needed, and yet still managed to make it fresh and entertaining!</p> 
+			</description>
+			<videos>
+				<video src="pb-tough-crowd.flv" width="640" height="360">
+					<label>view movie</label>
+					<thumbnail src="inset-work-toughcrowd.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="safecoDiversityScholarshipFund" name="Safeco Diversity Scholarship Fund" client="Safeco Insurance">
+			<background src="bg-work-safeco.jpg" />
+			<description>
+				<p>We’d already produced for Safeco Insurance for many years by the time they asked us to begin creating video invitations for a major University of Washington fundraiser they held every year. It was a great event – a chance to raise significant money for Safeco’s Diversity Scholarship Fund – all while enjoying the All-Star game on the jumbo screen at Safeco Field.</p> 
+			</description>
+			<videos>
+				<video src="safeco-scholarship.flv" width="512" height="384" >					
+					<label>view movie</label>
+					<thumbnail src="inset-work-safecodiversity.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="palominoTVSpot" name="Palomino TV Spot" client="Restaurants Unlimited">
+			<background src="bg-work-palomino-1.jpg" />
+			<description>
+				<p>While we most often produce motion content and don’t actively market ourselves as a full service creative agency, the truth is we work in many mediums. For years we’ve produced radio spots and conceived entire print and outdoor advertising campaigns for Restaurants Unlimited, a longstanding client. Naturally we’ve also produced video for them as well. Here’s a TV spot we produced for their Palomino brand.</p> 
+			</description>
+			<videos>
+				<video src="palomino.flv" width="512" height="384" >					
+					<label>view movie</label>
+					<thumbnail src="inset-work-palominotv.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="americasRestaurants" name="America’s Restaurants" client="National Restaurant Association">
+			<background src="bg-work-amerrest.jpg" />
+			<description>
+				<p>Teachers, executives, artists, and even Presidents – most of us have worked in the restaurant industry at one time or another. And most of us have purchased coffee or food from a restaurant today. So, when it came time to prepare a piece for use at their national convention, one that would illustrate the breadth and scope of their industry, we were very glad to get the call from the National Restaurant Association. This little film has since been widely distributed, and has picked up a number of awards.</p> 
+			</description>
+			<videos>
+				<video src="americas-restaurants.flv" width="640" height="360">
+					<label>view movie</label>
+					<thumbnail src="inset-work-nra.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		<project id="littleFilmsBusinessReel" name="Little Films Business Reel" client="Little Films">
+			<background src="bg-work-LFbiz.jpg" />
+			<description>
+				<p>It's true, we've shifted our focus to good - but we realize that business and good are by no means exclusive of one another. In fact, good business, corporate social responsibility, and social capitalism are essential to drive the engine of change that we need. So, check out our business reel. We're extremely fortunate to be able to count so many tremendous companies as friends, and we look forward to future positive collaborations with these firms and many more.</p> 
+			</description>
+			<videos>
+				<video src="lf-biz-reel.flv" width="640" height="360" >					
+					<label>view movie</label>
+					<thumbnail src="inset-work-lfbusiness.jpg" width="466" height="161" />
+				</video>
+			</videos>
+		</project>
+		
+		
+		
+	</folio>
+	
+</work>
+
+
+<!--
+<work>
+	<folio1>
+		<project id="littleFilmsGoodTeaser" name="Little Films Good Teaser" client="Little Films">
+			<thumbnail src="inset-work-lfgoodteaser.jpg" width="466" height="161" />
+			<background src="bg-work-LFgood.jpg" />
+			<video src="littlefilms-teaser.flv" width="480" height="270" />
+			<description>
+				<p>The choice to think forward is something that we share. But the path we choose, our own individual methods and means, are what define us. This is quite literally the message found within a simple piece we created to promote our new direction. Of course it’s impossible to feature every imaginable type of good in a two minute teaser, so that means you’ll have to contact us! Fill us in on what you’re up to so that we can help share your story.</p> 
+			</description>
+		</project>
+		<project id="dineForAmerica" name="Dine For America" client="National Restaurant Association">
+			<thumbnail src="inset-work-dineforamerica.jpg" width="466" height="161" />
+			<background src="bg-work-dineforamerica.jpg" />
+			<video src="dine-for-america.flv" width="480" height="320" />
+			<description>
+				<p>After 9/11, restaurants across the country banded together and raised over 20 million dollars for families of victims in a massive one-day fundraising effort kfolio1n as Dine For America. A few years later, in the wake of Hurricanes Katrina and Rita they rallied again and raised millions more. Here’s a small portion of a profile we produced after their Katrina effort.</p> 
+			</description>
+		</project>
+		<project id="potteryWebMovie" name="Art Matters PSA" client="Pro Bono Project - Client TBD">
+			<thumbnail src="inset-work-potterywebmovie.jpg" width="466" height="161" />
+			<background src="bg-work-pottery.jpg" />
+			<video src="pottery.flv" width="480" height="270" />
+			<description>
+				<p>We recently had the good fortune to have access to a small pottery studio as a shoot location. Of course we couldn’t let that wonderful opportunity pass by, so we quickly contacted a young friend of little films to be our on-camera talent and we shot a little public service announcement, even before we’d found a client. Not to worry, we’re currently talking to a couple different children’s art education groups about donating this piece pro bono.</p> 
+			</description>
+		</project>
+		<project id="erikAndBarryReel" name="Erik and Barry Reel" client="Eclipse/Barndance">
+			<thumbnail src="inset-work-erikbarry.jpg" width="466" height="161" />
+			<background src="bg-work-erikbarry.jpg" />
+			<video src="eclipse-barndance.flv" width="480" height="320" />
+			<description>
+				<p>Over the years our team has worked collectively and individually for clients near and far. Here’s a joint reel that features some great work by our own Erik Hutchison and Barry Thompson. It’s important to note that these were not all little films projects. Much of what you’ll see here was work performed for others. Even so, it’s a perfect testament to the skill and capability that Erik and Barry bring to our team. Take a look!</p> 
+			</description>
+		</project>
+		<project id="rwandaDocumentary" name="Rwanda - Documentary" client="Inflatable Film">
+			<thumbnail src="inset-work-rwanda.jpg" width="466" height="161" />
+			<background src="bg-work-rwanda.jpg" />
+			<video src="rwanda-driven.flv" width="480" height="270" />
+			<description>
+				<p>A couple years back, while in Kigali, Rwanda, our friends Leah and Chris stumbled across a small film education centre overflowing with aspiring filmmakers. These vibrant young storytellers were all producing movies to show on a giant inflatable screen during a traveling film festival through the remote villages of Rwanda. Naturally Chris and Leah felt the need to tell their story, and we were thrilled to cut some trailers from their glorious footage.</p> 
+			</description>
+		</project>
+		<project id="safecoDiversityScholarshipFund" name="Safeco Diversity Scholarship Fund" client="Safeco Insurance">
+			<thumbnail src="inset-work-safecodiversity.jpg" width="466" height="161" />
+			<background src="bg-work-safeco.jpg" />
+			<video src="safeco-scholarships.flv" width="480" height="320" />
+			<description>
+				<p>We’d already produced for Safeco Insurance for many years by the time they asked us to begin creating video invitations for a major University of Washington fundraiser they held every year. It was a great event – a chance to raise significant money for Safeco’s Diversity Scholarship Fund – all while enjoying the All-Star game on the jumbo screen at Safeco Field.</p> 
+			</description>
+		</project>
+		<project id="blackAchieverPledgePSA" name="Black Achiever Pledge PSA" client="YMCA of Seattle">
+			<thumbnail src="inset-work-ymca.jpg" width="466" height="161" />
+			<background src="bg-work-ymca.jpg" />
+			<video src="ymca.flv" width="480" height="320" />
+			<description>
+				<p>Here’s a little broadcast PSA that we produced years ago for the Seattle branch of the YMCA. As with most pieces produced for non-profits, the budget was tight but we were fortunate that Macy’s was also a sponsor and generously allowed us to use their internal production studio. Very simple and straightforward, it’s really just a good example of what can be done with a bare stage, a good crew,  and some great folks.</p> 
+			</description>
+		</project>
+		<project id="revolution" name="(R)evolution" client="Little Films">
+			<thumbnail src="inset-work-revolution.jpg" width="466" height="161" />
+			<background src="bg-work-revolution.jpg" />
+			<video src="revolution.flv" width="480" height="270" />
+			<description>
+				<p>Saving the world means reducing greenhouse gas emissions, among other things. Here's our own take on how fun it can be to leave the car at home for a change! Worth noting there wasn't a single video camera on set - just a gazillion still images shot by Donna and our good pal Chris Towey. Our thanks as well to the many folks who joined in to make this little grassroots piece a reality. Hey, have you joined the Revolution?</p> 
+			</description>
+		</project>
+	</folio1>
+
+	<folio2>
+		<project id="americasRestaurants" name="America’s Restaurants" client="National Restaurant Association">
+			<thumbnail src="inset-work-nra.jpg" width="466" height="161" />
+			<background src="bg-work-amerrest.jpg" />
+			<video src="americas-restaurants.flv" width="480" height="270" />
+			<description>
+				<p>Teachers, executives, artists, and even Presidents – most of us have worked in the restaurant industry at one time or another. And most of us have purchased coffee or food from a restaurant today. So, when it came time to prepare a piece for use at their national convention, one that would illustrate the breadth and scope of their industry, we were very glad to get the call from the National Restaurant Association. This little film has since been widely distributed, and has picked up a number of awards.</p> 
+			</description>
+		</project>
+		<project id="palominoTVSpot" name="Palomino TV Spot" client="Restaurants Unlimited">
+			<thumbnail src="inset-work-palominotv.jpg" width="466" height="161" />
+			<background src="bg-work-palomino-1.jpg" />
+			<video src="palomino.flv" width="480" height="320" />
+			<description>
+				<p>While we most often produce motion content and don’t actively market ourselves as a full service creative agency, the truth is we work in many mediums. For years we’ve produced radio spots and conceived entire print and outdoor advertising campaigns for Restaurants Unlimited, a longstanding client. Naturally we’ve also produced video for them as well. Here’s a TV spot we produced for their Palomino brand.</p> 
+			</description>
+		</project>
+		<project id="microsoftMontage" name="Microsoft Montage" client="Microsoft">
+			<thumbnail src="inset-work-microsoft.jpg" width="466" height="161" />
+			<background src="bg-work-microsoft.jpg" />
+			<video src="microsoft-montage.flv" width="480" height="320" />
+			<description>
+				<p>Over the years we’ve been involved in a wide variety of projects for Microsoft. Of course, like any huge corporation their look and persona is thoroughly established, so the challenge always involves bringing something new to the table while still playing by the rules. True to form, we do our best to mix things up, add some interesting graphical elements and make things cutty and cool. Here’s a quick montage cut from several of those projects.</p> 
+			</description>
+		</project>
+		<project id="wamuSmallBusinessBankingCD" name="Wamu Small Business Banking CD" client="Washington Mutual/Eyeplay">
+			<thumbnail src="inset-work-wamu.jpg" width="466" height="161" />
+			<background src="bg-work-wamu-1.jpg" />
+			<video src="wamu-host.flv" width="480" height="320" />
+			<description>
+				<p>We’ll miss our friends at Wamu. A little while back we produced several short host and interview segments for a CD Wamu made available at all of their branches to advertise and explain their small business banking services. Here’s the host introduction movie that auto-launched the whole package when you loaded the disc.</p> 
+			</description>
+		</project>
+		<project id="portOfSeattleAPECPresentation" name="Port of Seattle APEC Presentation" client="Port of Seattle/Eyeplay">
+			<thumbnail src="inset-work-portofseattle.jpg" width="466" height="161" />
+			<background src="bg-work-portofseattle.jpg" />
+			<video src="port-of-seattle.flv" width="480" height="320" />
+			<description>
+				<p>In this post 9/11 era, heightened security is here to stay and critical technology that ensures our safety is constantly being devised and refined. Here’s the beginning of a video we produced for the Port of Seattle that documents new technology being implemented to ensure the swift, secure transfer of goods. It was screened immediately prior to a speech by Colin Powell at the APEC conference in Bangkok, Thailand.</p> 
+			</description>
+		</project>
+		<project id="novelisVisionAndValues" name="Novelis Vision and Values" client="Novelis">
+			<thumbnail src="inset-work-novelis.jpg" width="466" height="161" />
+			<background src="bg-work-novelis.jpg" />
+			<video src="novelis.flv" width="480" height="320" />
+			<description>
+				<p>Global aluminum, yet very human - Novelis is a world leader in flat rolled aluminum production and aluminum recycling. Their products are highly specialized and range from lightweight materials that help automobiles to achieve greater fuel efficiency, to aluminum cans, to pliable exterior sheeting used as skins for modern architecture. This piece features the Novelis CEO as he effectively lays out their company values and vision statement.</p> 
+			</description>
+		</project>
+		<project id="littleFilmsBusinessReel" name="Little Films Business Reel" client="Little Films">
+			<thumbnail src="inset-work-lfbusiness.jpg" width="466" height="161" />
+			<background src="bg-work-LFbiz.jpg" />
+			<video src="lf-biz-reel.flv" width="480" height="320" />
+			<description>
+				<p>It is true - moving forward we are focused on good, but we realize that good and business are by no means exclusive of one another. In fact, most experts believe that business will be the vital engine that drives the change we need. So, check out our business reel. It’s very fortunate that we’re able to count so many tremendous companies as friends, and we look forward to future positive collaborations with these firms and many more.</p> 
+			</description>
+		</project>
+	</folio2>
+	
+</work>
+-->

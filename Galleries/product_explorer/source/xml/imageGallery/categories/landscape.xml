@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xml>
+	<item>
+			<name>Item 11 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb11.jpg</tmb>
+			<file>media/imageGallery/images/img11.jpg</file>
+			<description><![CDATA[Ipsum is simplmmy text of the printing and typesettIpsum is simply dummy text of the printing and typesett typesett]]></description>
+	</item>
+	<item>
+			<name>Item 12 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb12.jpg</tmb>
+			<file>media/imageGallery/images/img12.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oLorem Ipsum is simply dummy text of the printing and typesetting industry.f type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 13 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb13.jpg</tmb>
+			<file>media/imageGallery/images/img13.jpg</file>
+			<description><![CDATA[Ipsum is simply dummy text of the printing <i>andIpsum is simply dummy text of the printing</i> and typesettIpsum is simply dummy text of the printing andply dummy text of the printing and typesettIpsum is simply dummy text of the printing and typesett typesett]]></description>
+	</item>
+	<item>
+			<name>Item 14 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb14.jpg</tmb>
+			<file>media/imageGallery/images/img14.jpg</file>
+			<description><![CDATA[Ipsum is simply dummy text of the printing andIpsum is simply dummy text of the printing and typesettIpsum is simply dummy text of the printing andply dummy text of the printing and typesettIpsum is simply dummy text of the printing and typesett typesett]]></description>
+	</item>
+	<item>
+			<name>This is an item vith very loooooooong name... :)</name>
+			<tmb>media/imageGallery/thumbnails/tmb4.jpg</tmb>
+			<file>media/imageGallery/images/img4.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy <a href="http://www.xmlswf.com">this is url</a> and typesetting industry. <a href="http://www.xmlswf.com">formatted with external css file </a>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 7 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb7.jpg</tmb>
+			<file>media/imageGallery/images/img7.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 8 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb8.jpg</tmb>
+			<file>media/imageGallery/images/img8.jpg</file>
+			<description><![CDATA[Idummy text of the printing andIpsum is simply dummy text of the printing and typesettIpsum is simply dummy text of the <u>printing and typesettIpsum is text</u> of the printing and typesettIpsum is simply <a href="http://www.xmlswf.com">this is url</a>]]></description>
+	</item>
+		<item>
+			<name>Item 9 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb9.jpg</tmb>
+			<file>media/imageGallery/images/img9.jpg</file>
+			<description><![CDATA[Ipsum is sif the printing and typesettIpsum is simply dummy text of the printing and typesettIpsum is simply dummy text of the printing and typesett typesett]]></description>
+	</item>
+	<item>
+			<name>Item 10 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb10.jpg</tmb>
+			<file>media/imageGallery/images/img10.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 11 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb11.jpg</tmb>
+			<file>media/imageGallery/images/img11.jpg</file>
+			<description><![CDATA[Ipsum is simplmmy text of the printing and typesettIpsum is simply dummy text of the printing and typesett typesett]]></description>
+	</item>
+	<item>
+			<name>Item 12 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb12.jpg</tmb>
+			<file>media/imageGallery/images/img12.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oLorem Ipsum is simply dummy text of the printing and typesetting industry.f type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 13 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb13.jpg</tmb>
+			<file>media/imageGallery/images/img13.jpg</file>
+			<description><![CDATA[Ipsum is simply dummy text of the printing <i>andIpsum is simply dummy text of the printing</i> and typesettIpsum is simply dummy text of the printing andply dummy text of the printing and typesettIpsum is simply dummy text of the printing and typesett typesett]]></description>
+	</item>
+	<item>
+			<name>Item 14 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb14.jpg</tmb>
+			<file>media/imageGallery/images/img14.jpg</file>
+			<description><![CDATA[Ipsum is simply dummy text of the printing andIpsum is simply dummy text of the printing and typesettIpsum is simply dummy text of the printing andply dummy text of the printing and typesettIpsum is simply dummy text of the printing and typesett typesett]]></description>
+	</item>
+	<item>
+			<name>Item 15 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb15.jpg</tmb>
+			<file>media/imageGallery/images/img15.jpg</file>
+			<description><![CDATA[Ipsum is simplIpsum is simply dummy text of the printing and typesettIpsum is simply dummy text of the printing and typesett typesett]]></description>
+	</item>
+	<item>
+			<name>Item 16 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb16.jpg</tmb>
+			<file>media/imageGallery/images/img16.jpg</file>
+			<description><![CDATA[Iinting andIpsum is <font color="#99cc00"> simply dummy text of the printing and typesettIpsum is simply dummy text of the printing</font> and typesettIpsum is simply dummy text of the printing and typesettIpsum is simply dummy text of the printing and typesett tt]]></description>
+	</item>
+	<item>
+			<name>Item 2 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb6.jpg</tmb>
+			<file>media/imageGallery/images/img6.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 3 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb3.jpg</tmb>
+			<file>media/imageGallery/images/img3.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="http://www.xmlswf.com">this is url</a> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 4 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb4.jpg</tmb>
+			<file>media/imageGallery/images/img4.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 5 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb5.jpg</tmb>
+			<file>media/imageGallery/images/img5.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 6 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb6.jpg</tmb>
+			<file>media/imageGallery/images/img6.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to <a href="http://www.xmlswf.com">this is url</a>]]></description>
+	</item>
+	<item>
+			<name>Item 2 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb6.jpg</tmb>
+			<file>media/imageGallery/images/img6.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 5 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb5.jpg</tmb>
+			<file>media/imageGallery/images/img5.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></description>
+	</item>
+	<item>
+			<name>Item 6 name</name>
+			<tmb>media/imageGallery/thumbnails/tmb6.jpg</tmb>
+			<file>media/imageGallery/images/img6.jpg</file>
+			<description><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to <a href="http://www.xmlswf.com">this is url</a>]]></description>
+	</item>
+</xml>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<index title="WEBSITE DEMO">
+	<page type="text" url="data/text8.xml" title="Accueil"  bgurl="bgimages/city3.jpg">
+		<page type="text" url="data/text9.xml" title="Notre équipe" longtitle="Professionelle, Expérimentée, Engagée." />
+	</page>
+	<page type="text" url="data/cons.xml" title="Consultation" bgurl="bgimages/city5.jpg"/> 
+	<page type="text" url="data/explo.xml" title="Expl. Fonctionnelles" bgurl="bgimages/city6.jpg"/>
+	<page type="text" url="data/tet_cou.xml" title="Chirurgie tête et cou" bgurl="bgimages/city7.jpg"/>
+	<page type="text" url="data/ore_sur.xml" title="Oreille / Surdité" bgurl="bgimages/city8.jpg"/>
+	<page type="text" url="data/acou.xml" title="Acouphènes" bgurl="bgimages/city9.jpg"/>
+	<page type="text" url="data/ver_par.xml" title="Vertige / Paralysie faciale" bgurl="bgimages/city10.jpg"/>
+	<page type="text" url="data/nez_sin.xml" title="Nez / Sinus" bgurl="bgimages/city11.jpg"/>
+	<page type="text" url="data/voi_cor.xml" title="Voix / Cordes vocales" bgurl="bgimages/city12.jpg"/>
+	
+	<page type="text" url="data/ron_apn.xml" title="Ronflement / Apnées" bgurl="bgimages/city13.jpg"/>
+	<page type="text" url="data/radio.xml" title="Radiologie" bgurl="bgimages/city13.jpg"/>
+	<page type="external" url="swfs/externaldemo.swf" onresize="onresize" title="Map" bgurl="bgimages/city13.jpg" onload="initOnload" onloadparams="1600">
+	</page>
+	<page type="index" url="data/photos.xml" title="Galerie photo" longtitle="Galerie photo de la Clinique Roosevelt" frameid="white" >
+		<img src="images/CAROLINHALL3.jpg" fullsrc="images/CAROLINHALL3.jpg" title="Accueil" alt="Lorem ipsum dolor amet sit nodor." />
+		<img src="images/Couloir1.jpg" fullsrc="images/Couloir1.jpg" title="Couloir principal" alt="Lorem ipsum dolor amet sit nodor." />
+		<img id="germany" src="images/Couloir.jpg" fullsrc="images/Couloir.jpg" title="Couloir principal" alt="Lorem ipsum dolor amet sit nodor." />
+		<img src="images/salleattente1.jpg" fullsrc="salleattente1.jpg" title="Salle d'attente" alt="Lorem ipsum dolor amet sit nodor." />
+		<img id="sunset" src="swfs/cliniqueMap.swf" fullsrc="images/couloirbloc1.jpg" title="Couloir du bloc opératoire" alt="Lorem ipsum dolor amet sit nodor." />
+		<video id="video" frameid="video_white" src="images/video.png" fullsrc="video/video.flv" title="Présentation Vidéo" alt="Lorem ipsum dolor amet sit nodor." controllerheight="15" />
+	</page>
+	
+	<page type="form" url="data/contactus.xml" title="Contact" bgurl="bgimages/city4.jpg"/>
+</index>

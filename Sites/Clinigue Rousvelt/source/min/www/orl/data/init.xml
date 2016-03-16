@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<init devmode="0">
+	<theme url="data/site.css" basecol="0xff9900" compcol="0x6688aa" numcols="5" invert="0">
+		<frames>
+			<frame id="white" resizemode="2" >
+				<border color="0x6688aa" size="1" />
+				<border color="0xffffff" size="10" />
+			</frame>
+			<frame id="video_white" resizemode="2" >
+				<border color="0x6688aa" size="1" />
+				<border color="0xffffff" size="10,10,0.1,10" />
+			</frame>
+		</frames>
+	</theme>
+	<index url="data/index.xml" start="0"/>
+	<layout minwidth="800" minheight="400" maxwidth="1000" maxheight="650" marginleft="0.05" marginright="0.05" margintop="30" marginbottom="50" navpos="l"  gutter="20" navwidth="166" medianav="top" /><!-- attributes needed by more than one object -->
+	<logo url="images/logoentier.jpg" logowidth="170" xoffset="7" yoffset="-13" theme="1" /><!-- attributes only needed by the footer logo -->
+	<nav navspace="10,6,6" navxoffset="0"navyoffset="70" /><!-- attributes only needed by the nav objects -->
+	<content cornerradius="4" padding="20,20,20,20" bgalpha="80"><!-- attributes only needed by the content object  - padding order is like css Top, right, bottom , left-->
+		<media infolabels="auto" gutter="10" infoalpha="100" inforightindent="10" infoleftindent="10" infobottomindent="0" infotopindent="30" padding="25,20,20,20" infominbotwidth="300" infominsidewidth="130"/>
+	</content>
+	<siblingnav returnlink="Retour à la %%" thumbsize="25" thumbgutter="3" thumbxoffset="12" thumbyoffset="12" npnavwidth="80" npnavgutter="-28" labelyoffset="5" labelxoffset="9" bgalpha="90" bgradius="4" />
+	<footer bgalpha="60" padding="4,0,0,0" aligntocontent="1">
+		<b><a class="_footer" href="asfunction:updateMenu,../opht/index.htm,Ophtalmologie">Ophtalmologie</a></b> | <b><a class="_footer" href="../opht/index.htm">Plan d'accès</a></b> | <b><a class="_footer" href="../opht/index.htm">Mentions légales</a></b> | <b><a class="_footer" href="../opht/index.htm">Délai-Sécurité</a></b> | <b><a class="_footer" href="../opht/index.htm">Charte</a></b> | Copyright 2009 Clinique Roosevelt - Création de site: <a target="_blank" class="_footer" href="http://www.derni.com/">Derni.com</a>
+	</footer><!-- attributes and data only needed by the footer object -->	
+	<background smoothing="1" />
+	<tooltip shadowblur="20" shadowalpha="0.2" ttblur="10" ttalpha="0.6" gutter="10" arrowlength="20" />
+</init>

@@ -1,0 +1,18 @@
+How do I install/uninstall a component?
+
+Before installing any component, please make sure that you're using the latest Adobe Extension manager for the version of Flash that you are using. If you don't have it installed, you may download the appropriate version here: http://www.adobe.com/exchange/em_download/ 
+
+To install an extension from inside Flash:
+1. Go to HELP > MANAGE EXTENSIONS
+2. Choose FILE > "Install Extension"
+3. Install EZformPRO.mxp (for Flash MX, MX 2004, 8 or CS3) or EZformPRO_CS4.mxp (for Flash CS4)
+
+To install an extension from your desktop (recommended for Mac OS-X):
+1. Copy the EZformPRO.mxp or EZformPRO_CS4.mxp (for Flash CS4) file to your desktop.
+2. Double click on the EZformPRO.mxp/EZformPRO_CS4.mxp file. This will start the installation process through the Extension Manager.
+
+Note: The PHP file must be installed on a webserver. Please see the userguide for instuctions.
+
+To remove an extension:
+Close Flash. Open the Adobe Extension Manager from outside of Flash, click on the component that you wish to remove and select "Remove Extension".
+

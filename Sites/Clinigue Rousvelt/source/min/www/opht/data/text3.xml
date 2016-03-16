@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title useParent="title" />
+	<text><![CDATA[	<p>This page text is enclosed in a &lt;[!CDATA[...]]&gt; tag. These make sure that if you have any text with special HTML sensitive characters then they will not cause any problems. It is not compulsory to use these tags - as long as your text content is XHTML compliant. Plus a lot of visual editors add these tags around text blocks by default.</p>
+<br/>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae diam ac justo euismod laoreet. Vestibulum gravida, leo sit amet porttitor convallis, ligula dolor tempor enim, et adipiscing quam justo vitae velit. Nulla congue sodales tellus. In est enim, elementum non, pellentesque eget, euismod ac, quam. Sed sit amet lacus eu risus semper dapibus. Donec venenatis, ipsum a iaculis gravida, diam turpis ultrices arcu, malesuada suscipit diam augue vitae lectus. Quisque vitae leo accumsan enim ullamcorper venenatis. Aenean mi. Mauris aliquam lorem eu ligula. Maecenas aliquam, felis nec commodo fringilla, eros tellus condimentum sem, sed bibendum augue felis ut purus. Fusce fermentum, quam eget vehicula faucibus, justo ipsum ullamcorper lectus, quis mattis enim quam eu risus. Mauris interdum velit eget enim. In dui dui, commodo adipiscing, lobortis eget, vehicula non, sapien. Nunc ut quam. Nulla dolor. Sed et purus. Mauris eu nisi vitae lacus rutrum cursus. Phasellus nec ipsum ut nisi sagittis ultricies. Maecenas leo risus, pretium sit amet, accumsan id, aliquet pulvinar, sapien. In hac habitasse platea dictumst.
+</p><br/>
+<p>
+Nam mi. Aliquam ullamcorper accumsan odio. Nulla facilisi. Maecenas blandit sodales lacus. Nullam bibendum massa et diam. Maecenas odio metus, porttitor ut, consequat ac, mattis at, tellus. Etiam blandit pulvinar mauris. Aliquam erat volutpat. Nam vitae augue. Nam enim odio, semper non, hendrerit vitae, commodo quis, felis. Etiam tempor. Aenean neque nulla, congue id, dictum ac, faucibus in, nibh.
+</p><br/>
+<p>
+In hac habitasse platea dictumst. Nulla tortor. Fusce suscipit nibh vitae diam mollis convallis. Sed vel nisi elementum nibh tempus fringilla. Praesent venenatis erat a elit. Aliquam et dui. Nulla velit nisl, placerat eget, porta eget, faucibus at, erat. Nunc ullamcorper consequat nibh. Proin mollis orci sed tortor. Donec dui lectus, eleifend ut, porttitor eu, tempor quis, quam. Mauris pulvinar ligula sed sapien. Vestibulum sit amet ipsum sed sapien interdum consequat. Maecenas accumsan. Suspendisse potenti. Ut sem. Quisque in arcu vel purus varius rutrum. Quisque orci erat, iaculis ornare, elementum egestas, facilisis non, lacus. Phasellus nec dolor. Integer non turpis nec orci posuere vehicula. Integer ultricies, orci id accumsan aliquam, justo massa feugiat mi, a feugiat mi ante eget nunc.
+</p>]]>
+	</text>
+</mostlyText>

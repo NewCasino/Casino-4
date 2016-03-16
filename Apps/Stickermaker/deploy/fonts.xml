@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<font name="Arial Black" resource="fonts/ARIALBlack210201.swf" metrics="ARIALBlack210201.xml" image="fontsImages/arialblack210201.gif"/>	
+	<font name="AvantGarde Md" resource="fonts/AVANTGAmd210201.swf" metrics="AVANTGAmd210201.xml" image="fontsImages/avantgamd210201.gif"/>
+	<font name="Benguiat Gras" resource="fonts/BENGUIAbd210201.swf" metrics="BENGUIAbd210201.xml" image="fontsImages/benguiabd210201.gif"/> 
+	<font name="Brushscript 738" resource="fonts/BRUSH738210201.swf" metrics="BRUSH738210201.xml" image="fontsImages/brush738210201.gif"/>
+	<font name="Calligrapher" resource="fonts/CALLIGRbd210201.swf" metrics="CALLIGRbd210201.xml" image="fontsImages/calligrbd210201.gif"/>
+	<font name="Eras Extragras" resource="fonts/ERASulbd210201.swf" metrics="ERASulbd210201.xml" image="fontsImages/erasulbd210201.gif"/>
+	<font name="Futura Extragras Italic" resource="fonts/FUTURAxbdit210201.swf" metrics="FUTURAxbdit210201.xml" image="fontsImages/futuraxbdit210201.gif"/>
+	<font name="Incised Extragras Italic" resource="fonts/INCISED901ndit210201.swf" metrics="INCISED901ndit210201.xml" image="fontsImages/incised901ndit210201.gif"/>
+	<font name="Maпandra Gras" resource="fonts/MAIANDRgd210201.swf" metrics="MAIANDRgd210201.xml" image="fontsImages/maiandrgd210201.gif"/>
+	<font name="Serpentine Gras Italic" resource="fonts/SERPENTbdit210201.swf" metrics="SERPENTbdit210201.xml" image="fontsImages/serpentbdit210201.gif"/>
+	<font name="Staccato 222" resource="fonts/STACCAT222210201.swf" metrics="STACCAT222210201.xml" image="fontsImages/staccat222210201.gif"/>
+	<font name="Staccato 555" resource="fonts/STACCAT555210201.swf" metrics="STACCAT555210201.xml" image="fontsImages/staccat555210201.gif"/>
+	<font name="Comic Sans [Bold]" resource="fonts/COMICBold070601.swf" metrics="COMICBold070601.xml" image="fontsImages/comicbold070601.gif"/>
+	<font name="Arial [Bold]" resource="fonts/arialbold100601.swf" metrics="arialbold100601.xml" image="fontsImages/arialbold100601.gif"/>
+	<font name="Times New Roman [Bold]" resource="fonts/timesbold100601.swf" metrics="timesbold100601.xml" image="fontsImages/timesbold100601.gif"/>
+	<font name="Verdana [Bold]" resource="fonts/verdanabold100601.swf" metrics="verdanabold100601.xml" image="fontsImages/verdanabold100601.gif"/>
+	<font name="Impact" resource="fonts/impact100601.swf" metrics="impact100601.xml" image="fontsImages/impact100601.gif"/>
+	<font name="Earth" resource="fonts/Earth.swf" metrics="Earth.xml" image="fontsImages/earth.gif"/>
+	<font name="Plump" resource="fonts/PLUMPMT240903.swf" metrics="PLUMPMT240903.xml" image="fontsImages/PLUMPMT240903.gif"/> 
+	<font name="Bauhaus 93" resource="fonts/BAUHAUS240903.swf" metrics="BAUHAUS240903.xml" image="fontsImages/BAUHAUS240903.gif"/>
+	<font name="Stencil" resource="fonts/stencil210105.swf" metrics="stencil210105.xml" image="fontsImages/stencil210105.gif"/>
+	<font name="Jokerman" resource="fonts/jokerman_070207.swf" metrics="jokerman_070207.xml" image="fontsImages/jokerman_070207.gif"/>
+	<font name="typo Upright" resource="fonts/typoupright_290307.swf" metrics="typoupright_290307.xml" image="fontsImages/typoupright_290307.gif"/>
+	<font name="Tiger Rag" resource="fonts/tigerrag_290307.swf" metrics="tigerrag_290307.xml" image="fontsImages/tigerrag_290307.gif"/>
+	<font name="Rage Italic" resource="fonts/rageitalic_290307.swf" metrics="rageitalic_290307.xml" image="fontsImages/rageitalic_290307.gif"/>
+	<font name="English 111 Vivace" resource="fonts/english111vivace_290307.swf" metrics="english111vivace_290307.xml" image="fontsImages/english111vivace_290307.gif"/>
+	<font name="Karat Medium" resource="fonts/karatmd_050107.swf" metrics="karatmd_050107.xml" image="fontsImages/karatmd_050107.gif"/> 
+	<font name="Arnold" resource="fonts/arnold_290307.swf" metrics="arnold_290307.xml" image="fontsImages/arnold_290307.gif"/>
+	<font name="Lucida Handwriting" resource="fonts/lucidahandwriting_290307.swf" metrics="lucidahandwriting_290307.xml" image="fontsImages/lucidahandwriting_290307.gif"/>
+	<font name="Dauphin" resource="fonts/dauphin_290307.swf" metrics="dauphin_290307.xml" image="fontsImages/dauphin_290307.gif"/>
+	<font name="Cloister Open Face" resource="fonts/cloisteropenface_290307.swf" metrics="cloisteropenface_290307.xml" image="fontsImages/cloisteropenface_290307.gif"/>
+	<font name="Bremen Gras" resource="fonts/bremen_290307.swf" metrics="bremen_290307.xml" image="fontsImages/bremen_290307.gif"/>
+	<font name="Boink" resource="fonts/boink_290307.swf" metrics="boink_290307.xml" image="fontsImages/boink_290307.gif"/>
+	<font name="Bergell" resource="fonts/bergell_290307.swf" metrics="bergell_290307.xml" image="fontsImages/bergell_290307.gif"/> 
+	<font name="Arial Rounded Mt Bold" resource="fonts/arialrounded_mtbold_010408.swf" metrics="arialrounded_mtbold_010408.xml" image="fontsImages/arialrounded_mtbold_010408.gif"/>
+	<font name="Charter Bt" resource="fonts/charter_bt_010408.swf" metrics="charter_bt_010408.xml" image="fontsImages/charter_bt_010408.gif"/>
+	<font name="Castle T" resource="fonts/castle_t_010408.swf" metrics="castle_t_010408.xml" image="fontsImages/castle_t_010408.gif"/>
+	<font name="Eurostile" resource="fonts/eurostile_010408.swf" metrics="eurostile_010408.xml" image="fontsImages/eurostile_010408.gif"/>
+	<font name="Bank Gothic Md Bt" resource="fonts/bankgothic_mdbt_010408.swf" metrics="bankgothic_mdbt_010408.xml" image="fontsImages/bankgothic_mdbt_010408.gif"/>
+	<font name="Hobo Bt" resource="fonts/hobo_bt_010408.swf" metrics="hobo_bt_010408.xml" image="fontsImages/hobo_bt_010408.gif"/> 
+	<font name="Schadow Black Bt" resource="fonts/schadow_blkbt_010408.swf" metrics="schadow_blkbt_010408.xml" image="fontsImages/schadow_blkbt_010408.gif"/>
+	<font name="Tango Bt" resource="fonts/tango_bt_010408.swf" metrics="tango_bt_010408.xml" image="fontsImages/tango_bt_010408.gif"/>
+	<font name="Kabarett D" resource="fonts/kabarettd_010408.swf" metrics="kabarettd_010408.xml" image="fontsImages/kabarettd_010408.gif"/>
+	<font name="Quigley Wiggly" resource="fonts/quigleywiggly_010408.swf" metrics="quigleywiggly_010408.xml" image="fontsImages/quigleywiggly_010408.gif"/>
+	<font name="Oz Handicraft Bt" resource="fonts/ozhandicraft_bt_010408.swf" metrics="ozhandicraft_bt_010408.xml" image="fontsImages/ozhandicraft_bt_010408.gif"/>
+	<font name="Calligraph 421 Bt" resource="fonts/calligraph421_bt_010408.swf" metrics="calligraph421_bt_010408.xml" image="fontsImages/calligraph421_bt_010408.gif"/>
+	<font name="Shotgun Bt" resource="fonts/shotgun_bt_010408.swf" metrics="shotgun_bt_010408.xml" image="fontsImages/shotgun_bt_010408.gif"/>
+	<font name="Amelia Bt" resource="fonts/amelia_bt_010408.swf" metrics="amelia_bt_010408.xml" image="fontsImages/amelia_bt_010408.gif"/>
+	<font name="Futura Black Bt" resource="fonts/futurablack_bt_010408.swf" metrics="futurablack_bt_010408.xml" image="fontsImages/futurablack_bt_010408.gif"/>
+	<font name="Millenium Bold Ex Bt" resource="fonts/millenium_bdexbt_010408.swf" metrics="millenium_bdexbt_010408.xml" image="fontsImages/millenium_bdexbt_010408.gif"/>
+	<font name="Ocr A Bt" resource="fonts/ocra_bt_010408.swf" metrics="ocra_bt_010408.xml" image="fontsImages/ocra_bt_010408.gif"/>
+	<font name="Orbit B Bt" resource="fonts/orbit_bbt_010408.swf" metrics="orbit_bbt_010408.xml" image="fontsImages/orbit_bbt_010408.gif"/>
+	<font name="Sonic Xbd Bt" resource="fonts/sonic_xbdbt_010408.swf" metrics="sonic_xbdbt_010408.xml" image="fontsImages/sonic_xbdbt_010408.gif"/> 
+	<font name="You re gone" resource="fonts/youregone_010408.swf" metrics="youregone_010408.xml" image="fontsImages/youregone_010408.gif"/>
+</data>

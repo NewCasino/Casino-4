@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title useParent="title" />
+	<text>
+		<p><strong>Text5.xml</strong></p><br/>
+		<p>
+Proin scelerisque iaculis libero. Cras odio lacus, viverra gravida, malesuada nec, posuere non, urna. Nullam urna tellus, sagittis a, iaculis in, eleifend eget, sem. Nulla id urna quis arcu ultricies venenatis. Phasellus in mauris. Sed tincidunt, nisl sit amet cursus consectetur, mauris dui consectetur dui, sit amet pharetra velit mi a velit. Cras rutrum pretium nisi. Duis porta tellus at turpis. Aliquam enim. Donec vel magna.
+</p><br/>
+<p>
+Donec sapien orci, rutrum ut, laoreet ac, sodales id, justo. Duis viverra tempor massa. Curabitur non enim. Suspendisse potenti. Curabitur pulvinar viverra est. Nullam quis quam sit amet ipsum scelerisque varius. In elit orci, cursus sed, tempus sit amet, accumsan non, velit. Praesent pretium viverra metus. Ut ligula lectus, ornare vulputate, pellentesque id, viverra non, turpis. Donec pharetra. Nulla pharetra. Nunc eleifend. Mauris commodo, metus nec sagittis hendrerit, urna nisi elementum velit, et lobortis orci nisi ac mauris. Nunc non ligula vel orci bibendum fermentum. Donec at lacus. Maecenas porttitor velit eget justo. Etiam diam purus, rhoncus a, mollis quis, sagittis ut, purus. Donec nulla nisi, tincidunt non, adipiscing quis, ullamcorper sit amet, elit.
+</p><br/>
+<img src="images/german_apartments.jpg"  hspace="0" vspace="8" />
+		<br/>
+	</text>
+</mostlyText>

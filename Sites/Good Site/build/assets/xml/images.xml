@@ -1,0 +1,171 @@
+<images>
+
+	<!-- if you want to comment out an item to deactivate it, put put tags around it like below  -->
+	<!-- <image src"bg-no-funding-1000x15000.jpg" thumbSrc="bg-no-funding-1000x15000-thumb.jpg" title="Image Title" photographer="Photographer Name" commonsLink="link" /> -->
+	
+	<!-- you can do multiple lines at the same time that way as well -->
+	<!-- 
+	<image src="bg-who-team-800x531.jpg" title="Image Title" photographer="Photographer Name" commonsLink="link" />
+	<image src="bg-brent-1114x740.jpg" title="Image Title" photographer="Photographer Name" commonsLink="link" />
+	<image src"bg-no-funding-1000x15000.jpg" thumbSrc="bg-no-funding-1000x15000-thumb.jpg" title="Image Title" photographer="Photographer Name" commonsLink="link" />
+	-->
+	
+	
+	<creditCopy>
+		<p><![CDATA[Many thanks to the talented folks whose cool photos grace our home page. In some instances they are available under a <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution License</a> and other times they were captured during our actual production shoots. Either way, just scroll and click on the thumbnails below for proper photo credits and links. And a special thanks to our own Donna Souter for all other original photos found on our site.]]></p>
+	</creditCopy>
+	
+	<!--
+	
+	1. Graffiti image - this is the only existing photo from the current home page images that we'd like to keep. It's already in the rotation and is a shot of a concrete wall with simple spray paint of a smiling kid holding a flower. The info and link that you already have in the credits page stays the same for this one.
+
+
+	2. bg-home-african-nurses.jpg 
+
+	Here's the title info and credit link for this one...
+
+	Burkina Faso Medical Team 
+	PATH/Gabriel Bienczycki
+	http://zebravisual.com/
+
+
+	3. bg-home-fish-kid.jpg
+
+	"Hey, kid, the eagle flies at midnight…"
+	Ingrid Taylar
+	http://www.flickr.com/photos/taylar/5092314939
+
+
+	4. bg-home-laundry.jpg
+
+	Portrait Of A Sweet Girl With The Clothesline
+	joannawnuk
+	http://www.istockphoto.com/stock-photo-5721963-portrait-of-a-sweet-girl-with-the-clothesline.php
+
+
+	5. bg-home-solar.jpg
+
+	Water Pump House Solar Array 03
+	Michael Witzel
+	http://www.flickr.com/photos/michaelwitzel/3582066223
+
+
+	6. bg-home-page-african-girl.jpg
+
+	Burkina Faso Girl After Vaccination
+	PATH/ Gabriel Bienczycki
+	http://zebravisual.com
+
+
+	7. bg-home-peace.jpg
+
+	Peace Your Saguaro
+	Ken Bosma
+	http://www.flickr.com/photos/kretyen/2969358776
+
+
+	8. bg-home-recycle.jpg
+
+	Recycling 7
+	Timothy Takemoto
+	http://www.flickr.com/photos/nihonbunka/32774212
+	
+	-->
+	
+	<main>
+		<background src="bg-home-graffiti.jpg" thumbSrc="bg-home-graffiti-thumb.jpg" title="Smile" photographer="klara.kristina" commonsLink="http://www.flickr.com/photos/klarakristina/441685449/" width="1200" height="900" />
+		<background src="bg-home-african-nurses.jpg" thumbSrc="bg-home-african-nurses-thumb.jpg" title="Burkina Faso Medical Team" photographer="PATH/Gabriel Bienczycki" commonsLink="http://zebravisual.com/" width="1200" height="798" />
+		<background src="bg-home-fish-kid.jpg" thumbSrc="bg-home-fish-kid-thumb.jpg" title="Hey, kid, the eagle flies at midnight…" photographer="Ingrid Taylar" commonsLink="http://www.flickr.com/photos/taylar/5092314939/" width="1200" height="910" />
+		<background src="bg-home-laundry.jpg" thumbSrc="bg-home-laundry-thumb.jpg" title="Portrait Of A Sweet Girl With The Clothesline" photographer="joannawnuk" commonsLink="http://www.istockphoto.com/stock-photo-5721963-portrait-of-a-sweet-girl-with-the-clothesline.php" width="1200" height="783" />
+		<background src="bg-home-solar.jpg" thumbSrc="bg-home-solar-thumb.jpg" title="Water Pump House Solar Array 03" photographer="Michael Witzel" commonsLink="http://www.flickr.com/photos/michaelwitzel/3582066223/" width="1200" height="798" />
+		<background src="bg-home-african-girl.jpg" thumbSrc="bg-home-african-girl-thumb.jpg" title="Burkina Faso Girl After Vaccination" photographer="PATH/ Gabriel Bienczycki" commonsLink="http://zebravisual.com/" width="1200" height="798" />
+		<background src="bg-home-peace.jpg" thumbSrc="bg-home-peace-thumb.jpg" title="Peace Your Saguaro" photographer="Ken Bosma" commonsLink="http://www.flickr.com/photos/kretyen/2969358776/" width="1200" height="798" />
+		<background src="bg-home-recycle.jpg" thumbSrc="bg-home-recycle-thumb.jpg" title="Recycling 7" photographer="Timothy Takemoto" commonsLink="http://www.flickr.com/photos/nihonbunka/32774212/" width="1200" height="798" />
+		
+		<!--
+		<background src="bg-home-bamboo.jpg" thumbSrc="bg-home-bamboo-thumb.jpg" title="Arashiyama Bamboo Forest" photographer=".curt." commonsLink="http://www.flickr.com/photos/curtsm/2410193828/" width="1200" height="800" />
+		<background src="bg-home-bikes.jpg" thumbSrc="bg-home-bikes-thumb.jpg" title="365/47 Google!" photographer="mjmonty" commonsLink="http://www.flickr.com/photos/mjmonty/3289744996/" width="1200" height="900" />
+		<background src="bg-home-crowd.jpg" thumbSrc="bg-home-crowd-thumb.jpg" title="Our Time - IMG_6640" photographer="brainchildvn" commonsLink="http://www.flickr.com/photos/brainchildvn/3015185224/" width="1200" height="843" />
+		<background src="bg-home-electric-car.jpg" thumbSrc="bg-home-electric-car-thumb.jpg" title="Electric Car Charging Point" photographer="frankh" commonsLink="http://www.flickr.com/photos/f-r-a-n-k/359123912/" width="1200" height="900" />
+		<background src="bg-home-fish.jpg" thumbSrc="bg-home-fish-thumb.jpg" title="Taylor Creek Salmon Run" photographer="JB Mellquist" commonsLink="http://www.flickr.com/photos/19001426@N08/2345284953/" width="1024" height="768" />
+		<background src="bg-home-girl-bus.jpg" thumbSrc="bg-home-girl-bus-thumb.jpg" title="Tender Hug" photographer="Ignacio Guerra" commonsLink="http://www.flickr.com/photos/ignacioguerra/3433048225/" width="1200" height="814" />
+		<background src="bg-home-glasses.jpg" thumbSrc="bg-home-glasses-thumb.jpg" title="The Wind Man" photographer="the russians are here" commonsLink="http://www.flickr.com/photos/therussiansarehere/3260244871/" width="1200" height="900" />
+		<background src="bg-home-graffiti.jpg" thumbSrc="bg-home-graffiti-thumb.jpg" title="Smile" photographer="klara.kristina" commonsLink="http://www.flickr.com/photos/klarakristina/441685449/" width="1200" height="900" />
+		-->
+	</main>
+	
+	
+	
+	
+	<content>
+		
+		<background id="credits" src="bg-home-fish-kid.jpg" width="1200" height="910" />
+		<background id="ourClients" src="bg-clients.jpg" width="1440" height="900" />
+		<!-- <background id="ourClients" src="bg-clients.jpg" width="1200" height="797" /> -->
+		<background id="contactUs" src="bg-contact.jpg" width="1179" height="874" />
+		
+		<background id="whatWeDo" src="bg-what-what.jpg" width="1200" height="857" />
+		<background id="tellMeMore" src="bg-what-what.jpg" width="1200" height="857" />
+		<background id="funding" src="bg-what-what.jpg" width="1200" height="857" />
+		<background id="good" src="bg-what-good.jpg" width="1200" height="857" />
+		<!-- <background id="tellMeMore" src="bg-what-tellmemore.jpg" width="1200" height="857" /> -->
+		<!-- <background id="good" src="bg-what-good.jpg" width="1200" height="800" /> -->
+		
+		<background id="whoWeAre" src="bg-who-who.jpg" width="1200" height="857" />
+		<background id="theBackstory" src="bg-who-who.jpg" width="1200" height="857" />
+		<background id="bCorp" src="bg-who-who.jpg" width="1200" height="857" />
+		<!-- <background id="theBackstory" src="bg-who-backstory-1.jpg" width="1200" height="857" /> -->
+		<!-- <background id="bCorp" src="bg-who-bcorp.jpg" width="1200" height="857" /> -->
+		<!-- <background id="team" src="bg-who-team.jpg" width="1200" height="800" /> -->
+		<background id="team" src="bg-who-team.jpg" width="1200" height="857" />
+		
+		<background id="brent" src="bg-who-team-brent-3.jpg" width="1200" height="662" />
+		<background id="christine" src="bg-who-team-christine-3.jpg" width="1200" height="670" />
+		<background id="donna" src="bg-who-team-donna-3.jpg" width="1200" height="661" />
+		<!-- <background id="barry" src="bg-who-team-barry.jpg" width="1200" height="670" /> -->
+		<background id="lyn" src="bg-who-team-lyn.jpg" width="1200" height="678" />
+		<!-- <background id="lauren" src="bg-who-team-lauren.jpg" width="1200" height="670" /> -->
+		<background id="erik" src="bg-who-team-erik-3.jpg" width="1200" height="663" />
+		
+		<!-- HACK! HAD TO DUPLICATE A NODE FOR THE "now" SUBSECTION AS "ourWork" TO GET MY BG FETCHING TO WORK-->
+		<!-- <background id="ourWork" src="bg-work-now.jpg" width="1200" height="797" /> -->
+		<background id="ourWork" src="bg-work-all.jpg" width="1200" height="662" />
+		
+		<!-- <background id="now" src="bg-work-now.jpg" width="1200" height="797" /> -->
+		<background id="folio1" src="bg-work-all.jpg" width="1200" height="797" />
+		
+		<background id="littleFilmsReel" src="bg-work-lf-reel.jpg" width="1200" height="857" />
+		<background id="path" src="bg-work-path.jpg" width="1200" height="857" />
+		<background id="globalToLocal" src="bg-work-g2l.jpg" width="1200" height="857" />
+		<background id="tideCleanStart" src="bg-work-tide.jpg" width="1200" height="857" />
+		<background id="rwandaDocumentary" src="bg-work-rwanda.jpg" width="1200" height="857" />
+		<background id="revolution" src="bg-work-revolution.jpg" width="1200" height="662" />
+		<background id="nraNeighbors" src="bg-work-nra-neighbors.jpg" width="1200" height="857" />
+		
+		
+		
+		<background id="dineForAmerica" src="bg-work-dineforamerica.jpg" width="1200" height="857" />
+		<background id="erikAndBarryReel" src="bg-work-erikbarry.jpg" width="1200" height="857" />
+		<background id="potteryWebMovie" src="bg-work-pottery.jpg" width="1200" height="797" />
+		<!-- <background id="providenceLeadershipAward" src="bg-work-proworkence.jpg" width="1200" height="857" /> -->
+		<background id="safecoDiversityScholarshipFund" src="bg-work-safeco.jpg" width="1200" height="857" />
+		<background id="blackAchieverPledgePSA" src="bg-work-ymca.jpg" width="1200" height="857" />
+		<background id="littleFilmsGoodTeaser" src="bg-work-LFgood.jpg" width="1200" height="857" />
+		<background id="sodexo" src="bg-work-sodexo.jpg" width="1200" height="857" />
+		
+		<background id="nraSuccessStories" src="bg-work-nra-successstories.jpg" width="1200" height="857" />
+		
+		<!-- <background id="then" src="bg-work-then.jpg" width="1200" height="797" /> -->
+		<background id="folio2" src="bg-work-all.jpg" width="1200" height="797" />
+		<background id="littleFilmsBusinessReel" src="bg-work-LFbiz.jpg" width="1200" height="857" />
+		<background id="americasRestaurants" src="bg-work-amerrest.jpg" width="1200" height="857" />
+		<background id="microsoftMontage" src="bg-work-microsoft.jpg" width="1200" height="857" />
+		<background id="novelisVisionAndValues" src="bg-work-novelis.jpg" width="1200" height="857" />
+		<background id="palominoTVSpot" src="bg-work-palomino-1.jpg" width="1200" height="857" />
+		<background id="portOfSeattleAPECPresentation" src="bg-work-portofseattle.jpg" width="1200" height="857" />
+		<background id="toughCrowd" src="bg-work-toughcrowd.jpg" width="1200" height="857" />
+		<background id="wamuSmallBusinessBankingCD" src="bg-work-wamu-1.jpg" width="1200" height="857" />
+
+	</content>
+	
+</images>

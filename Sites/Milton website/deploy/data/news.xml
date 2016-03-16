@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data title="Projecten Update">
+	<item>
+		<date><![CDATA[15-10-2011]]></date>
+		<title><![CDATA[<b>Title 2</b>]]></title>
+		<previewtext><![CDATA[This is HTML text, you can use <b>tags</b> here]]></previewtext>
+		<readmoretext><![CDATA[lees meer]]></readmoretext>
+		<imageurl><![CDATA[images/image1.jpg]]></imageurl>
+		<text1><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></text1>
+		<text2><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></text2>
+	</item>
+	
+	<item>		
+		<date><![CDATA[15-10-2011]]></date>
+		<title><![CDATA[<b>Title 2</b>]]></title>
+		<previewtext><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></previewtext>
+		<readmoretext><![CDATA[lees meer]]></readmoretext>
+		<imageurl><![CDATA[images/image1.jpg]]></imageurl>
+		<text1><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></text1>
+		<text2><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></text2>
+	</item>
+	
+	<item>
+		<date><![CDATA[15-10-2011]]></date>
+		<title><![CDATA[<b>Title 2</b>]]></title>
+		<previewtext><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></previewtext>
+		<readmoretext><![CDATA[lees meer]]></readmoretext>
+		<imageurl><![CDATA[images/image1.jpg]]></imageurl>
+		<text1><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></text1>
+		<text2><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></text2>
+	</item>
+	
+	<item>
+		<date><![CDATA[15-10-2011]]></date>
+		<title><![CDATA[<b>Title 2</b>]]></title>
+		<previewtext><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></previewtext>
+		<readmoretext><![CDATA[lees meer]]></readmoretext>
+		<imageurl><![CDATA[images/image1.jpg]]></imageurl>
+		<text1><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></text1>
+		<text2><![CDATA[About 100 symbols here, About 100 symbols here, About 100 symbols here, About 100 symbols here]]></text2>
+	</item>
+</data>

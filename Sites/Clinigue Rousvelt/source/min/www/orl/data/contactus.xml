@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formModule margins="0,0,0,0" gutter="20">
+	<title>Des questions?</title>
+	<text position="top" height="0.5">
+		<![CDATA[<p><b>Docteur Francois Furia</b>
+		<br/>
+Responsable du Département Oto-Rhino-Laryngologie : <br>
+Tél: 00 33 (0)1 42 56 51 32  <br>
+Fax: 00 33 (0)1 42 56 64 49<br>
+e-mail: <a href="mailto:francois-furia@clinique-roosevelt.com">francois-furia@clinique-roosevelt.com</a>
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.fr/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=9+rue+jean+goujon,+paris&amp;sll=46.75984,1.738281&amp;sspn=7.180318,14.040527&amp;ie=UTF8&amp;ll=48.867961,2.306871&amp;spn=0.00988,0.018239&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a target="_blank" href="http://maps.google.fr/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=9+rue+jean+goujon,+paris&amp;sll=46.75984,1.738281&amp;sspn=7.180318,14.040527&amp;ie=UTF8&amp;ll=48.867961,2.306871&amp;spn=0.00988,0.018239&amp;z=15&amp;iwloc=A" style="color:#0000FF;text-align:left">PLAN</a></small></p> ]]>
+	</text>
+	<form action="php/contactus.php" labelwidth="120" maxwidth="" >
+		<item>
+			<label>Nom:</label>
+			<input name="name" type="text" value="Votre nom ici" width="200" maxlength="100" minlength="2"/>
+		</item>
+		<item>
+			<label>Votre email:</label>
+			<input name="email" type="text" value="Votre email ici" width="200" minlength="4"  />
+		</item>
+		<item>
+			<label>Objet:</label>
+			<input name="subject" type="text" value="Objet" width="300" minlength="2"  />
+		</item>
+		<item>
+			<label>Message:</label>
+			<textarea name="message" width="300" height="100"  minlength="4" maxlength="200" >Ecrire votre message ici</textarea>
+		</item>
+		<item>
+			<input name="submit" type="submit" value="Envoyer" width="100" />
+		</item>
+	</form>
+	<help msgpos="right">
+		<onSetFocus name="name" message="SVP tapez votre nom en entier" />
+		<onSetFocus name="subject" message="e.g. Sales query or Website issue" />
+		<onKillFocus name="email" rule="email" message="Adresse email non valide" />
+		<onKillFocus name="email" rule="minlength" message="Adresse email non valide" />
+		<onSubmit name="subject" rule="minlength" message="SVP ajoutez l'objet du message" />
+		<onSubmit name="message" rule="minlength" message="SVP ajoutez le message" />
+		<onSubmit name="name" rule="minlength" message="SVP ajoutez votre nom" />
+		<onSubmit name="message" rule="maxlength" message="SVP raccourcir votre message, nous vous repondrons plus rapidement si le message est plus concis." />
+	</help>
+</formModule>

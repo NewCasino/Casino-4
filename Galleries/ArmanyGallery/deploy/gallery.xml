@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<gallery thumbFolder="images/thumbs" imageFolder="images/fullsize" thumbsGap="5" thumbWidth="132" thumbHeight="198" imageWidth="225" imageHeight="338" thumbBorder="true" thumbBorderColor="0x000000" thumbBorderRollOverColor="0xffffff">
+	<title name="XML Image gallery with blured background."/>
+	<closebutton label="Back..." url="http://www.yahoo.com" />
+	<background url="images/background/back.jpg"/>
+	<images>
+		<image imageUrl="1.jpg" thumbUrl="1.jpg">Mountain river</image>
+		<image imageUrl="2.jpg" thumbUrl="2.jpg">The cave</image>
+		<image imageUrl="3.jpg" thumbUrl="3.jpg">Cave lake</image>
+		<image imageUrl="4.jpg" thumbUrl="4.jpg">Mountain camping</image>
+		<image imageUrl="5.jpg" thumbUrl="5.jpg">Girl</image>
+		<image imageUrl="6.jpg" thumbUrl="6.jpg">Happy family</image>
+		<image imageUrl="7.jpg" thumbUrl="7.jpg">Live performance</image>
+		<image imageUrl="8.jpg" thumbUrl="8.jpg">Handworks</image>
+		<image imageUrl="9.jpg" thumbUrl="9.jpg">Immemorial custom</image>
+		<image imageUrl="10.jpg" thumbUrl="10.jpg">Building</image>
+		<image imageUrl="11.jpg" thumbUrl="11.jpg">Photographer</image>		
+	</images>
+</gallery>

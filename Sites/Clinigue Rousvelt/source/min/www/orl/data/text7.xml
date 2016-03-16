@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title>We are situated in 3 major business centres. We know your region.</title>
+	<text>
+	<p><strong>In hac habitasse platea dictumst. Nulla tortor. Fusce suscipit nibh vitae diam mollis convallis. Sed vel nisi elementum nibh tempus fringilla. Praesent venenatis erat a elit. Aliquam et dui. Nulla velit nisl, placerat eget, porta eget, faucibus at, erat. Nunc ullamcorper consequat nibh. Proin mollis orci sed tortor. Donec dui lectus, eleifend ut, porttitor eu, tempor quis, quam.</strong></p>
+	<br/><img src="images/stairs.jpg" hspace="4" vspace="4" align="right" />
+<br />
+<h2>Location 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae diam ac justo euismod laoreet.</p>
+<br/>1234 Vestibulum St.
+<br/>Nulla, Donec.
+<br/>
+<br/><span class="em">Tel: </span> +34 8 7234 1362
+<br/><span class="em">Fax: </span> +34 8 7234 1363
+<br/>
+<br/><span class="em">Email: </span> <a href="mailto:location1@domain.com" >location1@domain.com </a>
+<br/>
+<br/>
+<br/>
+<h2>Location 2</h2>
+<p>Quisque vitae leo accumsan enim ullamcorper venenatis. Aenean mi. Mauris aliquam lorem eu ligula.</p>
+<br/>L6, 345 Aenean Ave.
+<br/>Aliquam, Mauris 45102.
+<br/>
+<br/><span class="em">Tel: </span> +34 4 7203 1002
+<br/><span class="em">Fax: </span> +34 4 7203 1003
+<br/>
+<br/><span class="em">Email: </span> <a href="mailto:location2@domain.com" >location2@domain.com </a>
+<br/>
+<br/>
+<br/>
+<h2>Location 3</h2>
+<p>Aenean neque nulla, congue id, dictum ac, faucibus in, nibh.</p>
+<br/>L6, 345 Praesent Blvd.
+<br/>Fusce, Proin 2301.
+<br/>
+<br/><span class="em">Tel: </span> +34 6 4403 0066
+<br/><span class="em">Fax: </span> +34 6 4403 6600
+<br/>
+<br/><span class="em">Email: </span> <a href="mailto:location3@domain.com" >location3@domain.com </a>
+</text>
+</mostlyText>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<celeb name="Bette Midler" bday="December 1st" image="images/Image_3.jpg" />
+	<celeb name="Britney Spears" bday="December 2nd" image="images/Image_5.jpg" />
+	<celeb name="Nelly Furtado" bday="December 2nd" image="images/Image_8.jpg" />
+	<celeb name="Brandan Faser" bday="December 3rd" image="images/Image_11.jpg" />
+	
+	
+	<celeb name="Ozzy Osbourne" bday="December 3rd" image="images/Image_1.jpg"/>
+	<celeb name="Jay-Z" bday="December 4th" image="images/Image_6.jpg"/>
+	<celeb name="Tyra Banks" bday="December 4th" image="images/Image_2.jpg"/>
+	<celeb name="Larry Bird" bday="December 7th" image="images/Image_4.jpg"/>
+	
+	<celeb name="Terri Hatcher" bday="December 8st" image="images/Image_7.jpg" />
+	<celeb name="John Malkovich" bday="December 9st" image="images/Image_9.jpg" />
+	<celeb name="Raven Syome" bday="December 10st" image="images/Image_10.jpg" />
+	<celeb name="Jamie Fox" bday="December 13st" image="images/Image_12.jpg" />
+	
+	<celeb name="Katie Holmes" bday="December 18th" image="images/Image_17.jpg" />
+	<celeb name="Jake Gyllenhaal" bday="December 19th" image="images/Image_18.jpg" />
+	<celeb name="K. Sutherland" bday="December 21th" image="images/Image_19.jpg" />
+	<celeb name="Corey Haim" bday="December 23th" image="images/Image_20.jpg" />
+
+</data>

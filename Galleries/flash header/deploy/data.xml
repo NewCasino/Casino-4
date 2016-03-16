@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<header folderUrl="images/headers" imageWidth="733" imageHeight="255">	
+	<logo url="images/dgedlogo.gif" link="http://yahoo.com"/>
+	<images>
+		<image imageUrl="1.jpg" link="http://yahoo.com" bigText="Only big text here."/>
+		<image imageUrl="2.jpg" link="http://yahoo.com" smallText="this is a small text for image 2" bigText="THIS IS A BIG TEXT FOR IMAGE 2"/>
+		<image imageUrl="3.jpg" link="http://yahoo.com" smallText="this is a small text for image 3" bigText="THIS IS A BIG TEXT FOR IMAGE 3"/>
+		<image imageUrl="4.jpg" link="http://yahoo.com" bigText="There is no small text here, only big one."/>
+		<image imageUrl="5.jpg" link="http://yahoo.com" smallText="there is no big text here, only small one." />
+		<image imageUrl="6.jpg" link="http://yahoo.com" smallText="this is a small text for image 6" bigText="THIS IS A BIG TEXT FOR IMAGE 6"/>
+	</images>
+</header>

@@ -1,0 +1,83 @@
+<?
+$arr = $_GET;
+$str = '';
+ foreach ($arr as $key => $value) {
+   $str .= $key."=".$arr[$key]."\n";      
+  }
+
+//mail("sava@oligarch.us", "video palyer oligarch", $str);
+
+?><xml>
+<!--	
+	 <preroll>
+	  <video active="true" path="http://oligarch.us/flv/adv.flv"  link="http://yahoo.com" />
+	  <image active="false"  path="images/logo.swf" link="http://yahoo.com" time="3"/>
+	 </preroll>
+-->
+	
+	 <postroll>
+	  <video active="true" path="http://oligarch.us/flv/adv.flv" link="http://yahoo.com" />
+	  <image active="false" path="images/hair.png" link="http://yahoo.com" time="5"/>
+	 </postroll>
+<!--	 <brand title="My Company" link="http://yahoo.com" />  -->
+
+	<rmpt path="rtmp://9tv401s0y5m.rtmphost.com/mary_chat/3/" /> 
+	
+	<settings scale="1"/>
+	<file path="01" image="images/1.jpg" />
+	<logo path="logo.swf" link="http://google.com" location="TR"/>
+	<!-- TL, TR, BL, BR, progress_bar -->
+	<embed><![CDATA[<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="430" height="365" id="video_player" align="middle">
+		<param name="allowScriptAccess" value="sameDomain" />
+		<param name="allowFullScreen" value="false" />
+		<param name="movie" value="http://oligarch.us/flash/Saish B/video_player.swf?http_base_url=http://oligarch.us/&xml_path=http://oligarch.us/flash/Saish B/data.xml" /><param name="quality" value="high" /><param name="bgcolor" value="#000000" />	<embed src="video_player.swf" quality="high" bgcolor="#000000" width="430" height="365" name="video_player" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</object>]]>
+	</embed>
+	<php_path value="http://oligarch.us/flash/Saish B/send.php" />
+	<link value="http://oligarch.us/flash/Saish%20B/video_Player.html" />
+	<related_videos>
+
+		<video thumb="images/1.jpg" title="Title 01" link="http://adobe.com" />		
+		<video thumb="images/2.jpg" title="Title 02" link="http://msn.com" />
+		<video thumb="images/3.jpg" title="Title 03" link="http://yahoo.com" />
+		<video thumb="images/thumbs/4.jpg" title="Title 04" link="http://google.com" />
+		<video thumb="images/thumbs/1.jpg" title="Title 05" link="http://adobe.com" />
+		<video thumb="images/thumbs/2.jpg" title="Title 06" link="http://msn.com" />
+		<video thumb="images/thumbs/3.jpg" title="Title 07" link="http://yahoo.com" />
+		<video thumb="images/thumbs/4.jpg" title="Title 08" link="http://google.com" />
+		<video thumb="images/thumbs/1.jpg" title="Title 09" link="http://adobe.com" />
+		<video thumb="images/thumbs/2.jpg" title="Title 10" link="http://msn.com" />
+		<video thumb="images/1.jpg" title="Title 01" link="http://adobe.com" />
+		<video thumb="images/2.jpg" title="Title 02" link="http://msn.com" />
+		<video thumb="images/3.jpg" title="Title 03" link="http://yahoo.com" />
+		<video thumb="images/thumbs/4.jpg" title="Title 04" link="http://google.com" />
+		<video thumb="images/thumbs/1.jpg" title="Title 05" link="http://adobe.com" />
+		<video thumb="images/thumbs/2.jpg" title="Title 06" link="http://msn.com" />
+		<video thumb="images/thumbs/3.jpg" title="Title 07" link="http://yahoo.com" />
+		<video thumb="images/thumbs/4.jpg" title="Title 08" link="http://google.com" />
+		<video thumb="images/thumbs/1.jpg" title="Title 09" link="http://adobe.com" />
+		<video thumb="images/thumbs/2.jpg" title="Title 10" link="http://msn.com" />
+	</related_videos>
+
+	<button_sharing value="1"/>
+	<buttonsname>
+		<replay value="REPLAY1"/>
+		<play_btn value="play1"/>
+		<seeking value="Seeking1..."/>
+		<ready value="ready1"/>
+		<loading value="loading1"/>
+		<paused value="paused1"/>
+		<ready value="ready1"/>
+		<embed_box_text value="Use the embed code below to put this video on your own website"/>
+		<embed value="Embed1"/>
+		<get_link value="Get Link 1"/>
+		<copy_link_btn value="COPY LINK1"/>
+		<copy_code_btn value="COPY CODE1"/>
+		<send_message_btn value="Send Message1"/>
+		<email  value="Email1"/>
+		<your_name value="your name1"/>
+		<your_email value="your email1"/>
+		<friends_email_adresses value="friends email1"/>
+		<message value="message1"/>
+	</buttonsname>
+</xml>

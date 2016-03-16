@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<indexModule>
+	<title useParent="longtitle" ></title>
+	<grid cols="4" rows="4" gutter="16">
+		<thumbnail cols="2" rows="3" x="0" y="0" ><text><p>text text text text text text text text text text . text text text text text text text text text text text text text text text text text text text text text text .</p><br/><p>text text text text text text text text . text text text text text text text text text text text text text text text text text text text text text text text text text text text text .</p></text></thumbnail>
+		<thumbnail id="sunset" cols="1" rows="2" x="2" y="0"/>
+		<thumbnail id="germany" cols="2" rows="2" x="2" y="2"/>
+	</grid>
+</indexModule>

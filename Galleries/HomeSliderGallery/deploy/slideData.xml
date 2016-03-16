@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--link type: url, frame_name, frame_num -->
+<data>	
+	<image_width_max>650</image_width_max>
+	<image_height_max>270</image_height_max>
+	<thumb_width>100</thumb_width>
+	<thumb_height>50</thumb_height>
+	<mask_width>650</mask_width>
+	<mask_height>260</mask_height>
+	<mask_grid_size>100</mask_grid_size>	
+	<change_interval>4</change_interval>
+	<stories>
+		<story>
+			<image>images/slide/1.jpg</image>
+			<link type="url">javascript:openVenue('1')</link>
+			<thumb>images/slide/thumbs/1.jpg</thumb>
+		</story>
+		<story>
+			<image>images/slide/2.jpg</image>
+			<link type="url">javascript:openVenue('1')</link>
+			<thumb>images/slide/thumbs/2.jpg</thumb>
+		</story>
+		<story>
+			<image>images/slide/3.jpg</image>
+			<link type="url">javascript:openVenue('1')</link>
+			<thumb>images/slide/thumbs/3.jpg</thumb>
+		</story>
+		<story>
+			<image>images/slide/4.jpg</image>
+			<link type="url">javascript:openVenue('1')</link>
+			<thumb>images/slide/thumbs/4.jpg</thumb>
+		</story>
+		<story>
+			<image>images/slide/5.jpg</image>
+			<link type="url">javascript:openVenue('1')</link>
+			<thumb>images/slide/thumbs/5.jpg</thumb>
+		</story>
+		<story>
+			<image>images/slide/6.jpg</image>
+			<link type="url">javascript:openVenue('1')</link>
+			<thumb>images/slide/thumbs/6.jpg</thumb>
+		</story>
+		<story>
+			<image>images/slide/7.jpg</image>
+			<link type="url">javascript:openVenue('1')</link>
+			<thumb>images/slide/thumbs/7.jpg</thumb>
+		</story>
+		<story>
+			<image>images/slide/8.jpg</image>
+			<link type="url">javascript:openVenue('1')</link>
+			<thumb>images/slide/thumbs/8.jpg</thumb>
+		</story>
+		<story>
+			<image>images/slide/9.jpg</image>
+			<link type="url">javascript:openVenue('1')</link>
+			<thumb>images/slide/thumbs/9.jpg</thumb>
+		</story>
+	</stories>
+</data>
+

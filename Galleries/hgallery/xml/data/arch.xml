@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<slides>
+
+	<slide path="images/architecture/normal/madness_arch1.jpg" thumbPath="images/architecture/thumb/madness_arch1.jpg">
+		<caption><![CDATA[architecture]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/madness_arch2.jpg" thumbPath="images/architecture/thumb/madness_arch2.jpg">
+		<caption><![CDATA[balcony]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in magna sed erat lobortis dignissim eget quis ante. 
+				Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc scelerisque sollicitudin urna, 
+				vel egestas erat pretium eu. Maecenas vulputate risus sit amet lectus iaculis ut commodo est aliquet.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/madness_arch3.jpg" thumbPath="images/architecture/thumb/madness_arch3.jpg">
+		<caption><![CDATA[architecture (close up)]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/random_statue.jpg" thumbPath="images/architecture/thumb/random_statue.jpg">
+		<caption><![CDATA[random statue]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/scottwills_building1.jpg" thumbPath="images/architecture/thumb/scottwills_building1.jpg">
+		<caption><![CDATA[building with columns]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in magna sed erat lobortis dignissim eget quis ante. 
+				Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc scelerisque sollicitudin urna, 
+				vel egestas erat pretium eu. Maecenas vulputate risus sit amet lectus iaculis ut commodo est aliquet.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/scottwills_building2.jpg" thumbPath="images/architecture/thumb/scottwills_building2.jpg">
+		<caption><![CDATA[building]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/scottwills_churchdoors.jpg" thumbPath="images/architecture/thumb/scottwills_churchdoors.jpg">
+		<caption><![CDATA[church doors]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/scottwills_fountain.jpg" thumbPath="images/architecture/thumb/scottwills_fountain.jpg">
+		<caption><![CDATA[fountain]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in magna sed erat lobortis dignissim eget quis ante. 
+				Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc scelerisque sollicitudin urna, 
+				vel egestas erat pretium eu. Maecenas vulputate risus sit amet lectus iaculis ut commodo est aliquet.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/scottwills_gardens.jpg" thumbPath="images/architecture/thumb/scottwills_gardens.jpg">
+		<caption><![CDATA[gardens]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/scottwills_ire_escape.jpg" thumbPath="images/architecture/thumb/scottwills_ire_escape.jpg">
+		<caption><![CDATA[fire escape]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/scottwills_lichterman.jpg" thumbPath="images/architecture/thumb/scottwills_lichterman.jpg">
+		<caption><![CDATA[lichterman]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in magna sed erat lobortis dignissim eget quis ante. 
+				Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc scelerisque sollicitudin urna, 
+				vel egestas erat pretium eu. Maecenas vulputate risus sit amet lectus iaculis ut commodo est aliquet.
+			]]>
+		</description>
+	</slide>
+
+	<slide path="images/architecture/normal/scottwills_modern_sculpture.jpg" thumbPath="images/architecture/thumb/scottwills_modern_sculpture.jpg">
+		<caption><![CDATA[modern sculpture]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/architecture/normal/scottwills_modernsculpture2.jpg" thumbPath="images/architecture/thumb/scottwills_modernsculpture2.jpg">
+		<caption><![CDATA[sculpture]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque massa leo, sed viverra mi. 
+				Integer volutpat eleifend pharetra. Pellentesque sollicitudin ipsum at augue tempor fringilla. Curabitur leo orci, volutpat ut 
+				volutpat quis, sodales vitae mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
+				Praesent nulla enim, dignissim quis congue id, aliquam fringilla dui. 
+				Curabitur eget massa pharetra nisl faucibus vehicula eget ac neque. Pellentesque metus erat, posuere id viverra vel, pretium ut dolor.
+	 		]]>
+		</description>
+	</slide>
+	
+</slides>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sections id="0">
+	<section id="1" label="Company" f="2" ddlref="company">
+		<section id="1" label="About Us" ddlref="about"></section>
+		<section id="2" label="Executive Team" ddlref="team">
+			<section id="1" label="Executive Management" ddlref="executive"/>
+			<section id="2" label="Senior Management" ddlref="senior"/>
+		</section>
+		<section id="3" label="Press &amp; News" ddlref="pressnews">
+			<section id="1" label="Press Releases" ddlref="pressreleases"/>
+			<section id="2" label="Media Kit" ddlref="mediakit"/>	
+			<section id="3" label="Current News" ddlref="news"/>	
+			<section id="4" label="Archived News" ddlref="archivednews"/>	
+		</section>
+		<section id="4" label="Partners" ddlref="partners"/>
+		<section id="5" label="Careers" ddlref="careers"/>
+	</section>
+	<section id="2" label="Portfolio" f="2" ddlref="portfolio">
+		<!-- [This portion is generated dynamically] -->
+		<section id="1" label="Date" ddlref="bydate">
+			<section id="1" dbid="2009" label="2009" ddlref="2009"/>
+			<section id="2" dbid="2008" label="2008" ddlref="2008"/>
+			<section id="3" dbid="2007" label="2007" ddlref="2007"/>
+			<section id="4" dbid="2006" label="2006" ddlref="2006"/>
+			<section id="5" dbid="2005" label="2005" ddlref="2005"/>
+			<section id="6" dbid="2004" label="2004" ddlref="2004"/>
+			<section id="7" dbid="2003" label="2003" ddlref="2003"/>
+			<section id="8" dbid="2002" label="2002" ddlref="2002"/>
+			<section id="9" dbid="2001" label="2001" ddlref="2001"/>
+			<section id="10" dbid="2000" label="2000" ddlref="2000"/>
+			<section id="11" dbid="1999" label="1999" ddlref="1999"/>
+			<section id="12" dbid="showall" label="Show All" ddlref="showall"/>
+		</section>
+		<section id="2" label="Projects by Alpha" ddlref="byproject">
+			<section id="1" dbid="09ab" ddlref="09ab" label="0-9; A-B"/>
+			<section id="2" dbid="ce" ddlref="ce" label="C-E"/>
+			<section id="3" dbid="f" ddlref="f" label="F"/>
+			<section id="4" dbid="gl" ddlref="gl" label="G-L"/>
+			<section id="5" dbid="mr" ddlref="mr" label="M-R"/>
+			<section id="6" dbid="sz" ddlref="sz" label="S-Z"/>
+			<section id="7" dbid="showall" ddlref="showall" label="Show All"/>
+		</section>
+		<section id="3" label="Clients by Alpha" ddlref="byclient">
+			<section id="1" dbid="09ab" ddlref="09ab" label="0-9; A-B"/>
+			<section id="2" dbid="ce" ddlref="ce" label="C-E"/>
+			<section id="3" dbid="f" ddlref="f" label="F"/>
+			<section id="4" dbid="gl" ddlref="gl" label="G-L"/>
+			<section id="5" dbid="mr" ddlref="mr" label="M-R"/>
+			<section id="6" dbid="sz" ddlref="sz" label="S-Z"/>
+			<section id="7" dbid="showall" ddlref="showall" label="Show All"/>
+		</section>
+		<section id="4" label="Industry" ddlref="byindustry">
+			<section id="1" dbid="7" label="Automotive" ddlref="automotive"/>
+			<section id="2" dbid="8" label="B to B" ddlref="b2b"/>
+			<section id="3" dbid="9" label="B to C" ddlref="b2c"/>
+			<section id="4" dbid="10" label="Entertainment" ddlref="entertainment"/>
+			<section id="5" dbid="11" label="Financial" ddlref="financial"/>
+			<section id="6" dbid="12" label="Internal" ddlref="internal"/>
+			<section id="7" dbid="13" label="Not for Profit" ddlref="notforprofit"/>
+			<section id="8" dbid="14" label="Real Estate/ Architect" ddlref="realestate"/>
+			<section id="9" dbid="15" label="Sports" ddlref="sports"/>
+			<section id="10" dbid="16" label="Technology" ddlref="technology"/>
+			<section id="11" dbid="18" label="Show All" ddlref="showall"/>
+		</section>
+		<section id="5" label="Service" ddlref="byservice">
+			<section id="1" dbid="35" label="Design" ddlref="design"/>
+			<section id="2" dbid="36" label="Development" ddlref="development"/>
+			<section id="3" dbid="37" label="Video" ddlref="video"/>
+			<section id="4" dbid="38" label="Rich Media" ddlref="richmedia"/>
+			<section id="5" dbid="39" label="3D Design" ddlref="3d"/>
+			<section id="6" dbid="40" label="Audio" ddlref="audio"/>
+			<section id="7" dbid="41" label="Branding" ddlref="branding"/>
+			<section id="8" dbid="42" label="Photography" ddlref="photography"/>
+			<section id="9" dbid="43" label="Promotion" ddlref="promotion"/>
+			<section id="10" dbid="44" label="Print" ddlref="print"/>
+		</section>
+		<section id="6" label="Type" ddlref="bytype">
+			<section id="1" dbid="4" label="Rich Internet App (RIA)" ddlref="ria"/>
+			<section id="2" dbid="5" label="Microsites" ddlref="microsites"/>
+			<section id="3" dbid="6" label="Websites &amp; Redesigns" ddlref="websites"/>
+			<section id="4" dbid="7" label="Intros &amp; Demos" ddlref="demos"/>
+			<section id="5" dbid="8" label="CMS &amp; Backend" ddlref="cms"/>
+			<section id="6" dbid="9" label="ECommerce" ddlref="ecom"/>
+			<section id="7" dbid="10" label="Identity" ddlref="identity"/>
+			<section id="8" dbid="11" label="Video &amp; Broadcast" ddlref="video"/>
+			<section id="9" dbid="12" label="Localization" ddlref="localization"/>
+			<section id="10" dbid="13" label="User Interface Design" ddlref="ui"/>
+			<section id="11" dbid="14" label="Concept Designs" ddlref="concept"/>
+			<section id="12" dbid="15" label="Show All" ddlref="showall"/>
+		</section>
+		<!-- [End] -->
+	</section>
+	<section id="3" label="Services" f="2"  ddlref="services">
+		<!-- [Edit this portion from the CMS] -->
+		<section id="1" label="Design" ddlref="design"/>
+		<section id="2" label="Development" ddlref="development"/>
+		<section id="3" label="Video" ddlref="video"/>
+		<section id="4" label="Rich Media" ddlref="richmedia"/>
+		<section id="5" label="3D Design" ddlref="3d"/>
+		<section id="6" label="Audio" ddlref="audio"/>
+		<section id="7" label="Branding" ddlref="branding"/>
+		<section id="8" label="Photography" ddlref="photography"/>
+		<section id="9" label="Promotion" ddlref="promotion"/>
+		<section id="10" label="Print" ddlref="print"/>
+		<!-- [End] -->
+	</section>
+	<section id="4" label="Case Studies" f="2" ddlref="casestudies">
+		<!-- [This portion is generated dynamically] -->
+		<section id="1" label="Date" ddlref="bydate">
+			<section id="1" dbid="2009" label="2009" ddlref="2009"/>
+			<section id="2" dbid="2008" label="2008" ddlref="2008"/>
+			<section id="3" dbid="2007" label="2007" ddlref="2007"/>
+			<section id="4" dbid="2006" label="2006" ddlref="2006"/>
+			<section id="5" dbid="2005" label="2005" ddlref="2005"/>
+			<section id="6" dbid="2004" label="2004" ddlref="2004"/>
+			<section id="7" dbid="2003" label="2003" ddlref="2003"/>
+			<section id="8" dbid="2002" label="2002" ddlref="2002"/>
+			<section id="9" dbid="2001" label="2001" ddlref="2001"/>
+			<section id="10" dbid="2000" label="2000" ddlref="2000"/>
+			<section id="11" dbid="1999" label="1999" ddlref="1999"/>
+			<section id="12" dbid="showall" label="Show All" ddlref="showall"/>
+
+		</section>
+		<section id="2" label="Projects by Alpha" ddlref="byproject">
+			<section id="1" dbid="09ab" ddlref="09ab" label="0-9; A-B"/>
+			<section id="2" dbid="ce" ddlref="ce" label="C-E"/>
+			<section id="3" dbid="f" ddlref="f" label="F"/>
+			<section id="4" dbid="gl" ddlref="gl" label="G-L"/>
+			<section id="5" dbid="mr" ddlref="mr" label="M-R"/>
+			<section id="6" dbid="sz" ddlref="sz" label="S-Z"/>
+			<section id="7" dbid="showall" ddlref="showall" label="Show All"/>
+
+		</section>
+		<section id="3" label="Clients by Alpha" ddlref="byclient">
+			<section id="1" dbid="09ab" ddlref="09ab" label="0-9; A-B"/>
+			<section id="2" dbid="ce" ddlref="ce" label="C-E"/>
+			<section id="3" dbid="f" ddlref="f" label="F"/>
+			<section id="4" dbid="gl" ddlref="gl" label="G-L"/>
+			<section id="5" dbid="mr" ddlref="mr" label="M-R"/>
+			<section id="6" dbid="sz" ddlref="sz" label="S-Z"/>
+			<section id="7" dbid="showall" ddlref="showall" label="Show All"/>
+		</section>
+		<!-- [End] -->
+	</section>
+	<section id="5" label="Recognition" f="2" ddlref="recognition">
+		<section id="1" label="Magazine Articles" ddlref="magazine"/>
+		<section id="2" label="Online Publications" ddlref="online"/>
+		<section id="3" label="Awards" ddlref="awards"/>
+		<section id="4" label="Books" ddlref="books"/>
+		<!--<section id="5" label="Event Calendar" ddlref="events"/>-->
+	</section>
+</sections>	

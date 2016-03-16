@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Automated table of contents - actionscript 2 and 3 - Documentation</title>
+<style type="text/css">
+body {margin:0 auto; width:900px;font-family:Geneva, Arial, Helvetica, sans-serif;font-size:80%;}
+.welcome{border:3px solid #cdc; padding:20px; background:#ded; color:#565;}
+.code {font-family: "Courier New", Courier, monospace;color:#600}
+div.code{ padding:10px; border:2px solid #ccc;width:80%;}
+.code li{ list-style:none;}
+.code li.comment{color:#666;margin-top:1em;}
+.code span{color:#CC0033; font-weight:bold}
+h1,h2,h3,h4,h5,h6{margin-bottom:0;}
+h1{font-size:1.9em;color:#999;}
+h2{font-size:1.6em;color:#666;}
+h3{font-size:1.2em;color:#333;}
+h4{font-size:1.0em;}
+h5{font-size:0.8em;color:#333;}
+h6{font-size:0.8em;color:#666;}
+p{margin-top:0.2em;margin-left:1em;}
+-->
+</style>
+</head>
+
+<body>
+<a name="top"></a>
+<h1>Minimalist, versatile, corporate site template - mbudm#001 (actionscript 2)</h1>
+<p>v1.2 created by Steve Roberts <br />
+August 2009</p>
+<h3>Contact me via my Flashden profile page: <a href="http://flashden.net/user/mbudm" >http://flashden.net/user/mbudm</a></h3>
+<h4 class="welcome">Thankyou very much for purchasing one of my projects I hope you find a good use for it. If you find any bugs in the code or problems with implementing I'm happy to help. However as with most FlashDen authors I can't spend time giving advice about design, code or help with work that is not related to these files. I am available for  freelance work but for small tasks and bug fixing  it is usually better for you to solve the problem yourself.<br />
+  <br/>
+If you do run into a problem, please take the time to read this documentation file. I have made an effort to explain everything you can do with this project so hopefully your question(s) will be answered right away in the material below.</h4>
+<h2>Contents</h2>
+<ol>
+  <li><a href="#description">Description</a></li>
+  <li><a href="#files">Files included in this download</a></li>
+  <li><a href="#simple">Simple implementation</a> - for users who  want to use the template as is
+    <ol>
+      <li><a href="#editing">Editing Content</a></li>
+      <li><a href="#design">Design and layout changes - reskinning</a></li>
+      <li><a href="#external">Using the external module</a></li>
+    </ol>
+  </li>
+  <li><a href="#more">More information</a> - for more advanced users who want to modify or extend the template
+  <ol>
+      <li><a href="#structure">Class structure</a></li>
+      <li><a href="#ui">UI classes</a> - for modifying design/layout code</li>
+      <li><a href="#core">Core classes</a> - all the non UI code</li>
+      <li><a href="#third">Third party code</a></li>
+  </ol>
+  </li>
+  <li><a href="#trouble" >Troubleshooting</a> - Please check here before asking for help
+    <ol>
+      <li><a href="#testing">Testing within Flash</a></li>
+      <li><a href="#security">Testing locally in the browser</a> (Adobe Security)</li>
+    </ol>
+  </li>
+  <li><a href="#history">Update history</a></li>
+</ol>
+<h2><a name="description" id="description"></a>Description</h2>
+<p>The mbudm#001 template is primarily aimed at the corporate market. It is well suited to a small to medium organisation, looking for a crisp and informative web presence. To achieve this, the template is simple, tasteful and professional with a focus on text. This Flash template lets you create a personalised Flash website with no need for actionscript coding knowledge.</p>
+<h3>Four modules</h3>
+<p>The mbudm#001 template lets you choose pages/site sections from four module types designed to help you customise the template to your liking. Of course a navigation item can also link to an external URL.</p>
+<h4>1. Mostly text module</h4>
+<p>This module type is for pages that are predominantly text. It has one textField with support for inline images and html/css and it includes my popular download, Automatic Table of Contents which you can switch on and position to your liking.</p>
+<h4>2. External swf module</h4>
+<p>This module loads  a separate swf of your choice. It can be configured to receive onResize() broadcasts plus it can also be set up to call another function at the root of your external swf and pass a parameter to this function. One example of how this can be useful is for calling an initialise() function in your swf.</p>
+<h4>3. Form module</h4>
+<p>The form module is a simple contact form - it sends the form data to an email address that you specify. The form module is quite customisable, as the form fields are editable in the XML file. The XML is also very easy, because it uses as much standard html form tags as possible.</p>
+<h4>4. Gallery module</h4>
+<p> The gallery module presents images and videos in a clean, uncluttered design. Of course deep linking is integrated into the gallery module. The gallery module is made up of two parts - index and media. The index module lets you lay out your collection of images and videos - usually as thumbnails. The media page displays the image or video at a bigger size.</p>
+<p>The index module is very versatile -as it can be used as a straight 'index' page as well - linking to any page in the site. In the demo module this is shown on the home page. The index module provides limitless layout possibilities via the unique 'grid system'. To use the grid system, you simply follow this easy process.</p>
+<ul>
+  <li>Decide which of items you want to feature</li>
+  <li>Decide what text you want to add to the index page (if any)</li>
+  <li>Decide on the size of the grid - for example 5 boxes wide by 3 boxes high.</li>
+  <li>For each of your featured items and your text, create a &lt;thumbnail&gt; for each item. This lets you set the size and position of your item as well as the custom text or image you want to use</li>
+  <li>That's it! Now the index module will fill in any parts of your grid not occupied by your &lt;thumbnail&gt; items with all the other items that are 'children of this index. If you have more items than there is space available,  extra pages are created and page navigation appears.</li>
+</ul>
+<h3>Deep linking</h3>
+<p>The mbudm#001 template includes inbuilt methods that can be used in two ways to navigate within the mbudm#001 template itself. These utilise the Coordinate or Id system. The Coordinate system let’s you link to pages ‘relatively’, for example,  page 2 of section 3. The ID system lets you target a precise page no matter where it is in the site structure. The mbudm#001 template is smart enough to know what navigation option you are using and updates the main navigation site structure to enable you to see where you are.</p>
+<h4>The back button and friendly URLs</h4>
+<p>The other aspect to deep linking is the ability to use the browser 'back' button, and to be able to bookmark any page. As you navigate through the demonstration site, you might notice that the browser location box changes to reflect where you are in the site. This is achieved by using the SWFAddress system. If you specify an ID for a particular page then the URL will use this instead of the standard coordinate system. This means that you can create 'friendly' urls that help people remember where they are (and what it is that they have bookmarked) and give your URLs semantic meaning.</p>
+<p>This also means that you can link to a part of the site from within any custom SWF files that you create. Just link to the URL that you see in the browser loaction box for your target page.</p>
+<h3>Full SEO solution</h3>
+<p>The mbudm#001 template comes with an optional index.php file. This file is a customisation of the SWFAddress SEO solution. This file generates a text version of your site that can be read and indexed by Google. </p>
+<p>To use the SEO solution you require a few things. These are fairly stock standard things that most web hosts provide, but check with your hosting provider if you are not sure.</p>
+<ul>
+  <li>An apache web server that has <strong>php version 5</strong></li>
+  <li>The ability to create <strong>.htaccess</strong> files on your server</li>
+  <li>The ability to switch on the <strong>phpmodrewrite</strong> setting on your server</li>
+</ul>
+<p>Of course the standard SWFAddress deep linking mentioned above does not require these server settings and works quite well for most websites.</p>
+<h3>Support for Google Analytics</h3>
+<p> The beauty of using SWFAddress is that support for tracking where your users go with Google Analytics is also supported.</p>
+<h3>Background Cross-Fader</h3>
+<p>You can set a background image or SWF for each page, each section, each sub section or none at all. The background will crossfade with whatever background is currently present and will resize with the browser - maintaining the image or swf scale.</p>
+<p>Note - don't use transparent pngs or SWFs with a transparent area as the cross fader only fades up the new background and then simply deletes the old background. If you have a transparent background fading up then the old background will still be visible when it suddenly disappears. Doing the 'cross fade' this way is less memory intensive for flash.</p>
+<h3>Change the theme</h3>
+<h4>Choose two colors to create a theme...</h4>
+<p>All graphical elements in the  mbudm#001 template source their colors from the main 'theme' object. Changing the colors in the main 'theme' object is a simple matter of specifying two colors - a 'base' color and a 'composite' color. The theme object then creates tints and shades of these two colors which will be used by all the graphics in the mbudm#001 template.</p>
+<h4>...Plus use CSS to change the color of anything</h4>
+<p>In addition, if you don't like the 'theme' color that has been chosen for a particular item, you can add a CSS override for that specific item.</p>
+<h3>Layout options with XML</h3>
+<p>The complete list of layout settings are:</p>
+<ul>
+  <li>Fixed width/height, minimum &amp; maximum width/height. This means you can have a fixed layout, partially fluid or completely fluid layout</li>
+  <li>Margin top, left, bottom, right. Pixels or percentages</li>
+  <li>Navigation offset X &amp; Y</li>
+  <li>Navigation items space, for each tier in the hierarchy</li>
+  <li>Logo offset X &amp; Y</li>
+  <li>Logo width</li>
+  <li>Grid System in index pages (see above)</li>
+  <li>Framing options for media items</li>
+  <li>Padding and offsets for media page navigation items</li>
+  <li>Content padding  top, left, bottom, right. Pixels or percentages</li>
+  <li>Footer padding top, left, bottom, right. </li>
+  <li>Footer aligned with content</li>
+</ul>
+</p>
+<h3>CSS control of text styles</h3>
+<p>All text items in the template are controllable from the one CSS file. Support for embedded fonts is built in (see the fonts section below for more info). All you need to do is add a font symbol to the library and use the export name in the CSS file. You can easily change:</p>
+<ul>
+  <li>Navigation font style (different style for each tier in the hierarchy)</li>
+  <li>The main text box style</li>
+  <li>The page heading text style, plus the space between the heading and the main text</li>
+  <li>The table of contents heading and link styles</li>
+  <li>The footer text style</li>
+  <li>The loader label text style</li>
+  <li>... plus many examples of custom inline styles for emphasising text or creating custom sub titles in text.</li>
+</ul>
+<h3>Mouse wheel and keyboard scrolling</h3>
+<p>The text areas in this module all have a smooth scrollbar, as does the whole site window. In addition to these scrollbars, mouse wheel functionality has been added. To top it off I have also added in support for PageUP and PageDOWN as well as the UP and DOWN cursor keys. These scrolling features also kick in if your browser window is smaller than the desired site dimensions (set with fixed or min and max height/width) - this causes the whole window scrollpane to appear, which of course also has support for the LEFT and RIGHT arrow keys as well.</p>
+<p>This cross OS mouse wheel functionality is made possible with the use of the 'MouseControl class' from <a href="http://mrsteel.wordpress.com/2008/07/31/mousecontrol-as2-class-update-added-mac-mouse-wheel-and-scrolling-area-support/">MrSteel</a> and the SWFObject add-on: MouseWheel on Mac OS from <a href="http://blog.pixelbreaker.com/flash/swfmacmousewheel/">pixelBreaker</a>.</p>
+<h3>Code customisation</h3>
+<p>For the more experienced actionscript developer who may want to modify this template even further, you will be pleased to hear that the code is well organised into base clases and classes for UI and design. All code is commented and this documentation provides an overview of how the code is organised so that you can quickly identify what you need to make your customisations.</p>
+<a href="#top" class="top">Top</a>
+<h2><a name="files" id="files"></a>Files included in this download</h2>
+<p>The zip file you have downloaded should include these files, let me know if this isn't the case:</p>
+<ul><li>documentation.html - this help file</li>
+	<li>com
+      - all the generic 'base' actionscript code needed by the fla files
+      <ul>
+        <li>alexandrup</li>
+        <li>asual</li>
+        <li>hageanagency</li>
+        <li>mbudm
+          <ul>
+              <li>mb....as</li>
+          </ul>
+        </li>
+        <li>pixelbreaker</li>
+      </ul>
+	</li>
+  <li>min - 'min' is my shorthand for Minimalist Corparate template
+    <ul>
+      <li>www - a demonstration version of the template
+        <ul>
+          <li>bgimages
+            <ul>
+              <li>beach.jpg</li>
+              <li>city.jpg</li>
+              <li>mount.jpg</li>
+              <li>sky.jpg</li>
+              <li>wall.jp</li>
+            </ul>
+          </li>
+          <li>data
+            <ul>
+                <li>index.xml</li>
+              <li>init.xml</li>
+              <li>site.css</li>
+              <li>text1.xml</li>
+              <li>text...xml</li>
+            </ul>
+          </li>
+          <li>images
+            <ul>
+                <li>alley.jpg</li>
+              <li>buildings.jpg</li>
+              <li>...</li>
+            </ul>
+          </li>
+          <li>index.html (Use this if you can't or don't want to implement the SEO solution)</li>
+          <li>index.php (Use this if you are implementing the SEO solution)</li>
+          <li>js
+            <ul>
+                <li>expressinstall.swf</li>
+              <li>swfaddress-optimizer.js</li>
+              <li>swfaddress.js</li>
+              <li>swfmacmousewheel2.js</li>
+              <li>swobject.js </li>
+            </ul>
+          </li>
+          <li>init.swf</li>
+          <li>main.swf</li>
+          <li>swfs
+            <ul>
+                <li>externaldemo.swf</li>
+              <li>logo.swf</li>
+            </ul>
+          </li>
+          <li>video
+            <ul>
+                <li>testvideo.flv</li>
+            </ul>
+          </li>
+          <li>videoplayer.swf</li>
+        </ul>
+      </li>
+      <li>src - all the source (fla) files for the template and associated swfs.
+        <ul>
+          <li>init.fla - (imports classes from the ../../com/ folder so you need to make sure com/ is kept in this relative location*)</li>
+          <li>main.fla - (imports classes from the ../../com/ folder so you need to make sure com/ is kept in this relative location*</li>
+          <li>com
+	                    - The class files that are specific to the Minimalist template
+            <ul>
+              <li>mbudm
+                <ul>
+                    <li>min
+                      <ul>
+                          <li>minBackground.as</li>
+                          <li>..</li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+	</li>
+  </ul>
+<p>* Or you can move com/ so that it is in the same folder as init.fla and main.fla - you will need to merge it with the com/ folder that contains the template specific folders</p>
+<p><a href="#top" class="top">Top</a></p>
+<h2><a name="simple" id="simple"></a>Simple implementation</h2>
+<p>The www/ folder contains the demonstartion version of the mbudm#001 template. To customise this template for your needs all you need to do is edit some xml files and add some images of your own. If you want to adjust the design and theme, there are also many xml and CSS files you can edit to transform this template into your own personalised version.</p>
+<h3><a name="editing"></a>Editing Content</h3>
+<h4>New to editing XML files?</h4>
+<p>Firstly, don't panic, editing XML files is quite easy. In fact it really is no different to editing basic HTML. It's just that instead of standard tags like &lt;p&gt; you will be using custom tags like &lt;textModule&gt; or &lt;index&gt;.</p>
+<p>Fortunately there are also some very good tools available that can help you if you make a mistake. Do you have the firefox browser? If so if you open your XML file in Firefox it will tell you if the file is &quot;well-formed&quot; or not. This means it is formatted correctly. It even tells you where in your document it has found a problem.</p>
+<p>Also there are many XML editing applications available. A good example is Adobe's Dreamweaver. Applications like these have 'code highlighting' which means that the code is colored differently to give you an idea of what is what.</p>
+<p>If this is stlll beyond you, then there are also editors that have more of a form like interface so you are not actually writing code, just filling in the boxes. Here are some useful links:</p>
+<ul>
+  <li><a href="http://flashden.net/item/flash-xml-editor-version-2/47884">Flash XML editor</a> (FlashDen file)</li>
+  <li><a href="http://www.xml.com/pub/rg/XML_Editors">List of free and commercial editors</a></li>
+</ul>
+<h4>The site index</h4>
+<p>The site index file in the supplied example is located at www/data/index.xml. This file has a root Node &lt;index&gt; and many <span class="code">&lt;page&gt;</span> nodes. The &lt;page nodes  each represent an item on the navigation in the template and you can create as many page nodes as you like &#8212; within the space limits of your users browsers.</p>
+<p><span class="code">&lt;page&gt;</span> nodes can also be nested to create sections and subsections. There is no restriction on how deeply nested <span class="code">&lt;page&gt;</span> nodes can be, except for design and usability considerations.</p>
+<h5 class="code">&lt;index&gt;</h5>
+<p>The index node itselfcan have a title and a background image. The title gets used by SWFAddress (see below) and the bg image set here will be used for every page - unless that page (or an ancestor of that page) has a bgimage of it's own.</p>
+<p class="code">&lt;index title=&quot;MBU Consulting&quot; bgimage=&quot;bgimages/sky.jpg&quot;&gt;</p>
+<h5><span class="code">&lt;page&gt;</span></h5>
+<p>A page node has these attributes (* - required):</p>
+<ul>
+  <li><span class="code">type</span>: <span class="code">type</span> can be 'text', 'external' or 'url'. This specifies which module the page will use or in the case of 'url' that the page will navigate to an external URL. This is required in most situations, the only exception being if the <span class="code">&lt;page&gt;</span> is a non content section (see below for more info on <span class="code">&lt;page&gt;</span> used as a section)</li>
+  <li><span class="code">url</span>: The path to the xml (or swf) data that will be loaded for this page (or the address of the external url if the type is set to 'url'). This is required in most situations, the only exception being if the <span class="code">&lt;page&gt;</span> is a non content section (see below for more info on <span class="code">&lt;page&gt;</span> used as a section)</li>
+  <li><span class="code">title</span>*: The <span class="code">title</span> is used by the navigation item, and is sometimes used by the Text module as well</li>
+  <li><span class="code">bgurl</span>: The image or swf file to be used as the background for this page. Note if a background is set for an ancestor of the current page, and the current page has no background set, then the ancestor background will be used. This means that if you want one background to be the same for each page in a section, you only need to set it once &#8212; on the highest page in the section hierarchy.</li>
+  <li><span class="code">longtitle</span>: <span class="code">longtitle</span> let's you set a more informative title to be used in the text module</li>
+</ul>
+<h6>Text pages</h6>
+<p>There are no additional attributes available or required with <span class="code">&lt;page&gt;</span> nodes that have a type of 'text'.</p>
+<h5>Form pages (<span class="code"> &lt;form&gt;</span> )</h5>
+<p>There are no additional attributes available or required with <span class="code">&lt;form&gt;</span> nodes</p>
+<h6><a name="external"></a>External module</h6>
+<p>Additional attributes on <span class="code">&lt;page&gt;</span> nodes with a type of 'external' are:</p>
+<ul>
+  <li><span class="code">onresize</span>: The name of the function within your external swf that you want to be called when the size of the space allocated to the page changes. This function should be set up to receive width and height paremeter and it should be located at the root of your swf.</li>
+  <li><span class="code">onload</span>: The name of the function within your external swf that you want to be called when it first loads. The parameter below is passed. This function should be located at the root of your swf.</li>
+  <li><span class="code">onloadparams</span>:The parameter you want to pass to the function specified in the onload attribute</li>
+</ul>
+<h6>External links</h6>
+<p>There are no additional attributes available or required with <span class="code">&lt;page&gt;</span> nodes that have a type of 'url'.</p>
+<h5><span class="code">&lt;page&gt;</span> used as a section</h5>
+<p><span class="code">&lt;page&gt;</span> can be used to create a section in two ways:</p>
+<ol>
+  <li><span class="code">&lt;page&gt;</span> as section <em>with</em> content</li>
+  <li><span class="code">&lt;page&gt;</span> as section <em>without</em> content</li>
+</ol>
+<p>The difference is that the first type, when navigated to will load as a normal page, whereas the second type will automatically navigate to the first <span class="code">&lt;page&gt;</span> node in it's section. These two types of sub section are shown in the supplied demonstration site.</p>
+<h3>Content pages for modules</h3>
+<p>When a module type needs content then the content (an XML file) is always specified in the url attribute of the module node. These sections describe how the XML files for each module type are organised.</p>
+<h4>Index pages</h4>
+<h5 class="code">&lt;grid&gt;</h5>
+<p>The grid node is where you design the layout of your index pages, deciding which thumbnails to put where and how big they need to be. Of course if you leave the grid node at its bare essentials, then your index page will still work - it will simply display all of the sub-nodes of the index in a neat grid formation.</p>
+<h6>Attributes</h6>
+<ul>
+  <li><span class="code">cols:</span> The number of columns in the grid. (Required)</li>
+  <li><span class="code">rows:</span> The number of rows in the grid. (Required)</li>
+</ul>
+<h5 class="code">&lt;thumbnail&gt;</h5>
+<p>Thumbnails are the items that appear on the index module page. Thumbnails can be an image or a block of text. Thumbnails can link to another page in the site or they can be inactive - just content - that doesn't link to anything.</p>
+<h6>Automatic thumbnails and custom thumbnails</h6>
+<p>If an <span class="code">&lt;index&gt;</span> node has child nodes then those child nodes will be automatically added to the index page - whether there is a <span class="code">&lt;thumbnail&gt; </span>in the <span class="code">&lt;grid&gt;</span> or not. You can customise these thumbnails by creating a<span class="code"> &lt;thumbnail&gt;</span> node with the same id as appears on the child node. You can also add <span class="code">&lt;thumbnail&gt;</span> nodes that have an id of a node somewhere else in the site - not a child node of this index, as well as custom <span class="code">&lt;thumbnail&gt;</span> nodes that have no id - they don't link to any item in the site.</p>
+<h6>Attributes</h6>
+<ul>
+  <li><span class="code">id:</span>: The <span class="code">id</span> must match an <span class="code">id</span> of a node in index.xml. The thumbnail will link to the page specified by <span class="code">id</span> </li>
+  <li><span class="code">cols:</span> The width of the thumbnail. Should not be more than the number of columns specified in the &lt;grid&gt; node</li>
+  <li><span class="code">rows:</span> The height of the thumbnail. Should not be more than the number of rows specified in the &lt;grid&gt; node</li>
+  <li><span class="code">x:</span> The horizontal location of the thumbnail as a 0 based index. Should not be more than the number of columns in the &lt;grid&gt; node minus the width of this thumbnail (specified in its <span class="code">cols</span> attribute). For example if the grid is 10 columns wide and this thumnail is 5 columns wide, then the x value should be no more than 5.</li>
+  <li><span class="code">y:</span> The vertical location of the thumbnail as a 0 based index. Should not be more than the number of rows in the &lt;grid&gt; node minus the height of this thumbnail (specified in its <span class="code">rows</span> attribute). For example if the grid is 8 rows high, and this thumbnail is 2 rows high then the x value should be no more than 6.</li>
+  <li><span class="code">src:</span> The path to an image that is to be used for this thumbnail. This overrides an image specifed in the <span class="code">src</span> attribute of the <span class="code">&lt;img&gt;</span> or <span class="code">&lt;video&gt;</span> node specified by this thumbnails <span class="code">id</span> attribute..</li>
+  <li><span class="code">uselabel</span>: Set this to &quot;1&quot;  if you want a thumbnail that links to an &lt;index&gt;, &lt;img&gt;, or &lt;video&gt; node to use its title and alt attributes rather than the image specifed in src.</li>
+</ul>
+<h5 class="code">&lt;text&gt;</h5>
+<p>Thumbnails can also be a block of text instead of an image. To make a thumbnail text then you will need to add a <span class="code">&lt;text&gt;</span> node as a child of the<span class="code"> &lt;thumbnail&gt;</span> node. Inside the <span class="code">&lt;text&gt;</span> node you can place any Flash supported html that you like. If the <span class="code">&lt;thumbnail&gt;</span> has an <span class="code">id</span> attribute that matches  an <span class="code">id</span> of one of the sub-nodes of this <span class="code">&lt;index&gt;</span> then this text node will still act as a link to the sub-node page.</p>
+<p>Note that all text in a thumbnail is will inherit styles from the CSS class <span class="code">.thumbTextBox</span></p>
+<h4>Media pages ( &lt;video&gt; and &lt;img&gt; )</h4>
+<p>The media module does not require any more content. All descriptions of the video or image should be placed in the <span class="code">alt</span> attribute of the <span class="code">&lt;img&gt; </span>or <span class="code">&lt;video&gt; </span>module node. As mentioned above you can also use the attribute <span class="code">longdesc</span> to link to an xml file that contains a single <span class="code">&lt;text&gt;</span> node. This will be used instead of alt in the item description area.</p>
+<h4>Text pages</h4>
+<h5 class="code">&lt;title&gt;</h5>
+<h6>Attribute:</h6>
+<ul>
+  <li><span class="code">useparent</span>: Specifies that this page should use the content from the index.xml <span class="code">&lt;text&gt;</span> node for the heading of the page. If this is set to title, it will use the content of the <span class="code">title</span> attribute, if it is set to longtitle  it will use the <span class="code">longtitle</span> attribute.</li>
+</ul>
+<p>Node content - If nothing is specified in the <span class="code">useparent</span> attribute, the page heading will be generated from the contents of the <span class="code">&lt;title&gt;</span> node.</p>
+<h5 class="code">&lt;text&gt;</h5>
+<p>The contents of the <span class="code">&lt;text&gt;</span> node are used to populate the textField in the text module. This text content can be enclosed in <span class="code">&lt;[!CDATA[...]]&gt;</span> tags.</p>
+<h6>Inline links - Coordinate system</h6>
+<p>To specify a link to another page in the module using the coordinate system, links should be written in this format:</p>
+<p class="code">&lt;a href=&quot;asfunction:asfRelay,internalNav,2|1&quot;&gt;go to page 2 of section 3&lt;/a&gt;</p>
+<p>Note that the coordinate system uses 0 based numbering, so<span class="code"> 2|1</span> means the <em>third</em> item of the root navigation and the <em>second</em> item in item 3's sub navigation. Other examples of this format are here so you get the hang of the syntax:</p>
+<p class="code">&lt;a href=&quot;asfunction:asfRelay,internalNav,0&quot;&gt;go to the first page of the root nav&lt;/a&gt;</p>
+<p class="code">&lt;a href=&quot;asfunction:asfRelay,internalNav,0|0|4|0&quot;&gt;Go to a page that would be at this 'breadcrumb': First root nav item-&gt;First child nav item-&gt;Fifth grandchild nav item-&gt;First great grandchild nav item&lt;/a&gt;</p>
+<h6>Inline links- ID system</h6>
+<p>To specify a link to another page in the module using the coordinate system, links should be written in this format:</p>
+<p class="code">&lt;a href=&quot;asfunction:asfRelay,internalNavByID,007&quot;&gt;go to page with an id of &quot;007&quot;&lt;/a&gt;.&lt;/p&gt;</p>
+<h6>Inline links - External URLs</h6>
+<p>To specify a link to an external url, links should be written in standard html format:</p>
+<p class="code">&lt;a href=&quot;http://www.somedomain.com&quot; target=&quot;_blank&quot;&gt;Link text&lt;/a&gt;</p>
+<h5 class="code">&lt;toc&gt;</h5>
+<p>The <code>&lt;toc&gt; </code>node controls the Table of Contents item for the page. The attributes for this node are:</p>
+<ul>
+  <li><span class="code">enabled</span>: (1 | 0) Switches the TOC item off (0) or on (1). Default is off</li>
+  <li><span class="code">halign</span>: (left | right) Positions the TOC list to the left or right of the text box. Default is left.</li>
+  <li><span class="code">valign</span>: (top | middle | bottom) Positions the TOC list to align with the top of the text box (top), aligns the middle of the TOC list with the middle of the text box (middle) or aligns the bottom of the TOC list with the bottom of the text box.</li>
+  <li><span class="code">width</span>: (Number - pixels) The width of the TOC list.</li>
+  <li><span class="code">tag</span>: (String e.g. 'h2') The tag used to markup items of text that you wish to be linked to from the TOC list. Note that you only pass the text of the tag, not the &lt; and &gt; characters. Any tag is acceptable as long as it has an associated ending tag.</li>
+  <li><span class="code">marker</span>: (String of unusual characters e.g. ~~) These characters must not conflict with any text in your page &#8212; otherwise the TOC functionality will not work. This is why it is a good idea to use an obscure set of characters for your 'marker'.</li>
+  <li><span class="code">heading</span>: (String) The label to use above the TOC list. Can be left blank.</li>
+  <li><span class="code">headspace</span>: (Number - pixels) The space between the TOC heading and the TOC list.</li>
+  <li><span class="code">margin</span>: (Number - pixels) The space between the TOC list and the text box</li>
+  <li><span class="code">padding</span>: (Number - pixels) The space between TOC list items.</li>
+</ul>
+<h4>Form pages </h4>
+<h5 class="code">&lt;title&gt;</h5>
+<h6>Attribute:</h6>
+<ul>
+  <li><span class="code">useparent</span>: Specifies that this page should use the content from the index.xml <span class="code">&lt;text&gt;</span> node for the heading of the page. If this is set to title, it will use the content of the <span class="code">title</span> attribute, if it is set to longtitle  it will use the <span class="code">longtitle</span> attribute.</li>
+</ul>
+<p>Node content - If nothing is specified in the <span class="code">useparent</span> attribute, the page heading will be generated from the contents of the <span class="code">&lt;title&gt;</span> node.</p>
+<h5 class="code">&lt;text&gt;</h5>
+<p>The &lt;text&gt; node works the same as in the text module. The only additional attributes are:</p>
+<ul>
+  <li><span class="code">position</span>: (top | left) The text block can be t the left or above the form</li>
+  <li><span class="code">width</span>: ( e.g. &quot;0.3&quot; or &quot;200&quot;) The width of the text block as a percentage of the page width or a fixed value. If position is set to top then this is ignored.</li>
+  <li><span class="code">height</span>: ( e.g. &quot;0.3&quot; or &quot;200&quot;) The height of the text block as a percentage of the page height or a fixed value. If position is set to left then this is ignored.</li>
+</ul>
+<h5 class="code">&lt;form&gt;</h5>
+<p>The <code>&lt;form&gt; </code>node uses HTML like form tags and attributes. The attributes for this node are:</p>
+<ul>
+  <li><span class="code">action</span>: (String) Path to the php script that the form submits data to</li>
+  <li><span class="code">labelwidth</span>: (e.g. 120) The width in pixels of the labels to the left of each from field</li>
+</ul>
+<h6>Form fields</h6>
+<p>Form fields are separated by an &lt;item&gt;&lt;/item&gt; node. There are three form field types that all use standard html:</p>
+<p class="code">&lt;item&gt;<br />
+  &lt;label&gt;Subject:&lt;/label&gt;<br />
+  &lt;input name=&quot;subject&quot; type=&quot;text&quot; value=&quot;Subject&quot; width=&quot;300&quot; minlength=&quot;2&quot;  /&gt;<br />
+  &lt;/item&gt;</p>
+<p class="code"><br />
+  &lt;item&gt;<br />
+  &lt;label&gt;Message:&lt;/label&gt;<br />
+  &lt;textarea name=&quot;message&quot; width=&quot;300&quot; height=&quot;100&quot;  minlength=&quot;4&quot; maxlength=&quot;200&quot; &gt;Write your message here&lt;/textarea&gt;<br />
+  &lt;/item&gt;</p>
+<p class="code"><br />
+  &lt;item&gt;<br />
+  &lt;input name=&quot;submit&quot; type=&quot;submit&quot; value=&quot;Send Message&quot; width=&quot;100&quot; /&gt;<br />
+  &lt;/item&gt;</p>
+<h6>Help  messages</h6>
+<p>The <span class="code">&lt;help&gt;</span> node let's you add help and error messages for your form fields. These messages can be set to appear when the form field is activated 'onSetFocus', when the form field is deactivated 'onKillFocus'. The <span class="code">&lt;help&gt;</span> node has one attribute msgpos (right | top) allowing you to position these help messages to the right or above the form field.</p>
+<p class="code">&lt;onSetFocus&gt;, &lt;onKillFocus&gt;, &lt;onSubmit&gt;</p>
+<p>All messages require a <span class="code">name</span> attribute - that must match the <span class="code">name</span> attribute of a form field and a <span class="code">message</span> attribute - which is the text of the actual message.</p>
+<p>The <span class="code">&lt;onKillFocus&gt;, &lt;onSubmit&gt;</span> message nodes must also have a <span class="code">rule</span> attribute. The <span class="code">rule</span> is tested to determine if the message should be displayed. The available rules are:</p>
+<ul>
+  <li><span class="code">email</span>: If the content of the form field does not have an '@' symbol followed by some text and a '.' then the message will be displayed</li>
+  <li><span class="code">minlength</span>: If the content is shorter than the minlength value of the form field then the message will be displayed</li>
+  <li><span class="code">maxlength</span>: If the content is longer than the maxlength value of the form field then the message will be displayed</li>
+</ul>
+<h4>External SWF pages</h4>
+<p>External SWF pages do not have an XML file. However if your custom SWF does need some XML data then you can pass the name of the XML file to your SWF using the <span class="code">onload</span> attribute.</p>
+<h4>External URLs</h4>
+<p>External urls have no need for an XML file. </p>
+<h4>&nbsp;</h4>
+<h3><a name="design"></a>Design and layout changes - reskinning</h3>
+<h4>Init.xml - theme, layout options and general template settings</h4>
+<p>Controlling the layout of graphical items in the mbudm#001 template is handled entirely in the init.xml file. This file contains nodes for layout and for each graphical item in the swf. Generally any attributes that affect the position of more than one item are located in the &lt;layout&gt; node and any attributes that only affect on item are located in the node named after that item.</p>
+<h5>&lt;init&gt;</h5>
+<ul>
+  <li><span class="code">devmode</span>: (0 | 1) This is a feature directly requested by customers - so that you don't need to explain to your clients how they need to clear their cache in order to see new site changes. If set to 1 then the load manager will implement a 'cachebuster'. This means that every time you upload new content to the server and refresh the browser, the new content will load without you having to clear the cache. Note this will not work for items that are loaded before the init.xml is loaded (main.swf,site.css and init.xml).<br />
+      <br />
+    So that you know when devmode is turned on, when devmode is enabled red text stating &quot;DEVMODE&quot; will show at the top left of the screen when the loader loads something.<br />
+    <br />
+    IMPORTANT - Ensure that devmode is set to 0 when you release your web site (after you have finished editing), otherwise your bandwidth costs will skyrocket because visitors to your site will be loading all your content every time they visit and revisit your site. It will also be a slower experience too.</li>
+</ul>
+<h5>&lt;theme&gt;</h5>
+<ul>
+  <li> <span class="code">url</span>: (eg: &quot;data/site.css&quot;  ) The CSS file to be used for this template.</li>
+  <li><span class="code">basecol</span>: (Flash hexadecimal number format eg: &quot;0xff9900&quot;  ) The base color from which to build the theme</li>
+  <li><span class="code">compcol</span>: (Flash hexadecimal number format eg: &quot;0x6688aa&quot;  ) The composite color from which to build the theme</li>
+  <li><span class="code">numcols</span>: (Number - requires a minimum of 5) The number of shades and tints to be created for the basecol and compcol</li>
+  <li><span class="code">invert</span>: (0 | 1) An option to 'invert' the theme - so items set to use light colors will use dark colors and vice versa. 0 is off, 1 is on. Useful if you want to set up the template for use on a dark background.</li>
+</ul>
+<h5>&lt;index&gt;</h5>
+<ul>
+  <li><span class="code">url</span>: (eg. &quot;data/index.xml&quot;  ) The index to use for this template. Note that it is easy to swap indexes if you need to have different versions of the site eg different language versions</li>
+  <li><span class="code">start</span>: (eg. &quot;0&quot; ) The coordinate of the start page. Can be left blank as the template willdefault to 0.</li>
+</ul>
+<h5>&lt;layout&gt;</h5>
+<p>In these descriptions I use the term<em> 'template area'</em> to refer to the rectangle containing the navigation, the logo and content items.</p>
+<ul>
+  <li><span class="code">fixedwidth</span>: (null or a Number of pixels) The width of the <em>template area</em> . Note, if this is set it overrides marginleft and marginright — the <em>template area</em> will simply center itself in the browser.</li>
+  <li><span class="code">fixedheight</span>: (null or a Number of pixels) The height of the <em>template area</em> . Note, if this is set it overrides margintop and marginbottom — the <em>template area</em> will simply center itself in the browser.</li>
+  <li><span class="code">minwidth</span>: (null or a Number of pixels) The minimum width of the <em>template area</em> . If the browser width is less than this plus marginleft and margin right the scrollbars will appear.</li>
+  <li><span class="code">minheight</span>: (null or a Number of pixels) The minimum height of the <em>template area</em> .  If the browser height is less than this plus margintop and marginbottom the scrollbars will appear.</li>
+  <li><span class="code">maxwidth</span>: (null or a Number of pixels) The maximum width of the <em>template area</em> . Note, if this is set and the browser width is greater than this plus marginleft and marginright then the extra space will be added to marginleft and marginright.</li>
+  <li><span class="code">maxheight</span>: (null or a Number of pixels) The maximum height of the <em>template area</em> .  Note, if this is set and the browser height is greater than this plus margintop and marginbottom then the extra space will be added to margintop and marginbottom.</li>
+  <li><span class="code">marginleft</span>: (eg. &quot;0.05&quot;  or &quot;20&quot;) The margin between the left of the browser and the left edge of the <em>template area</em> . This can be in pixels or as a measure between 0 and 0.99 that represents a percentage.</li>
+  <li><span class="code">marginright</span>: (eg. &quot;0.05&quot;) The margin between the right of the browser and the right edge of the <em>template area</em> . This can be in pixels or as a measure between 0 and 0.99 that represents a percentage.</li>
+  <li><span class="code">margintop</span>: (eg. &quot;30&quot;) The margin between the top of the browser and the top edge of the <em>template area</em> . This can be in pixels or as a measure between 0 and 0.99 that represents a percentage.</li>
+  <li><span class="code">marginbottom</span>: (eg. &quot;50&quot;) The margin between the bottom of the browser and the bottom edge of the <em>template area</em> . This can be in pixels or as a measure between 0 and 0.99 that represents a percentage.</li>
+  <li><span class="code">gutter</span>: (eg. &quot;20&quot;) The space in pixels between the navigation and the content.</li>
+  <li><span class="code">navwidth</span>: (eg. &quot;160&quot;) The width in pixels of the navigation item</li>
+</ul>
+<h5>&lt;logo&gt;</h5>
+<ul>
+  <li><span class="code"> url</span>: (eg. &quot;swfs/logo.swf&quot;) The graphic to use as the logo. Can be a png, swf, gif or jpg.</li>
+  <li><span class="code">xoffset</span>: (eg. &quot;7&quot;) The number of pixels to offset the logo to the left or right</li>
+  <li><span class="code">yoffset</span>: (eg. &quot;-13&quot;) The number of pixels to offset the logo up or down</li>
+  <li><span class="code">theme</span>: (eg. &quot;1&quot;) Specifies whether to pass the theme object to the loaded logo. Appropriate only if the logo is a SWF and is set up with a setTheme() function. See the Logo section below for instructions on this.</li>
+  <li><span class="code">logowidth</span>: (eg. &quot;120&quot;) The width of the logo. The logo will be physically sized to this dimension. Height is set to the appropriate proportion.</li>
+</ul>
+<h5>&lt;nav&gt;</h5>
+<p>Note that the size of the navigation items is also determined by the CSS <span class="code">font-size</span> value that you set.</p>
+<ul>
+  <li><span class="code"> navspace</span>: (eg. &quot;10,6,6&quot;) The space between navigation items. Comma separated list where each item in the list represents a step down the hierarchy.</li>
+  <li><span class="code">navxoffset</span>: (eg. &quot;0&quot;) The number of pixels to offset the navigation to the left or right</li>
+  <li><span class="code">navyoffset</span>: (eg. &quot;70&quot;) The number of pixels to offset the navigation up or down</li>
+</ul>
+<h5>&lt;content&gt;</h5>
+<ul>
+  <li><span class="code"> cornerradius</span>: (eg. &quot;4&quot;) The size of the curved corner of the content 'box' in pixels</li>
+  <li><span class="code">padding</span>: (eg. &quot;20,20,20,20&quot;) The padding inside the content box. Order is the same as CSS: Top,Right,Bottom,Left</li>
+</ul>
+<h5>&lt;footer&gt;</h5>
+<p>Note that the alignment of the footer text is controlled by the CSS</p>
+<ul>
+  <li><span class="code"> bgalpha</span>: (eg. &quot;60&quot;) The transparency of the footer background.</li>
+  <li><span class="code">padding</span>: (eg. &quot;4,0,0,0&quot;) The padding inside the footer box. Order is the same as CSS: Top, Right, Bottom, Left</li>
+  <li><span class="code">aligntocontent</span>: (eg. &quot;1&quot;) Aligns the footer text field to the content area. This overrides padding left and right.</li>
+</ul>
+<p>Node content: The node content is used to populate the footer text field</p>
+<h4>The CSS file</h4>
+<p>The CSS file (data/site.css in the demo site) is divide into three areas, Required items, Optional formatting and Color overrides. These are explained below, but firstly, a note about fonts.</p>
+<h5>A note about Fonts.</h5>
+<p>Fonts can be assigned to all of these required items. However if you want to use a font that is uncommon,  you must embed that font in the Fla to make it work on all computers. </p>
+<p>See the Flash help section &quot;Embedding fonts&quot; for instructions on how to  embed font symbols in the library. Once you have successfully added a font to your library you then need to set it up to be exported for use at runtime. To do this, select the font symbol in the library, and choose 'Linkage'. In the dialog box check the &quot;Export for ActionScript&quot; box and enter a name for your font in the Identifier field. For the mbudm#001 template to recognise your font as an embedded font, you must use this syntax for your exported font name that you enter into the Identifier field:</p>
+<p class="code">__FontName</p>
+<p>The font can be named whatever you like but it <strong>must</strong> start with two underscores. You can specify this name to be used in css by writing the exported name in a font-family property:</p>
+<p class="code">.textBox{font-family:__FontName;}</p>
+<h6>Special Characters e.g. éñøå</h6>
+<p>For languages other than English that require special characters you must use a font that actually supports these characters. Generally, it is a good idea to embed these fonts as well because if some of your users don't have the font you use, then Flash will 'fall back' on another font that may not support these characters.</p>
+<p>Having said that, Flash does <em>seem</em> (it's not a documented feature) to recognise backup fonts specified in CSS. So you will notice that for my basic text areas I tend to use the folloing CSS:<br />
+</p>
+<p class="code">.textBox{font-family:Arial, Helvetica;}</p>
+<p>In this situation if a user does not have Arial on their system then Flash will use Helvetica. This is a fairly reliable way of ensuring that most users can see the text the way you want them to and it avoids you having to embed fonts (which is very important for some customers who are using this template but don't actually have a copy of Flash). However this method is  not 100% reliable — there may be a user out there who doesn't have Arial or Helvetica on their system. What would happen for this user? They would probably see the text as Times New Roman, which is ugly but not the end of the world either.</p>
+<h4>So the short word on fonts is:</h4>
+<ul>
+  <li>If you are concerned about a high file size, don't want to mess around with embedded fonts and are not concerned if 1% of people see your site in Times New Roman and it's okay if some people maybe don't see some special characters - Use device fonts</li>
+  <li>Otherwise use Embedded fonts</li>
+</ul>
+<h5>Required items</h5>
+<p>Required CSS items are what the template expects to be available. If some of these are not set then you may end up with some text simply using the flash defaults (Basic Serif text with no formatting).</p>
+<p>The required items are:</p>
+<ul>
+  <li><span class="code">.textBox{}</span>: All text in the text box of pages that use text module have a <span class="code" >&lt;span class=&quot;textBox&quot;&gt;&lt;/span&gt;</span> surrounding the text. Anything you specify here will be applied to all text in the text box.</li>
+  <li><span class="code">.nav{}</span>: All navigation item labels are surrounded by this class. Anything you specify here will be applied to all text in all navigation items.</li>
+  <li><span class="code">.nav0{} ... .nav[n]{}</span>: To specify different styles to different levels of the navigation hierarchy you use these CSS classes. Styles set here will be applied to navigation items, in addition to styles set using <span class="code">.nav{}</span></li>
+  <li><span class="code">.toclink{}</span>: Sets the style of text in the table of content links.</li>
+  <li><span class="code">.tocheading{}</span>: Sets the style of the table of contents heading.</li>
+  <li><span class="code">.pageheading{}</span>: Sets the style of the page heading.</li>
+  <li><span class="code">.pageheadingspace{}</span>: The font-size property of this class is used to determine the space between the page heading and the page text box.</li>
+  <li><span class="code">.footer{}</span>: All text in the text box of the footer is  surrounded by this class. Anything you specify here will be applied to all text in the footer.</li>
+</ul>
+<h5>Optional formatting</h5>
+<p>Optional formatting is any CSS styles that are added for custom styles, such as highlighted text, headings etc. This is 'normal' css therefore you can add  as much or as little as you like.</p>
+<h5>Color overrides</h5>
+<p>Color override classes require only one property - <span class="code">color:#XXXXXX;</span>. If a color property is set for any of these items, this color will be used instead of the default color that the item sources from the theme object. The override names are self explanatory as to what they override.</p>
+<h4>Logo</h4>
+<p>The logo used in the demonstration site is set to receive the theme object. See above for an explanation of the <span class="code">theme</span> attribute used in the <span class="code">&lt;logo&gt;</span> node of the init.xml file.</p>
+<p>In the src/ folder there is a logo.fla file that contains some graphic items, plus a setTheme() function. This function receives the theme and transforms the color of the logo. This is a handy method for keeping your logo updated with the colors you are using in your site.</p>
+<h4>Images</h4>
+<p>TextFields in Flash accept the use of the image tag. This section of the Flash help docs, &quot;Image Tag&quot; explains what can and can't be used in the <span class="code">&lt;img&gt;</span> tag. Additionally, here are a few design tips of my own:</p>
+<ul>
+  <li>Don't set the image height and width. Because this template has a transparent background you will see a white flash when the text box first renders with image width/height set.</li>
+  <li>Generally, I think images floating right look better, especially as you can only set left and right margin for images. This means that if you float images left (with hspace) then the image is indented from the left edge of the TextField.</li>
+  <li>Full width images. Because images are set to float automatically in Flash, it is difficult to have full width images when you are using a fluid layout. For this reason, if you want images to appear on their own line (ie not floating) then use the fixedwidth property (set in the layout node of the inti.xml file) so that you are guaranteed that your images will always be the width of the textField, and thereby not appear to be 'floating'. Or you can simply place the image at the end of your textField &#8212; where there is no text that will wrap around the image.</li>
+</ul>
+<p><a href="#top" class="top">Top</a></p>
+<h2><a name="swfaddress" id="swfaddress"></a>Implementing SWFAddress (Deep Linking)</h2>
+<h3>Using index.html</h3>
+<p>If you are unfamiliar with php, then I suggest using the index.html file instead of the index.php file. Don't upload the index.php file to your server as this will take precedence over the index.html file.</p>
+<p>The index.html file will do two things:</p>
+<h4>1. Change the title of your browser window</h4>
+<p>SWFAddress will change the title of your browser window to the name of your site (the title attribute of the &lt;root&gt; node in index.xml plus the name of the current page (the title attribute of the currently selected item in the index.xml site structure).</p>
+<p>So if you are on the index page called &quot;Home&quot; and the site name is &quot;MBU Curator's Gallery&quot; thn you should see this in the title of your browser window:</p>
+<p>	MBU Curator's Gallery - Home</p>
+<h4>2. Change the URL in the browser location field</h4>
+<p>In the above example, becuase &quot;Home&quot; is the first page in the site, the location field will show:</p>
+<p class="code">http://www.yourdomain.com/yourfolder/#/</p>
+<p>If you navigate to a sub page - for example the fourth item that is a sub node of the Home node, then the location will change to:</p>
+<p class="code">http://www.yourdomain.com/yourfolder/#/0/3</p>
+<p>It's a 3 because this system uses 0 based indexing.</p>
+<p>If that sub node has an id attribute, then the id value will be used instead:</p>
+<p class="code">http://www.yourdomain.com/yourfolder/#/idvalue</p>
+<p>This allows you to create 'friendly', human understandable URLs</p>
+<h3>Using index.php - the SEO solution</h3>
+<p>The index.php file does everything that the index.html file. In addition it creates some behind the scenes content so that when the Google crawler visits your site, it can index the content and thereby provide more relevant serach engine traffic to you.</p>
+<p>Because Google doesn't recognise URLs that contain the # this php file also does a URL rewrite on your server. This allows the Google focussed content to use URLs without the #, but a regular user will be given the # urls, and most importantly the Flash Content.</p>
+<p>So this is the URL that Google likes:</p>
+<p><span class="code">http://www.yourdomain.com/yourfolder/idvalue</span></p>
+<p>And this is the url that you and I and Flash can understand:</p>
+<p><span class="code">http://www.yourdomain.com/yourfolder/#/idvalue</span></p>
+<p>To increase your SEO, when giving out links to people, ensure that you always give them the ones without the # - then if they add this link to their site, the part of the site that it links to will acheive a better Google PageRank.</p>
+<h5>Setting up to use index.php</h5>
+<p>To use index.php you will need to modify the .htaccess file in the folder on your server where you want the mbudm#001 template to be.</p>
+<p>You may need to check with your hosting provider on how to edit .htaccess files. </p>
+<p>This is the .htaccess file you need to create:</p>
+<p class="code"># Enables mod_rewrite<br />
+RewriteEngine on</p>
+<p class="code"># Sets the base folder of the SEO sample<br />
+  RewriteBase  <strong>/stock/002</strong></p>
+<p class="code">RewriteCond  %{REQUEST_FILENAME}    !-f<br />
+  RewriteCond  %{REQUEST_FILENAME}    !-d<br />
+  RewriteRule  .*                     index.php</p>
+<p>This is the file I use at my SEO demo site here: <span class="code">http://www.mbudm.com<strong>/stock/002</strong></span> . You will need to change the text in bold to whatever the equivalent is for your site. If you are placing mbudm#001 at the base of your domain then you will just need to replace the <span class="code"><strong>/stock/cur</strong></span> with <strong class="code">/</strong></p>
+<h5>Tips:</h5>
+<p>Use CDATA tags around all content in <span class="code">&lt;text&gt; </span>nodes e.g:</p>
+<p><span class="code">&lt;text&gt;&lt;![CDATA[&lt;p&gt;Some html with &amp; ampersands &quot;quote marks&quot; and other things that php does not like]]&gt;&lt;/text&gt;</span> </p>
+<p>Flash is much more accepting of special characters than php, so an XML file that will load into Flash without a problem may cause the php script to break.</p>
+<p>Check to see how the site works for Google by switching off javascript and CSS in your browser (Note this is very easy to do in Firefox with the Web Developer add on). This will allow you to navigate the basic html site that is produced for Google.</p>
+<p><a href="#top" class="top">Top</a></p>
+<h2><a name="swfaddress" id="swfaddress2"></a>Implementing Google Analytics</h2>
+<p>Another advantage of using SWFAddress is that support for Google Analytics is built in. To use Google Analytics and find out what your visitors to your site are actually up to, you'll need to <a href="http://www.google.com/analytics/">sign up for an account here</a>.</p>
+<p>The files index.php and index.html have the Google analytics code in them but it is commented out by default. So you need to uncomment this code:</p>
+<p class="code"> &lt;!-- UNCOMMENT this &lt;script&gt; block to enable Google Analytics<br />
+&lt;script type=&quot;text/javascript&quot;&gt;<br />
+var gaJsHost = ((&quot;https:&quot; == document.location.protocol) ? &quot;https://ssl.&quot; : &quot;http://www.&quot;);<br />
+document.write(unescape(&quot;%3Cscript src='&quot; + gaJsHost + &quot;google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E&quot;));<br />
+&lt;/script&gt;<br />
+&lt;script type=&quot;text/javascript&quot;&gt;<br />
+try {<br />
+// add your GA id here:<br />
+var pageTracker = _gat._getTracker(&quot;UA-XXXXXX-X&quot;);<br />
+pageTracker._trackPageview();<br />
+} catch(err) {}&lt;/script&gt;--&gt;</p>
+<p>And you need to comment out the call to SWFAddress and uncomment the call to SWFAddress that is below - it has the extra bit of code on the end that tells SWFAddress to look for the page tracking.</p>
+<p> <span class="code">&lt;!-- to use Google Analytics, comment out this line and UNCOMMENT the next line --&gt;<br />
+&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;?php swfaddress_resource('/js/swfaddress.js'); ?&gt;&quot;&gt;&lt;/script&gt;<br />
+&lt;!--&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;?php swfaddress_resource('/js/swfaddress.js'); ?&gt;?tracker=pageTracker._trackPageview&quot;&gt;&lt;/script&gt;--&gt;</span><br />
+</p>
+<p>When you do this you will be supplied with your own key - which you simply need to add to index.html or index.php here:</p>
+<p class="code">// add your GA id here:<br />
+var pageTracker = _gat._getTracker(&quot;<strong>UA-XXXXXX-X</strong>&quot;);</p>
+<p>Using the code as it is on my site won't work because <strong class="code">UA-XXXXXX-X</strong> is obviously not a real Google Analytics key.</p>
+
+<a href="#top" class="top">Top</a>
+<h2><a name="more" id="more"></a>More Information</h2>
+<p>If you find that the many, many possibilities for customising this template via the XML and CSS files  does not meet your needs then you may have to dive in and do some actionscript work. If you are not confident of your ability then by all means hire a freelancer to do this. I try and make my code as clear and understandable as possible for whoever will be working on it.</p>
+<p>Just one thing, before you start make sure you make a backup copy. If you want to get really serious consider using a code management system like SVN.</p>
+<p></p>
+<h3><a name="structure"></a>Class structure</h3>
+<p>The classes for the mbudm#001 template are divided into two main categories, base (core) classes and mbudm#001 specific clases. Base classes  are always preceded by 'mb', and they provide the core functionality of the template &#8212; all the 'behind the scenes' code &#8212; these classes are located here: src/com/mbudm. Template specific classes are always preceded by 'min' and they reside in a sub folder also named 'min' ('min' is short for minimalist - my shortened name for this template). These classes are located here: src/com/mbudm/min.</p>
+<p>There are also some third party classes used with this template (all with the authors permission). These are discussed below.</p>
+<p>Generally, there should be no reason for editing the 'mb' base classes. This is because the 'min' classes handle everything that appears visually in the template.</p>
+<h3><a name="library" id="library"></a>Library Symbols</h3>
+<p>All classes that extend the MovieClip class, ie. any class that is even remotely visual in nature - or that has to use movieClip methods to add, remove or transform movieClips, has an accompanying symbol in the library of the main.fla. Init.fla — the 'stub' movie &#8212; has only one symbol, mbLoaderSymbo,l as that is all that is required by this flash movie. Note that the mbLoader is also in the main.fla library, for quick testing. See Troubleshooting for more info.</p>
+<h5>Naming convention</h5>
+<p>These symbols are placed in either the 'mb' or the 'min' folder depending on what class they use. Additionally, if the symbol name is prefixed with 'mb' and it is in the 'min' folder - this means it is using a 'min' class that <em>extends</em> a 'mb' class. Items in the 'min' folder that are prefixed 'min' use a 'min' class that <em>does not extend</em> a 'mb' class.</p>
+<p></p>
+<h3><a name="ui"></a>UI classes ('min')</h3>
+<p> The 'min' classes themselves can also be categorised in two ways. The majority of the 'min' classes simply extend the 'mb' class of the same name. The 'min' classes simply extend the functionality of the base class by adding the UI and graphics, and specifying the layout of these items. As mentioned, these classes simply handle all the visual parts of the template.</p>
+<p>All min classes contain inline documentation and an overall description of what they do. In addition the classes are named similarly to the visual element they represent - so finding the bit you want to change should not be too difficult.</p>
+<h3><a name="core"></a>Base/Core classes ('mb')</h3>
+<p>All 'mb' classes  contain inline documentation and an overall description of what they do. In addition the classes are named similarly to the visual element they represent, so finding the bit you want to change should not be too difficult. Some 'mb' classes do not have a visual component as they handle more general things like the initialisation of the site, site index, site layout, site colors and transitions between pages.</p>
+<h3><a name="third" id="third"></a>Third Party Code</h3>
+<p>There are  other folders in src/com/ apart from mbudm/. These are the third party classes. All information about their origin and the authors details are in these files. Likewise, the javaScript files in www/js are also all third party code.</p>
+<p>If you suspect that you have found a bug in any of these files, I urge you to contact me first in order to rule out a problem which is specific to my code - or to this third party code as it is being used in my template.</p>
+
+<a href="#top" class="top">Top</a>
+
+<h2><a name="trouble" id="more"></a>Troubleshooting</h2>
+<h3><a name="testing" id="testing"></a>Testing using Control/Test Movie (Control + Enter) in Flash</h3>
+<p>It is possible to run the application from Flash, allowing you to debug and use trace(). Some trace errors are included in the classes when obvious errors are made, like invalid navigation requests for example.</p>
+<p>To test, you will need to uncomment some code in src/minMain.fla that  creates a loader instance. This is the task that is usually handled by init.fla. You will of course also need to change the publish location so that when you hit Ctrl + Enter Flash publishes the movie where it can find all the data files.</p>
+<h3><a name="security" id="security"></a>Problems testing locally in the browser</h3>
+<p>Working locally, if you see the Security Alert from Adobe, this is because the template communicates with the javascript files in www/js. There are a couple of things you can do to prevent this, that <em>should</em> work:</p>
+<ul>
+<li>set allowscript access to always</li>
+<li>specify your location as ok (on mac you may have to add localhost to your URL, eg file://localhost/Users/ instead of file:///Users/, to disable the popup blocker)</li>
+</ul>
+
+<p>If this doesn't work,  I encourage you to test locally on a server (Personal Web Server on windows and Web Sharing on mac), or if you have to, simply test in a secure or hidden part of your website. You are building a website after all so it's important to test in as realistic environment as possible.</p>
+<p><a href="#top" class="top">Top</a></p>
+<h2>Update History</h2>
+<h3>v1.2 - 15 August 2009</h3>
+<h5>SWFAddress</h5>
+<p>Replaces the deep linking system FLurl which had some issues in Safari 4 and IE8. Also offers a full SEO solution.</p>
+<h5>Google Analytics</h5>
+<p>Comes with SWFAddress.</p>
+<h5>Fixed and Maximum/Minimum width and height</h5>
+<p>Added these options to the init.xml layout attributes. Provides better control of the template size in all browser situations</p>
+<h5>Faster loading</h5>
+<p>The loading class has been optimised so that it loads items much more quickly</p>
+<h5>CDATA support</h5>
+<p>&lt;text&gt; nodes can now have a CDATA wrapper around them - so that you can use XML editors that do this automatically. If your content is clean XHTML then you don't have to do this but it is probably a safer bet.</p>
+<h5>DevMode</h5>
+<p>A Cache beater that is useful when testing out new content.</p>
+<h5>Folder structure and files affected</h5>
+<p>The only change you need to be aware off is that I have moved the two template SWF files:</p>
+<p class="code">www/swfs/init.swf<br />
+www/swfs/minMain.swf</p>
+<p>To</p>
+<p class="code">www/init.swf<br />
+www/main.swf</p>
+<p>Apart from that the folder structure has changed a little and I have tested this out with the original release and there should be nothing more that needs to change for this update to work with your existing site that uses mbudm#001. Unless of course you want to use some of these cool new features ;-)</p>
+<p>There are so many file changes in this release that it is not worth listing them here. As I have developed mbudm#002 I have made lots of improvements to my base classes - these code improvements are all included in this update to mbudm#001</p>
+<p>Users of mbudm#002 may notice that I have changed from &lt;page type=&quot;text&quot; /&gt; to simply using &lt;text /&gt;. You can use this convention with #001 as well if you like.</p>
+<h3>v1.1 - 2 June 2009</h3>
+<h4>Background smoothing</h4>
+<p>Added background smoothing to the minBackground class. The init.xml file now supports a &lt;background&gt; node with a smoothing attribute. If this is set to 1 then all bg images are smoothed.</p>
+<h5>Files affected:</h5>
+<ul><li>src/com/mbudm/mbInit.as</li>
+  <li>src/com/mbudm/mbBackground.as</li>
+  <li>src/com/mbudm/min/minBackround.as</li>
+</ul>
+<h4>Arrow buttons scrolling</h4>
+<p>When the up or down arrow is pressed (and the textField does not have focus) the textBox scrolls if there is scrolling to be done.</p>
+<h5>Files affected:</h5>
+<ul>
+  <li>src/com/mbudm/mbScroller.as</li>
+  <li>src/com/mbudm/mbScrollerTextFieldMode.as</li>
+  <li>src/com/mbudm/mbTextBox.as (Comment about object structure requirement of textField)</li>
+</ul>
+<h4>Footer text blurring</h4>
+<p>When the footer text is centered it would occasionally blur slightly. This no longer occurs</p>
+<h5>Files affected:</h5>
+<ul>
+  <li>src/com/mbudm/min/minFooter.as</li>
+</ul>
+<h4>Preview sample site</h4>
+<p>Some images resized and settings changed to make the preview site display more professionally i most browser situations.</p>
+<p>&nbsp;</p>
+</body>
+</html>

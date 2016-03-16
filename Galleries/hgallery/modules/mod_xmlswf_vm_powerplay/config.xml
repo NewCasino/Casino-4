@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config 
+	bgColor="0x000000" gradientColor="0x222222" preloaderSize="34" preloaderColor="0xB5FF00"
+	rotateMode="true" autoStart="true" delay="8" random="false">
+	
+	<textpanel textSize="12" textAlign="left" textColor="0xFFFFFF" bgColor="0x333333" bgAlpha="0.75" />
+	
+	<button width="20" height="70" color="0xFFFFFF" mouseoverColor="0xB5FF00" bgColor="0x333333" bgAlpha="0.75" 
+		displayPreview="true" panelColor="0x000000" />
+	
+	<controlpanel textSize="12" color="0xFFFFFF" mouseoverColor="0xB5FF00" bgColor="0x333333" bgAlpha="0.75" menuWidth="125" />
+	
+	<thumbnail width="125" height="70" preloaderSize="20" 
+			displayNumber="true" frameSize="1" color="0x000000" mouseoverColor="0x0066FF" bgColor="0x000000" />
+			
+	<thumbpanel color="0x000000" mouseoverColor="0xFF3300" bgColor="0xFFFFFF" gradientColor="0xCCCCCC" bgAlpha="1" margin="5" gap="5"/>
+	
+	<tooltip textSize="12" textColor="0xFFFFFF" bgColor="0x000000" bgAlpha="0.75"/>
+</config>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo"
+		  xmlns:sqlite="com.peterelst.air.sqlite.*"
+		  width="100%" height="100%"
+		  creationComplete="this_creationCompleteHandler(event)">
+	
+	<fx:Declarations>
+		<sqlite:Query id="getSeasons_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM seasons"
+					  result="getSeasons_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="addSeasons_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="INSERT INTO seasons (season) VALUES (@SEASON)"
+					  result="{seasonAdded()}"/>
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			
+			import flash.events.Event;
+			import flash.events.SQLEvent;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+			[Bindable]
+			public var selectedItem:Object;
+			
+			public var editState:Boolean = false;
+			
+			private var dummyObject:Object = {season:''};
+			
+			protected function getSeasons_query_resultHandler(event:SQLEvent):void {
+				if (event.target.data == null) {
+					return;
+				}
+								
+				model.seasonsData = new ArrayCollection(event.target.data);
+				//model.seasonsData.refresh();
+				if (this.editState) {
+					selectSeason(newSeason.text);
+					this.switchToNormalState();
+					this.dispatchEvent(new Event('seasonSaved'));
+				}
+			}
+			
+			protected function seasonAdded():void {				
+				getSeasons_query.execute();				
+			}
+			
+			public function selectSeason(season:String):void {
+				var seasonsArray:ArrayCollection = seasons.dataProvider as ArrayCollection;
+				for (var i:int = 0; i < seasonsArray.length; i++) {
+					if (seasonsArray.getItemAt(i).season == season) {
+						seasons.selectedIndex = i;
+						selectedItem = seasons.selectedItem;
+						return;
+					}
+				}
+			}
+
+			protected function this_creationCompleteHandler(event:FlexEvent):void {				
+				getSeasons_query.execute();
+				model.watchComboBox(seasons);
+			}
+
+			protected function newSeason_enterHandler(event:FlexEvent):void {
+				seasons.dataProvider.addItem({season:newSeason.text});
+				addSeasons_query.parameters = [newSeason.text];
+				newSeason.text = "";
+				addSeasons_query.execute();
+			}
+			
+			public function clear():void {
+				this.switchToNormalState();
+				seasons.selectedItem = -1;
+				this.selectedItem = null;
+				if (newSeason) {
+					newSeason.text = '';
+				}
+			}
+			
+			public function saveSeason():void {
+				if (newSeason.text == '') {
+					Alert.show("Inserisci il stagione.");
+					return;
+				}
+				seasons.dataProvider.addItem({season:newSeason.text});
+				addSeasons_query.parameters = [newSeason.text];				
+				addSeasons_query.execute();
+				//newSeason.text = "";
+			}
+			
+			protected function switchToNormalState():void {
+				currentState='normalState';
+				selectedItem = seasons.selectedItem;
+				seasons.enabled = true;
+				editState = false; 
+			}
+			
+			protected function switchToAddState():void {
+				currentState='addSeason';
+				selectedItem = null;
+				seasons.enabled = false;
+				editState = true;
+			}
+				
+
+		]]>
+	</fx:Script>
+	
+	<fx:Metadata>
+		[Event(name="seasonSaved", type="flash.events.Event")]		
+	</fx:Metadata>
+	
+	<s:states>
+		<s:State name="normalState"/>
+		<s:State name="addSeason" />
+	</s:states>
+	
+	<s:HGroup height="25">
+		<mx:ComboBox id="seasons" dataProvider="{model.seasonsData}"					 
+					 labelField="season"					 
+					 close="{selectedItem = seasons.selectedItem}"
+					 prompt="Seleziona Stagione"/>
+		
+		<s:Button label="+" textAlign="center"
+				  fontWeight="bold"
+				  width="30" fontSize="15"
+				  click.normalState="{switchToAddState()}" click.addSeason="{switchToNormalState()}"/>
+	</s:HGroup>
+	
+	<s:TextInput id="newSeason"
+				 width="120" includeIn="addSeason"/>
+	<!--enter="newSeason_enterHandler(event)"-->
+	
+</s:VGroup>

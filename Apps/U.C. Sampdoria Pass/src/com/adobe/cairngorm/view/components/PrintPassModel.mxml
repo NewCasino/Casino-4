@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Window xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/halo"		
+		 width="386" height="560" resizable="false"
+		 creationComplete="this_creationCompleteHandler(event)"
+		 xmlns:sqlite="com.peterelst.air.sqlite.*">
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<fx:Script>
+		<![CDATA[
+			import mx.events.ResizeEvent;
+			import classes.PrintObject;
+			
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			
+			import flash.display.Bitmap;
+			import flash.display.Sprite;
+			import flash.events.MouseEvent;
+			import flash.events.SQLEvent;
+			import flash.printing.PrintJob;
+			import flash.printing.PrintJobOptions;
+			
+			import mx.collections.ArrayCollection;
+			import mx.core.IVisualElementContainer;
+			import mx.events.DropdownEvent;
+			import mx.events.FlexEvent;
+			import mx.printing.FlexPrintJobScaleType;
+			
+			[Bindable]
+			private var WIDTH:int = 386;
+			
+			[Bindable]
+			private var HEIGTH:int = 560;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+			[Bindable]
+			private var season:String = "Stagione 2009-2010";
+			
+			[Bindable]
+			private var companyName:String = "MAC EVENTS (AUDIO)"; 
+			
+			[Bindable]
+			private var userName:String = "FIDIO MAURIZIO"; 
+			
+			[Bindable]
+			private var accessAreas:String = "Accesso Escluso: Campo / Spogli / Sala Stampa"; 
+			
+			[Bindable]
+			private var matchName:String = "SAMPDORIA - BOLOGNA"; 
+			
+			[Bindable]
+			private var printOptions:ArrayCollection = new ArrayCollection([]);
+			
+			[Bindable]
+			private var selectedOption:String = FlexPrintJobScaleType.SHOW_ALL;	
+				
+			private var accessData:Object;
+			private var userData:Object;
+			private var companyData:Object; 
+			private var matchData:Object;
+			
+			private var photoBMP:Bitmap;
+			
+			[Bindable]
+			private var showAreaBorder:Boolean = true;
+			
+			[Bindable]
+			private var printAsBitmap:Boolean = false;
+			
+			private var prinaAreaWidth:Number;
+			
+			public function printPass(pass:Object):void {
+				if (pass != null) {
+					accessAreas = pass.access_area;
+					prinaAreaWidth = printArea.width - 20;
+					/* accessAreas = pass.name + " " + pass.lastname;
+					accessAreas.toUpperCase(); */
+					getUser_query.parameters = [pass.user_id];
+					getUser_query.execute();
+					
+					getMatches_query.parameters = [pass.matches_id];
+					getMatches_query.execute();
+				}				
+			}
+			
+			private function makePrintOptionsObject():void {
+				printOptions.addItem({label:"None", data:FlexPrintJobScaleType.NONE});				
+				printOptions.addItem({label:"Match height", data:FlexPrintJobScaleType.MATCH_HEIGHT});
+				printOptions.addItem({label:"Match width", data:FlexPrintJobScaleType.MATCH_WIDTH});
+				printOptions.addItem({label:"Fill page", data:FlexPrintJobScaleType.FILL_PAGE});
+				printOptions.addItem({label:"Show all", data:FlexPrintJobScaleType.SHOW_ALL});
+			}
+			
+			private function doPrint():void {
+				var printJob:PrintJob = new PrintJob();
+				if (printJob.start()) {
+					var printObject:PrintObject = new PrintObject();
+					printObject.photo = this.photoBMP;
+					printObject.userName = this.userName;
+					printObject.season = this.season
+					printObject.company = this.companyName;
+					printObject.area = this.accessAreas
+					printObject.match = this.matchName;
+					printObject.width = printJob.paperWidth;
+					printObject.height = printJob.paperHeight;
+					printObject.showBorder = this.showAreaBorder;
+					printJob.addPage(printObject as Sprite, null, new PrintJobOptions(printAsBitmap));
+					
+					printJob.send();
+				} else {
+					return;
+					//myAlert.text = "Print job canceled";
+				}
+			}
+
+
+			protected function getCompany_query_resultHandler(event:SQLEvent):void {
+				if (event.currentTarget.data != null) {
+					companyName = event.currentTarget.data[0].company_name
+				}
+				
+				this.adjustTextWidth();
+			}
+
+
+			protected function getUser_query_resultHandler(event:SQLEvent):void {
+				if (event.currentTarget.data != null) {					
+					userName = event.currentTarget.data[0].name + " " + event.currentTarget.data[0].lastname;
+					userName.toUpperCase();
+					if (event.currentTarget.data[0].image != null) {
+						byteArrayToBitmapData(event.currentTarget.data[0].image);
+					}
+					getCompany_query.parameters = [event.currentTarget.data[0].company_id];
+					getCompany_query.execute();
+					
+					/* var ratio:Number = prinaAreaWidth / user.width;
+					if (ratio < 1) {
+						user.scaleX = ratio;
+						user.scaleY = ratio;
+						trace (ratio);
+					}  */
+					
+					
+					
+				}
+			}
+			
+			private function byteArrayToBitmapData(ba:ByteArray):void {
+				var loader:Loader = new Loader();
+				loader.contentLoaderInfo.addEventListener(Event.COMPLETE, loaderReady, false, 0, true);
+				loader.loadBytes(ba);
+			}
+			
+			private function loaderReady(event:Event):void {
+				event.currentTarget.loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, loaderReady, false);
+				var bmp:Bitmap = event.currentTarget.content as Bitmap;
+				photo.source = bmp.bitmapData;
+				this.photoBMP = bmp;
+			}
+
+
+			protected function getMatches_query_resultHandler(event:SQLEvent):void {
+				if (event.currentTarget.data != null) {
+					matchName = event.currentTarget.data[0].matchname.toUpperCase();
+					//matchName;
+					season = "Stagione " + event.currentTarget.data[0].season;					
+				}
+				
+				/* var ratio:Number = prinaAreaWidth / match.width;
+				if (ratio < 1) {
+					match.scaleX = ratio;
+					match.scaleY = ratio; 
+					trace (ratio);
+				} */
+			}			
+
+			protected function startPrint_clickHandler(event:MouseEvent):void {
+				this.doPrint();
+			}
+
+
+			protected function this_creationCompleteHandler(event:FlexEvent):void {
+				(statusBar.parent as IVisualElementContainer).removeElement(statusBar);
+				this.makePrintOptionsObject();
+			}
+
+
+			protected function combobox1_closeHandler(event:DropdownEvent):void {
+				selectedOption = event.currentTarget.selectedItem.data;					
+			}
+			
+			private function adjustTextWidth():void {
+				
+				
+			}
+
+
+			protected function label_resizeHandler(event:ResizeEvent):void {
+				if (event.currentTarget.width > 435) {
+					var ratio:Number = 435 / event.currentTarget.width;
+					event.currentTarget.scaleX = ratio;
+					event.currentTarget.scaleY = ratio;
+				}
+				
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<sqlite:Query id="getCompany_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM companies WHERE id=@COMPANYID AND deleted = 0"
+					  result="getCompany_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="getUser_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM users WHERE id=@USERID AND deleted = 0"
+					  result="getUser_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="getMatches_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM matches WHERE id=@MATCHID AND deleted = 0"
+					  result="getMatches_query_resultHandler(event)"/>
+		
+	</fx:Declarations>
+	
+
+	<s:Border width="{WIDTH}" height="{HEIGTH}"
+		backgroundImage="@Embed('assets/printpass_back.jpg')"/>
+	
+	<mx:HBox x="0" y="0" width="100%" height="100%" scaleX="0.7" scaleY="0.7"
+			 horizontalScrollPolicy="off" verticalScrollPolicy="off"
+			 id="printArea">		
+		<mx:Spacer width="7%"/>
+		<s:HGroup width="85%" height="100%" 
+				  left="18" right="18">
+			
+			<s:Group width="100%" height="100%">
+				<s:VGroup y="22" width="100%"
+					horizontalAlign="right">
+					<s:HGroup top="50">
+						<s:Label id="seasonText" text="{season}"								 
+								 fontFamily="Roadgeek"
+								 fontSize="13" fontWeight="bold" 
+								 textAlign="right"/>
+						<mx:Spacer width="35"/>		
+					</s:HGroup>
+				</s:VGroup>
+				
+				<s:VGroup y="220" width="100%" 
+						  horizontalAlign="center">
+					<s:Label text="SERVIZIO"
+							 fontFamily="Roadgeek" 
+							 fontWeight="bold" fontSize="35"/>
+				</s:VGroup>
+				
+				<s:VGroup y="267" width="100%" 
+						  horizontalAlign="center">
+					<s:Label id="company" text="{companyName}"
+							 fontFamily="Roadgeek" 
+							 fontWeight="bold" fontSize="26"/>
+				</s:VGroup>
+				
+				<s:VGroup y="303" width="100%" 
+						  horizontalAlign="center">
+					<s:Label id="user" text="{userName}"
+							 fontFamily="Roadgeek" resize="label_resizeHandler(event)"
+							 fontWeight="bold" fontSize="35"/>
+				</s:VGroup>
+				<s:VGroup y="347" width="100%" 
+						  horizontalAlign="center">
+					<s:TextArea id="access" text="{accessAreas}"
+								height="90" width="434"
+								editable="false" textAlign="center" horizontalCenter="17"
+								borderVisible="{showAreaBorder}" borderColor="#000000" contentBackgroundAlpha="0"		
+								fontFamily="Roadgeek" fontSize="31" />
+				</s:VGroup>
+				
+				<s:VGroup y="451" width="100%"
+						  horizontalAlign="center">
+					<s:BitmapImage id="photo" smooth="true"
+								   source="@Embed('../../../../../assets/sample_photo.jpg')"
+								   width="203" height="281"/>
+				</s:VGroup>
+				
+				<s:VGroup y="757" width="100%"
+						  horizontalAlign="center">			
+					
+					<s:Label id="match" text="{matchName}"
+							 fontFamily="Roadgeek" resize="label_resizeHandler(event)"
+							 fontWeight="bold" fontSize="30"/>
+				</s:VGroup>
+					
+			</s:Group>
+		</s:HGroup>
+	
+	</mx:HBox>
+	<s:Border top="10" left="10" height="80"
+			  backgroundAlpha="1" backgroundColor="#525050" 
+			  borderColor="#000000" borderStyle="solid">
+		<s:VGroup top="10" left="10" right="10" bottom="10"
+				  gap="15">
+			<!--<s:Label text="Printing scale options" styleName="dialogLabel"/>-->
+			<!--<mx:ComboBox dataProvider="{printOptions}"
+						 close="combobox1_closeHandler(event)"/>-->
+			<!--<s:CheckBox id="printType" label="Print as bitmap"
+						selected="true"
+						change="{printAsBitmap = printType.selected}"/>-->
+			
+			<s:CheckBox id="chbShowBorder"
+						color="white"
+						label="Visualizza cornice"
+						selected="true"
+						change="{showAreaBorder = chbShowBorder.selected}"/>
+			
+			<s:Button id="startPrint" label="Stampa" 
+					  click="startPrint_clickHandler(event)"/>
+		</s:VGroup>
+	</s:Border>
+	
+	
+	<!--</s:Border>-->
+	
+</s:Window>

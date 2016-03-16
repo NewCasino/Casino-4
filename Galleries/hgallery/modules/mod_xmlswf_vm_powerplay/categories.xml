@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<categories>
+	<category title="3D Abstract" 	path="xml/data/3d.xml"/>
+	<category title="Architecture" 	path="xml/data/arch.xml"/>
+</categories>

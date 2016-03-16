@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<slides>
+
+	<slide path="images/flowers/normal/very_pink_flower-other.jpg" thumbPath="images/flowers/thumb/very_pink_flower-other.jpg">
+		<caption><![CDATA[pink flower]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/envato060.jpg" thumbPath="images/flowers/thumb/envato060.jpg">
+		<caption><![CDATA[yellow flower]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vestibulum nunc, quis venenatis diam sodales id. 
+				Integer ultrices posuere turpis, ac facilisis nisl ultricies non. Mauris et neque a turpis eleifend gravida. 
+				Quisque sit amet pretium lacus. Nam felis lorem, pharetra et cursus eu, elementum sed dolor. Ut risus. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/purple_water_lily-other.jpg" thumbPath="images/flowers/thumb/purple_water_lily-other.jpg">
+		<caption><![CDATA[purple water lily]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/madness_flower2.jpg" thumbPath="images/flowers/thumb/madness_flower2.jpg">
+		<caption><![CDATA[white flower]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/random_violet.jpg" thumbPath="images/flowers/thumb/random_violet.jpg">
+		<caption><![CDATA[violet]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vestibulum nunc, quis venenatis diam sodales id. 
+				Integer ultrices posuere turpis, ac facilisis nisl ultricies non. Mauris et neque a turpis eleifend gravida. 
+				Quisque sit amet pretium lacus. Nam felis lorem, pharetra et cursus eu, elementum sed dolor. Ut risus. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/scottwills_bee.jpg" thumbPath="images/flowers/thumb/scottwills_bee.jpg">
+		<caption><![CDATA[bee]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/scottwills_makeawish.jpg" thumbPath="images/flowers/thumb/scottwills_makeawish.jpg">
+		<caption><![CDATA[make a wish]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/scottwills_plant.jpg" thumbPath="images/flowers/thumb/scottwills_plant.jpg">
+		<caption><![CDATA[plant]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vestibulum nunc, quis venenatis diam sodales id. 
+				Integer ultrices posuere turpis, ac facilisis nisl ultricies non. Mauris et neque a turpis eleifend gravida. 
+				Quisque sit amet pretium lacus. Nam felis lorem, pharetra et cursus eu, elementum sed dolor. Ut risus. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/pink_orchid-other.jpg" thumbPath="images/flowers/thumb/pink_orchid-other.jpg">
+		<caption><![CDATA[pink orchid]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/scottwills_redrose.jpg" thumbPath="images/flowers/thumb/scottwills_redrose.jpg">
+		<caption><![CDATA[red rose]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/heaven_bird_flower-other.jpg" thumbPath="images/flowers/thumb/heaven_bird_flower-other.jpg">
+		<caption><![CDATA[heaven bird flower]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vestibulum nunc, quis venenatis diam sodales id. 
+				Integer ultrices posuere turpis, ac facilisis nisl ultricies non. Mauris et neque a turpis eleifend gravida. 
+				Quisque sit amet pretium lacus. Nam felis lorem, pharetra et cursus eu, elementum sed dolor. Ut risus. 
+			]]>
+		</description>
+	</slide>
+
+	<slide path="images/flowers/normal/one_red_rose-other.jpg" thumbPath="images/flowers/thumb/one_red_rose-other.jpg">
+		<caption><![CDATA[red rose]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/flowers/normal/scottwills_whiteflowers.jpg" thumbPath="images/flowers/thumb/scottwills_whiteflowers.jpg">
+		<caption><![CDATA[white flower]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+</slides>

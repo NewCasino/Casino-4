@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formModule margins="0,0,0,0" gutter="20">
+	<title>Des questions?</title>
+	<text position="top" height="0.5">
+		<![CDATA[<p>Responsable du Département d' OPHTALMOLOGIE : <br>
+Tel: 00 33 (0)1 42 56 51 31  <br>
+Fax: 00 33  (0)1 42 56 51 33<br>
+e-mail: mfuria@clinique-roosevelt.com</p> ]]>
+	</text>
+	<form action="php/contactus.php" labelwidth="120" maxwidth="" >
+		<item>
+			<label>Nom:</label>
+			<input name="name" type="text" value="Votre nom ici" width="200" maxlength="100" minlength="2"/>
+		</item>
+		<item>
+			<label>Votre email:</label>
+			<input name="email" type="text" value="Votre email ici" width="200" minlength="4"  />
+		</item>
+		<item>
+			<label>Objet:</label>
+			<input name="subject" type="text" value="Objet" width="300" minlength="2"  />
+		</item>
+		<item>
+			<label>Message:</label>
+			<textarea name="message" width="300" height="100"  minlength="4" maxlength="200" >Ecrire votre message ici</textarea>
+		</item>
+		<item>
+			<input name="submit" type="submit" value="Envoyer" width="100" />
+		</item>
+	</form>
+	<help msgpos="right">
+		<onSetFocus name="name" message="SVP tapez votre nom en entier" />
+		<onSetFocus name="subject" message="e.g. Sales query or Website issue" />
+		<onKillFocus name="email" rule="email" message="Adresse email non valide" />
+		<onKillFocus name="email" rule="minlength" message="Adresse email non valide" />
+		<onSubmit name="subject" rule="minlength" message="SVP ajoutez l'objet du message" />
+		<onSubmit name="message" rule="minlength" message="SVP ajoutez le message" />
+		<onSubmit name="name" rule="minlength" message="SVP ajoutez votre nom" />
+		<onSubmit name="message" rule="maxlength" message="SVP raccourcir votre message, nous vous repondrons plus rapidement si le message est plus concis." />
+	</help>
+</formModule>

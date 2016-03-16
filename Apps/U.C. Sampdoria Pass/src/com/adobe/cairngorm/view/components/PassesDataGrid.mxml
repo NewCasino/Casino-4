@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:DataGrid xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			 xmlns:s="library://ns.adobe.com/flex/spark" 
+			 xmlns:mx="library://ns.adobe.com/flex/halo"
+			 implements="com.adobe.cairngorm.view.interfaces.ICustomDataGrid"
+			 doubleClickEnabled="true"
+			 itemDoubleClick="datagrid1_itemDoubleClickHandler(event)">
+	
+	<fx:Metadata>
+		[Event(name="editAction", type="com.adobe.cairngorm.event.CustomDataGridEvent")]
+		[Event(name="deleteAction", type="com.adobe.cairngorm.event.CustomDataGridEvent")]	
+		[Event(name="printAction", type="com.adobe.cairngorm.event.CustomDataGridEvent")]
+	</fx:Metadata>
+	
+	<fx:Script>
+		<![CDATA[			
+			import mx.events.ListEvent;
+			import com.adobe.cairngorm.event.CustomDataGridEvent;
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			import com.adobe.cairngorm.view.interfaces.ICustomDataGrid;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance(); 
+			
+			public function takeAction(item:Object, type:String):void {
+				var event:CustomDataGridEvent = new CustomDataGridEvent(type);
+				event.item = item;
+				this.dispatchEvent(event);
+			}
+			
+			protected function getFullname(item:Object, column:DataGridColumn):String {
+				return item.username +" "+ item.userlastname;
+			}
+			
+			public function getCompanyLabel(item:Object,column:DataGridColumn):String {				
+				for (var j:int = 0; j < model.companiesData.length; j++) {
+					if (model.companiesData[j].id == item.company_id) {
+						return model.companiesData[j].company_name;
+					}
+				}
+				return "";
+			}
+
+			protected function datagrid1_itemDoubleClickHandler(event:ListEvent):void {
+				var e:CustomDataGridEvent = new CustomDataGridEvent(CustomDataGridEvent.EDIT_ACTION);
+				e.item = event.itemRenderer.data;
+				this.dispatchEvent(e);
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<mx:DateFormatter id="dateFormat" formatString="DD/MM/YYYY"/>		
+	</fx:Declarations>
+	
+	<mx:columns>
+		<mx:DataGridColumn headerText="Cognome Nome"
+						   labelFunction="getFullname"/>
+		
+		<mx:DataGridColumn headerText="Azienda"						   
+						   labelFunction="getCompanyLabel"
+						   width="150"/>
+		
+		<mx:DataGridColumn headerText="Incontro" 
+						   dataField="match"						   
+						   width="175"/>
+		
+		<mx:DataGridColumn headerText="Stagione"
+						   dataField="season"
+						   width="125"/>
+		
+		<mx:DataGridColumn width="60" 
+						   itemRenderer="com.adobe.cairngorm.view.renderers.EditDeleteItemRenderer"/>
+		
+		<mx:DataGridColumn width="60" 
+						   itemRenderer="com.adobe.cairngorm.view.renderers.PrintItemRenderer"/>
+		
+	</mx:columns>
+</mx:DataGrid>

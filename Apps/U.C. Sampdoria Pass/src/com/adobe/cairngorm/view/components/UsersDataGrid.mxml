@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:DataGrid xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			 xmlns:s="library://ns.adobe.com/flex/spark" 
+			 xmlns:mx="library://ns.adobe.com/flex/halo"
+			 implements="com.adobe.cairngorm.view.interfaces.ICustomDataGrid"
+			 doubleClickEnabled="true" itemDoubleClick="datagrid1_itemDoubleClickHandler(event)">
+	
+	<fx:Metadata>
+		[Event(name="editAction", type="com.adobe.cairngorm.event.CustomDataGridEvent")]
+		[Event(name="deleteAction", type="com.adobe.cairngorm.event.CustomDataGridEvent")]
+		[Event(name="showPassAction", type="com.adobe.cairngorm.event.CustomDataGridEvent")]
+	</fx:Metadata>
+	
+	<fx:Script>
+		<![CDATA[			
+			import mx.events.ListEvent;
+			import com.adobe.cairngorm.event.CustomDataGridEvent;
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			import com.adobe.cairngorm.view.interfaces.ICustomDataGrid;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance(); 
+			
+			public function takeAction(item:Object, type:String):void {
+				var event:CustomDataGridEvent = new CustomDataGridEvent(type);
+				event.item = item;
+				this.dispatchEvent(event);
+			}
+			
+			protected function getFullname(item:Object, column:DataGridColumn):String	{
+				return item.name +" "+item.lastname;
+			}
+			
+			public function getDateLabel(item:Object,column:DataGridColumn):String {
+				return dateFormat.format(item[column.dataField]);
+			}
+			
+			public function getCompanyLabel(item:Object,column:DataGridColumn):String {				 
+				
+				for (var i:int = 0; i < model.companiesData.length; i++) {
+					if (model.companiesData[i].id == item.company_id) {
+						return model.companiesData[i].company_name;
+					}
+				}
+				return "";
+			}
+
+
+			protected function datagrid1_itemDoubleClickHandler(event:ListEvent):void {
+				var e:CustomDataGridEvent = new CustomDataGridEvent(CustomDataGridEvent.EDIT_ACTION);
+				e.item = event.itemRenderer.data;
+				this.dispatchEvent(e);
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<mx:DateFormatter id="dateFormat" formatString="DD/MM/YYYY"/>		
+	</fx:Declarations>
+	
+	<mx:columns>
+		<mx:DataGridColumn headerText="Cognome Nome" 
+						   dataField="name"
+						   labelFunction="getFullname"/>
+		<mx:DataGridColumn headerText="Azienda" 
+						   dataField="company_id"
+						   labelFunction="getCompanyLabel"
+						   width="150"/>
+		<mx:DataGridColumn headerText="Data di Nascita" 
+						   dataField="borndate"
+						   labelFunction="getDateLabel"
+						   width="125"/>				
+		
+		<mx:DataGridColumn width="60" 
+						   itemRenderer="com.adobe.cairngorm.view.renderers.EditDeleteItemRenderer"/>
+		
+		<mx:DataGridColumn width="60" 
+						   itemRenderer="com.adobe.cairngorm.view.renderers.PassItemRenderer"/>
+		
+	</mx:columns>
+</mx:DataGrid>

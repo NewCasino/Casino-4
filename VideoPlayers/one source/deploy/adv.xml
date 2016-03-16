@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+
+	<key>integration_test</key>
+	<zid>flash_ads</zid>
+	<adaptag>
+		<value>partner1</value>
+		<value>tag1</value>
+	</adaptag>
+	<companionId>adaptvcompanion</companionId>
+	<context>key1%3Dvalue1%2Ckey2%3Dvalue2</context>
+	<id>1337</id>
+	<title>Test Video</title>
+	<duration>100</duration>
+	<url>http://www.adap.tv/test.flv</url>
+	<description>Test Video</description>
+	<keywords>
+		<value>test</value>
+		<value>video</value>
+		<value>adaptv</value>
+	</keywords>
+	<categories>
+		<value>category1</value>
+		<value>category2</value>
+	</categories>
+	
+</config>

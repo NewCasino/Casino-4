@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo" 
+		  width="100%" height="100%" xmlns:sqlite="com.peterelst.air.sqlite.*"
+		  creationComplete="this_addedToStageHandler(event)">
+	
+	<fx:Declarations>
+		<sqlite:Query id="getCompanies_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM companies WHERE deleted = 0 ORDER BY company_name ASC"
+					  result="getCompanies_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="addCompany_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="INSERT INTO companies (company_name, deleted) VALUES (@COMPANY_NAME, @DELETED)"
+					  result="{companySaved()}"/>
+		
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			
+			import flash.events.Event;
+			import flash.events.MouseEvent;
+			import flash.events.SQLEvent;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+			private var addedCompanyName:String;
+			
+			[Bindable]
+			private var companiesData:ArrayCollection;			
+			
+			public var selectedItem:Object;
+			public var selectedCompanyId:int = -1;
+			
+			public var editState:Boolean = false;
+			
+			public function refreshData():void {
+				getCompanies_query.execute();
+				cursorManager.setBusyCursor();
+			}
+
+			protected function this_addedToStageHandler(event:Event):void {
+				this.refreshData();
+				model.watchComboBox(companies);
+			}
+
+
+			public function saveCompany():void {
+				if (newCompanyName.text == '') {
+					Alert.show("Inserisci il azienda.");
+					return;
+				}
+					
+				companies.dataProvider.addItem({company_name:newCompanyName.text});	
+				addCompany_query.parameters = [newCompanyName.text, 0];				
+				addCompany_query.execute();				
+			}
+			
+			protected function companySaved():void {
+				getCompanies_query.execute();
+			}
+			
+			public function selectCompanyById(id:int):void {
+				var tmpArray:ArrayCollection = companies.dataProvider as ArrayCollection;
+				for (var i:int = 0; i < tmpArray.length; i++) {
+					if (tmpArray.getItemAt(i).id == id) {
+						companies.selectedIndex = i;
+						selectedItem = companies.selectedItem;					
+						return;
+					}
+				}
+			}
+			
+			public function selectCompanyByName(name:String):void {
+				var tmpArray:ArrayCollection = companies.dataProvider as ArrayCollection;
+				for (var i:int = 0; i < tmpArray.length; i++) {
+					if (tmpArray.getItemAt(i).company_name == name) {
+						companies.selectedIndex = i;
+						selectedItem = companies.selectedItem;
+						return;
+					}
+				}
+			}
+
+			protected function getCompanies_query_resultHandler(event:SQLEvent):void {
+				cursorManager.removeBusyCursor();
+				if (event.currentTarget.data == null) {
+					return;
+				}
+				model.companiesData = new ArrayCollection(event.currentTarget.data);
+				
+				if (this.editState) {
+					selectCompanyByName(newCompanyName.text);
+					this.switchToNormalState();
+					this.dispatchEvent(new Event('companySaved'));
+				}
+				//this.selectCompany(selectedCompanyId);
+			}
+			
+			protected function getCompanyName(item:Object):String {
+				return item.company_name;
+			}
+			
+			public function clear():void {
+				this.switchToNormalState();
+				companies.selectedItem = -1;
+				this.selectedItem = null;
+				if (newCompanyName) {
+					newCompanyName.text = '';
+				}				
+			}
+			
+			protected function switchToNormalState():void {
+				currentState='normalState';
+				selectedItem = companies.selectedItem;
+				companies.enabled = true;
+				editState = false; 
+			}
+			
+			protected function switchToAddState():void {
+				currentState='addCompany';
+				selectedItem = null;
+				companies.enabled = false;
+				editState = true;
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Metadata>
+		[Event(name="companySaved", type="flash.events.Event")]		
+	</fx:Metadata>
+	
+	<s:states>
+		<s:State name="normalState"/>
+		<s:State name="addCompany"/>
+	</s:states>
+	
+	<mx:HBox height="25">
+		<mx:ComboBox id="companies" dataProvider="{model.companiesData}"					 
+					 labelField="company_name"
+					 close="{selectedItem = companies.selectedItem}"
+					 prompt="Seleziona Azienda"/>
+		
+		<s:Button label="+" textAlign="center"
+				  fontWeight="bold"
+				  width="30" fontSize="15"
+				  click.normalState="{switchToAddState()}" click.addCompany="switchToNormalState()"/>
+	</mx:HBox>
+	
+	
+	<!--enter="newCompanyName_enterHandler(event)" -->
+	<s:TextInput id="newCompanyName"				
+				 width="120" includeIn="addCompany"/>
+	
+</s:VGroup>

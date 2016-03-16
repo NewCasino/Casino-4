@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config configId="0.1">
+	<!-- Color of the mouse over events -->
+	<rollOverColor>0x5898F3</rollOverColor>
+	<!-- Color of the disabled buttons -->
+	<disabledColor>0xcccccc</disabledColor>
+	<!-- Static(normal) color of all buttons and several other things -->
+	<rollOutColor>0x333333</rollOutColor>
+	<!-- Path to the categories config file -->
+	<pathToCategories>xml/imageGallery/categories.xml</pathToCategories>
+	<!-- Path to the descriptions css file -->
+	<cssFilePath>xml/imageGallery/categories/colors.css</cssFilePath>
+	<!-- Default category id(consecutive number as listed in categories config file) -->
+	<defaultCategoryId>0</defaultCategoryId>
+	<!-- Top margin of the gallery header(spacing between top and header) -->
+	<headerTopMargin>0</headerTopMargin>
+	<!-- Allow users to press autoplay button -->
+	<allowAutoPlay>true</allowAutoPlay>
+	<!-- Auto play time between images -->
+	<autoPlayTime>2000</autoPlayTime>
+	<!-- Allow users to press fullscreen button and go to fullscreen mode -->
+	<allowFullscreen>true</allowFullscreen>
+	<!-- Allow header to be collapsed to only 4 pixels -->
+	<allowHeaderCollapse>false</allowHeaderCollapse>
+	<!-- Allow tooltip when mouse over it -->
+	<showThumbnailsToolTip>true</showThumbnailsToolTip>
+	<!-- Show arrows(next, previous image)  -->
+	<showLighBoxArrows>true</showLighBoxArrows>
+	<!-- View type 1: Navigation through thumbnails will go through next and previous buttons on every side of the thubs -->
+	<!-- View type 2: Thumbnails will scroll based on mouse X position -->	
+	<thumbnailsNavigation>1</thumbnailsNavigation>
+	<!-- If this variable is set to true, then selected image thumbnal will always be visible in the thumbnails area -->
+	
+		
+	<!-- IMPORTANT!! -->
+	<!-- IMPORTANT!! If you have selected view 2 then is not recomended that you have seelSelection set to true!! -->
+	<!-- IMPORTANT!! -->
+	<seekSelection>false</seekSelection>
+	
+	<!-- allows scale of thumbnails images -->
+	<thumbnailsScale>true</thumbnailsScale>
+</config>

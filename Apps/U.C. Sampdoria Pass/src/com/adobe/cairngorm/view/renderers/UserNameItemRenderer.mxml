@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo" 
+		  width="100%" height="100%"
+		  verticalAlign="middle" horizontalAlign="left"		  
+		  left="50">
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.event.CustomDataGridEvent;
+			import com.adobe.cairngorm.view.interfaces.ICustomDataGrid;
+			
+			import flash.events.MouseEvent;
+			
+			 override public function set data(value:Object):void {
+				super.data = value;
+				labelText.text = value.name +" "+value.lastname;
+			} 
+			
+
+			protected function btnEdit_clickHandler(event:MouseEvent):void {
+				var owner:ICustomDataGrid = this.owner as ICustomDataGrid;
+				owner.takeAction(data, CustomDataGridEvent.EDIT_ACTION);
+			}
+
+		]]>
+	</fx:Script>
+	<mx:Spacer width="5"/>
+	<mx:Text id="labelText" selectable="false"/>
+	<mx:Spacer width="100%"/>
+	<s:Button id="btnEdit" buttonMode="true" click="btnEdit_clickHandler(event)"
+			  toolTip="Modifica"
+			  skinClass="com.adobe.cairngorm.view.skins.EditButtonSkin"/>
+	<mx:Spacer width="5"/>
+</mx:HBox>

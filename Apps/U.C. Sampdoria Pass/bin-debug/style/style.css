@@ -1,0 +1,109 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/halo";
+@namespace dataGridClasses "mx.controls.dataGridClasses.*";
+
+@font-face 
+{ 
+	src: url("assets/fonts/BankGothicMedium.ttf"); 
+	fontFamily: BankGothicMedium;
+	font-weight:normal;	
+	advancedAntiAliasing: true;
+}
+
+@font-face 
+{ 
+	src: url("assets/fonts/BankGothicLight.ttf"); 
+	fontFamily: BankGothicLight;
+	font-weight:normal;
+	advancedAntiAliasing: true;
+}
+
+@font-face {
+	src:url("assets/fonts/HelveticaNeue.ttf");
+	fontFamily: HelveticaNeue;
+	fontWeight: normal;
+}
+
+@font-face {
+	src:url("assets/fonts/HelveticaNeueBold.ttf");
+	fontFamily: HelveticaNeueBold;
+	fontWeight: bold;
+}
+
+@font-face {
+	src:url("assets/fonts/Roadgeek 2005 Series F.otf");
+	fontFamily: Roadgeek;
+	fontWeight: normal;
+}
+
+@font-face {
+	src:url("assets/fonts/Roadgeek 2005 Series F.otf");
+	fontFamily: Roadgeek;
+	fontWeight: bold;
+}
+
+mx|TabNavigator
+{	
+	font-weight:normal;
+	font-family: "Verdana";
+	font-size:12;
+	color:#000000;
+	corner-radius:0;	
+}
+
+mx|DataGrid
+{
+}
+
+dataGridClasses|DataGridHeader
+{
+	font-weight:bold;
+	font-size:11;
+}
+
+s|Button
+{
+	font-family:HelveticaNeue;
+	font-size:10;
+	font-weight:normal;
+	corner-radius:4;
+}
+
+.iconButton
+{
+	font-family:BankGothicMedium;
+	font-size:10;
+	font-weight:normal;
+	color:#000000;
+}
+
+s|TextInput
+{
+	content-background-color:#ffffff;
+}
+
+.dialogLabel
+{
+	font-family:"Verdana";
+	font-weight:normal;
+	color:#ffffff;
+	font-size:12;
+}
+
+.windowLabel
+{
+	font-family:"Verdana";
+	font-weight:normal;
+	color:#000000;
+	font-size:12;
+}
+
+.dialogHeader
+{
+	font-family:BankGothicMedium;
+	font-weight:normal;
+	color:#ffffff;
+	font-size:20;
+}
+

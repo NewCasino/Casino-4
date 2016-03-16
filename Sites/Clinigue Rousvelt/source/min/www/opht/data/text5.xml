@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title >The mbudm#001 template can be easily reskinned</title>
+	<text>
+<p>
+Like they say on cooking shows, "Here's one I prepared earlier". The image below is a screenshot of a template that has the same content as this one but with a different background and some setting changes. </p><br/>
+<p>
+The full list of XML and CSS changes made to get to this design are:</p>
+<p>
+<li>Added a new darker background image to the bgimages folder and set this as the background.</li>
+<li>Inverted the theme by setting the invert attribute to 1.</li>
+<li>Changed the base color to a bright yellow and the composite color to a steel grey.</li>
+<li>Added two CSS color 'overrides' to make the color of the footer and the content border a better yellow.</li>
+<li>Increased the alpha of the content background to 90.</li>
+</p>
+<br/>
+<img src="images/Alt_mbudm001.jpg"  hspace="0" vspace="8" />
+		<br/>
+	</text>
+</mostlyText>

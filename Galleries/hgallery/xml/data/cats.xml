@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<slides>
+
+	<slide path="images/cats/normal/cat_face_5-other.jpg" thumbPath="images/cats/thumb/cat_face_5-other.jpg">		
+		<caption><![CDATA[cat's face]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/cats/normal/cat_1-other.jpg" thumbPath="images/cats/thumb/cat_1-other.jpg">		
+		<caption><![CDATA[cat outside]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vestibulum nunc, quis venenatis diam sodales id. 
+				Integer ultrices posuere turpis, ac facilisis nisl ultricies non. Mauris et neque a turpis eleifend gravida. 
+				Quisque sit amet pretium lacus. Nam felis lorem, pharetra et cursus eu, elementum sed dolor. Ut risus. 
+			]]>
+		</description>			
+	</slide>
+	
+	<slide path="images/cats/normal/street_cat_3-other.jpg" thumbPath="images/cats/thumb/street_cat_3-other.jpg">		
+		<caption><![CDATA[grey/white cat]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/cats/normal/window_and_cat-800x600.jpg" thumbPath="images/cats/thumb/window_and_cat-800x600.jpg">		
+		<caption><![CDATA[window & cat]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+				Integer ultrices posuere turpis, ac facilisis nisl ultricies non. Mauris et neque a turpis eleifend gravida. 
+				Quisque sit amet pretium lacus. Nam felis lorem, pharetra et cursus eu, elementum sed dolor. Ut risus. 
+			]]>
+		</description>
+	</slide>
+	
+	<slide path="images/cats/normal/green_eyes_cat-other.jpg" thumbPath="images/cats/thumb/green_eyes_cat-other.jpg">		
+		<caption><![CDATA[green eyes cat]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.]]>
+		</description>
+	</slide>
+	
+	<slide path="images/cats/normal/curios_cat-other.jpg" thumbPath="images/cats/thumb/curios_cat-other.jpg">		
+		<caption><![CDATA[curious cat]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vestibulum nunc, quis venenatis diam sodales id. 
+				Integer ultrices posuere turpis, ac facilisis nisl ultricies non. Mauris et neque a turpis eleifend gravida. 
+				Quisque sit amet pretium lacus. Nam felis lorem, pharetra et cursus eu, elementum sed dolor. Ut risus. 
+			]]>
+		</description>
+	</slide>
+		
+	<slide path="images/cats/normal/wild_cat_3-other.jpg" thumbPath="images/cats/thumb/wild_cat_3-other.jpg">		
+		<caption><![CDATA[sleeping cat]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>		
+	</slide>
+	
+	<slide path="images/cats/normal/orange_tabby_cat_face-other.jpg" thumbPath="images/cats/thumb/orange_tabby_cat_face-other.jpg">		
+		<caption><![CDATA[orange tabby]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.]]>
+		</description>
+	</slide>
+	
+	<slide path="images/cats/normal/red_cat-other.jpg" thumbPath="images/cats/thumb/red_cat-other.jpg">		
+		<caption><![CDATA[ginger cat]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vestibulum nunc, quis venenatis diam sodales id. 
+				Integer ultrices posuere turpis, ac facilisis nisl ultricies non. Mauris et neque a turpis eleifend gravida. 
+				Quisque sit amet pretium lacus. Nam felis lorem, pharetra et cursus eu, elementum sed dolor. Ut risus. 
+			]]>
+		</description>
+	</slide>		
+	
+	<slide path="images/cats/normal/the_dominant_cat-other.jpg" thumbPath="images/cats/thumb/the_dominant_cat-other.jpg">		
+		<caption><![CDATA[two cats outdoor]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis, nibh a molestie vulputate, est ante condimentum enim, 
+				nec interdum ante augue sit amet nulla. Fusce posuere urna vitae odio. 
+			]]>
+		</description>
+	</slide>
+
+	<slide path="images/cats/normal/cat_face_9-other.jpg" thumbPath="images/cats/thumb/cat_face_9-other.jpg">		
+		<caption><![CDATA[unhappy cat]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum no vocibus accusamus dignissim et, eius erat an ius, quot zzril facilisi an no. 
+				Sit brute laoreet deserunt id, sit at aeterno diceret officiis. Exerci legendos dignissim duo no.]]>
+		</description>
+	</slide>
+
+	<slide path="images/cats/normal/street_cat_2-other.jpg" thumbPath="images/cats/thumb/street_cat_2-other.jpg">		
+		<caption><![CDATA[napping]]></caption>
+		<description>
+			<![CDATA[
+				<font color="#B5FF00" size="14">XML Browser Gallery</font><br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque vestibulum nunc, quis venenatis diam sodales id. 
+				Integer ultrices posuere turpis, ac facilisis nisl ultricies non. Mauris et neque a turpis eleifend gravida. 
+				Quisque sit amet pretium lacus. Nam felis lorem, pharetra et cursus eu, elementum sed dolor. Ut risus. 
+			]]>
+		</description>
+	</slide>	
+					
+</slides>

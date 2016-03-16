@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title>Consultations spécialisées</title>
+	<text>
+	<p>
+<h2>Surdité</h2>
+<h4>1. Contrôle de l'audition et bilan avant chirurgie de l'oreille moyenne</h4>
+<p>Otoscopie, audiométrie, tympanométrie éventuellement complété par un scanner haute résolution du rocher voir une IRM (imagerie par résonnance magnétique).</p><br/>
+<h4>2. Expertise prothétique et bilan avant chirurgie de prothèse implantable</h4>
+<p>
+Audiométrie en champ libre, test dichotiques de latéralité, tests de discrimination temporelle.</p><br/>
+<h4>3. Bilan préimplantation cochléaire (enfant, adultes)</h4>
+<p>Audiométrie, otoémissions acoustiques, potentiels évoqués auditifs, vidéonystagmographie, tets prothétiques, test au promontoire, bilan orthophonique, bilan psychologique, scanner haute résolution du rocher, imagerie par résonnane magnétique.</p><br/>
+<h4>4. Bilan d'acouphène</h4>
+<p>Questionnaire, audiométrie, acouphénométrie, bilan d'hyperacousie et masking, bilan psychologique, bilan prothétique, retraining therapy complétés éventuellement par un bilan dentaire et neurologique.</p><br/><br/>
+<h2>Vertiges</h2>
+<p>Examen clinique otoscopique et otoneurologique, videonystagmoscopie, audiométrie, potentiels évoqués auditifs, vidéonystagmographie complétés éventuellement par une exploration radiologique (Scanner,IRM).</p><br/><br/>
+<h2>Paralysie faciale</h2>
+<p>Examen otoneurologique, otoscopie, audiométrie, potentiels évoqués auditifs, éventuellement complété par une electroneuronographie et une exploration radiologique (scanner, IRM).</p><br/><br/>
+<h2>Rhino-sinusites, polypose, nez bouché, déviation de cloison nasale, écoulement postérieur, gène pharyngée...</h2>
+<p>Fibroscopie nasale, scanner haute résolution des sinus, bilan allergologique, complétés éventuellemnt par des explorations fonctionnelles respiratoires, un enregistrement polygraphique du sommeil, un bilan dentaire.</p><br/><br/>
+<h2>Dysphonie (problème de voix)</h2>
+<p>Laryngoscopie, video-stroboscopie laryngée, bilan orthophonique.</p><br/><br/>
+<h2>Ronflement et apnées</h2>
+<p>Bilan rhinosinusien, examen oropharyngé, enregistrement  polygraphique du sommeil complétés éventuellement par un bilan diététique, une exploration radiologique maxillo-faciale.
+</p></p><br/><br/><br/><br/>
+	</text>
+	<toc enabled="1" halign="left" valign="top" width="140" margin="20" tag="h2" marker="~~" heading="Mots clés" headspace="3" padding="6" />
+</mostlyText>

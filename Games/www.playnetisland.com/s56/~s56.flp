@@ -1,0 +1,7 @@
+<flash_project name="~s56" version="1">
+	<project_file filetype="fla" path="./~s56.fla" profile=""/>
+	<project_file filetype="as" path="./mx/transitions/OnEnterFrameBeacon.as"/>
+	<project_file filetype="as" path="./mx/transitions/BroadcasterMX.as"/>
+	<project_file filetype="as" path="./mx/transitions/Tween.as"/>
+	<project_file filetype="as" path="./mx/transitions/easing/Bounce.as"/>
+</flash_project>

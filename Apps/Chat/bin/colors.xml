@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pallettes>
+	<pallette title="Group 1">
+		<item id="6" title="Black" hexValue="0x000000" />
+		<item id="7" title="White" hexValue="0xFFFFFF" />
+		<item id="8" title="Light Blue" hexValue="0xB0E0E6" />
+		<item id="9" title="Olympic Blue" hexValue="0x00CCFF" />
+		<item id="10" title="Blue" hexValue="0x0066CC" />
+		<item id="11" title="Blueberry" hexValue="0x0000CD" />
+		<item id="12" title="Dark Blue" hexValue="0x003399" />
+		<item id="13" title="Navy Blue" hexValue="0x000080" />
+		<item id="14" title="Midnight Blue" hexValue="0x191970" />
+		<item id="15" title="Orange" hexValue="0xFF8000" />
+		<item id="16" title="Red" hexValue="0xFF0000" />
+		<item id="17" title="22k Engine Turn Gold Leaf" hexValue="0xFAD200"/>
+		<item id="18" title="22k Florentine Gold Leaf" hexValue="0xFAD200"/>
+		<item id="21" title="Stucco" hexValue="0xCD853F" />
+		<item id="22" title="Tan" hexValue="0xDEB887" />
+	</pallette>		
+</pallettes>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title useParent="title" />
+	
+	<text>
+		<p></p><br/>
+		<br/><h3>Chapter 1</h3><br/><br/>
+		<div width="100%">
+		<span class="em">Email: </span><a href="asfunction:asfRelay,showPopup,2|1">go to page 2 of section 3</a>
+		</div>
+	</text>	
+</mostlyText>

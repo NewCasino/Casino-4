@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Border xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo"		   
+		  xmlns:imagecropper="com.flexblocks.imagecropper.*"
+		  cornerRadius="8" backgroundColor="#333333">
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			
+			import flash.display.BitmapData;
+			import flash.events.Event;
+			import flash.events.MouseEvent;
+			import flash.net.FileFilter;
+			
+			
+			private var lastSelectedImage:uint = 0;
+					
+			private var currentCropbox:Rectangle;
+			private var currentHandleSize:uint = 7;
+			private var currentCropConstraint:Boolean = false;
+		
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+						
+			private function doImageSelect():void {
+				
+				// Remove the previously cropped image
+				
+				croppedImage.source = null;
+				croppedImage.width = 0;
+				croppedImage.height = 0;
+				
+				enableControls(false, true);			
+			}
+			
+			private function doCrop():void {
+				
+				var newImage:BitmapData = imageCropper.croppedBitmapData;
+				croppedImage.source = new Bitmap(newImage);
+			}	
+			
+			private function imageReady():void {
+				enableControls(true, true);
+				
+				// Restore the handle size that was previously saved for this image
+				imageCropper.handleSize = currentHandleSize;
+				
+				imageCropper.constrainToAspectRatio = true;
+				imageCropper.setCropRect(461, 638, -1, -1, true);
+				
+				doCrop();				
+			}
+			
+			private function enableControls(enable:Boolean, includeEnabled:Boolean = false):void {
+				
+				// Set the enabled state for all other controls
+				
+				imageCropper.enabled = enable;
+			}
+			
+
+			protected function button1_clickHandler(event:MouseEvent):void {
+				var file:File = File.documentsDirectory;				
+				var imagesFilter:FileFilter = new FileFilter("Images", "*.jpg;*.gif;*.png");
+				file.addEventListener(Event.SELECT, loadImage);
+				file.browseForOpen("Open",[imagesFilter]);
+			}
+			
+			private function loadImage(e:Event):void {
+				imageCropper.sourceImage = e.currentTarget.url;
+			}
+			
+			public function set source(image:Object):void {
+				imageCropper.sourceImage = image;
+			}
+			
+
+
+			protected function btnCrop_clickHandler(event:MouseEvent):void {
+				model.currentUserPhoto = imageCropper.croppedBitmapData;
+				//imageCropper.sourceImage =
+			}
+
+		]]>
+	</fx:Script>
+	
+	
+	
+	<s:HGroup top="10" left="10" right="10" bottom="10" 
+		width="100%" height="100%">
+		<s:VGroup
+			top="10" left="10" right="10" bottom="10">			
+			<s:Button label="File" fontSize="11" click="button1_clickHandler(event)"/>
+			<s:Button id="btnCrop" label="Ritaglia" fontSize="11" click="btnCrop_clickHandler(event)"/>
+			<s:Button label="Reset" fontSize="11"/>
+			<s:Button label="Elimina" fontSize="11"/>
+		</s:VGroup>
+				
+		<imagecropper:ImageCropper id="imageCropper" width="100%" height="100%"
+								   y="37" left="15"
+								   enabled="true" sourceImage="{model.currentUserPhoto}"
+								   handleColor="#FF00FF" maskColor="#660066" maskAlpha="0.6"
+								   sourceImageReady="imageReady()" sourceImageLoadError="trace('Error while loading image')" 
+								   cropRectChanged="doCrop()" cropConstraintChanged="trace('Crop constraint changed'); doCrop()" 
+								   cropDimensionsChanged="trace('Crop dimensions changed'); doCrop()" 
+								   cropPositionChanged="trace('Crop position changed'); doCrop()"/>
+		
+		<s:Border width="100%" height="100%">
+			
+			<s:BitmapImage width="100%" height="100%"
+				id="croppedImage" smooth="true"/>
+			
+		</s:Border>
+		
+	</s:HGroup>
+	
+</s:Border>

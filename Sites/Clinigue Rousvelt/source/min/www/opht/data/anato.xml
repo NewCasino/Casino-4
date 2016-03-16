@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title>Anatomie de l'oeil</title>
+	<text>
+	<p>
+<h2>Vue de face</h2>
+	<p><img src="images/oeilanatomie001.gif" hspace="4" vspace="4" align="center" />
+</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p><h2>Fond d'oeil normal</h2>
+	<img src="images/oeilfond.jpg" hspace="4" vspace="4" align="center" />
+</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p><h2>Fond oeil droit et gauche</h2>
+<img src="images/oeil.gif" hspace="4" vspace="4" align="center" />
+</p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p><h2>Oeil normal</h2>
+<img src="images/oeilessai.jpg" hspace="4" vspace="4" align="center" />
+</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p><h2>Situation des yeux  dans les orbites</h2>
+En rouge  et bleu les muscles oculomoteurs
+<img src="images/vl.gif" hspace="4" vspace="4" align="center" />
+</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	</p></text>
+	<toc enabled="1" halign="left" valign="top" width="140" margin="20" tag="h2" marker="~~" heading="Photos" headspace="3" padding="6" />
+</mostlyText>

@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	GamTest
+</title><link href="/common/commonstyles.css" rel="stylesheet" type="text/css" media="screen" /><link id="ctl00_styleLink" href="/common/selftest.css" rel="stylesheet" type="text/css" media="screen" /><link id="ctl00_radLink1" href="../common/empty.css" rel="stylesheet" type="text/css" media="screen" /><link id="ctl00_radLink2" href="../common/empty.css" rel="stylesheet" type="text/css" media="screen" />    
+    
+    <style type="text/css">  
+    .TelerikModalOverlay  
+    {  
+        /*background-image: url('/images/overlaybg.png') !important;*/
+        background-color: Black !important;
+        filter: alpha(opacity=80) !important; /*for IE 5.5+ */
+        opacity: .60 !important; /*for FF 2x, Opera 9x */
+        -moz-opacity: .60 !important; /*for FF 1x*/
+    }  
+    </style> 
+    
+    
+
+    <link href="/common/dropshadow.css" rel="stylesheet" type="text/css" />
+    <script src="/common/jQuery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="/common/clickLogger.js" type="text/javascript" language="javascript"></script>
+    
+<style media="all" type="text/css">
+
+.contentbox {
+	width: 476px;
+	height: 526px;
+	background-color: transparent;
+	position: relative;
+	top: 15px;
+	left: 4px;
+}
+
+</style>
+<link href="/WebResource.axd?d=kGgiBtKwtgTwWl-XHajq7dnkRByXwM3SdgORhtLzPZQVbvZ_rq40yPJxqNN291A-RDm65mr26dIspA23FCzrGVl1sex9UwWHSbO5tiMJTap_Bk9PUZRYcJHEDKOSGbfQrE2uSg2&amp;t=634134927409687500" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=LkUZqB12X0LUygPj5WUxgEjIM5V4f4S_wgQwdDecjClJLjIQX7Z5zQk17YyJ9vtVzT8ClFk1XLyn0-x4H8roViN59tmK2ZVZ3qPxsGYOn7wmiyEURite_qrWebKIyVFm7RGLikDwaATDxIvvKVxb_b8z3wo1&amp;t=634134927409687500" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=o2Uu1kpBVBCtK1FiE1gx1cjIoXXUxfFSpp_jsGnP7DP2YkCS5hoLgSiCLQq6nZUgUJEx1WfkJdG6DdQ7VByuKMKBAgSmTYeDL44EAgDbIoKg9-Z2nwoysK1yVi7izdatcAT2Iw2&amp;t=634134927409687500" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=lCDsxNsKKa9fPT6EopK0F_1p25DbAA3DBYFtadWEtH-DTdmU_LZHOZNHs5XaI2fJzvyetUgHKWc5IO1HBnaOcHRjNO28cXC49cYvGLJWPobMFNY4ExhStoz_KvH5vaRaZnw4bUfN4g-Q1KjxH_uoFaHH8ew1&amp;t=634134927409687500" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head> 
+<body>
+    <form name="aspnetForm" method="post" action="/test/result.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDAyNTY4NQ8WAh4HamF2YVN0cgWWCjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+DQokKGRvY3VtZW50KS5yZWFkeShmdW5jdGlvbigpIHsgY3JlYXRlUm91bmRlZENvcm5lcnMoKSB9KTsgZnVuY3Rpb24gY3JlYXRlUm91bmRlZENvcm5lcnMoKSB7dmFyIHRhYmxlSFRNTCA9ICc8dGFibGU+PHRib2R5Pjx0cj48dGQgY2xhc3M9InRsIi8+PHRkIGNsYXNzPSJ0bSIvPjx0ZCBjbGFzcz0idHIiLz48L3RyPjx0cj48dGQgY2xhc3M9Im1sIj48dGQgY2xhc3M9ImJvZHkiPjxkaXYgY2xhc3M9ImNvbnRlbnQiPnJlcGxhY2VNZTwvZGl2PjwvdGQ+PHRkIGNsYXNzPSJtciIvPjwvdHI+PHRyPjx0ZCBjbGFzcz0iYmwiLz48dGQgY2xhc3M9ImJtIi8+PHRkIGNsYXNzPSJiciIgLz48L3RyPjwvdGJvZHk+PC90YWJsZT4nOyAkKCcuY29udGVudGJveCAuZHJvcHNoYWRvdycpLmVhY2goZnVuY3Rpb24oaXRlbSkgeyB2YXIgaHRtbFN0ciA9IHRoaXMuaW5uZXJIVE1MOyBodG1sU3RyID0gdGFibGVIVE1MLnJlcGxhY2UoL3JlcGxhY2VtZS9pLCBodG1sU3RyKTsgdGhpcy5pbm5lckhUTUwgPSBodG1sU3RyOyB9KTsNCnZhciBmbGFzaHZhcnMgPSB7IHJlc3VsdHM6ICcxOToxMzoxNzo4OjE4OjAnLCBrYXR0ZXh0czogJ0tvbnN1bXRpb24gdGlkOkRlbiB0aWQgZHUgbMOkZ2dlciBuZXIgcMOlIHNwZWw6S29uc3VtdGlvbiBwZW5nYXI6RGUgcGVuZ2FyIGR1IGzDpGdnZXIgbmVyIHDDpSBzcGVsOkVrb25vbWlza2Ega29uc2VrdmVuc2VyOkh1ciBzcGVsYW5kZXQgcMOldmVya2FyIGRpbiBla29ub21pOlNvY2lhbGEga29uc2VrdmVuc2VyOkh1ciBhbmRyYSBzZXIgcMOlIGRpdHQgc3BlbGFuZGU6S8OkbnNsb23DpHNzaWdhIGtvbnNla3ZlbnNlcjpIdXIgc3BlbGFuZGV0IHDDpXZlcmthciBodXIgZHUgbcOlcjpLbGlja2EgaMOkciBmw7ZyIGF0dCBzZSBkaW4gZWdlbiBiZWTDtm1uaW5nOkh1ciBkdSBzasOkbHYgaGFyIGJlZMO2bXQgZGl0dCBzcGVsYW5kZScsIHRvdGFsdGV4dHM6ICdEdSDDpHIgZ3LDtm46RHUgw6RyIGd1bDpEdSDDpHIgcsO2ZCcgfTsNCnZhciBhdHRyaWJ1dGVzID0geyBpZDogJ2RldGFpbHNGbGFzaCcgfTsNCnZhciBwYXJhbXMgPSB7IHdtb2RlOiAndHJhbnNwYXJlbnQnLCBtZW51OiAnZmFsc2UnLCBhbGxvd1NjcmlwdEFjY2VzczogJ2Fsd2F5cycgfTsNCnN3Zm9iamVjdC5lbWJlZFNXRignL0NvbW1vbi9kZXRhaWx2aWV3LnN3ZicsICdmbGFzaGRpdicsICc0MzQnLCAnMTU1JywgJzkuMC4wJywgJycsIGZsYXNodmFycywgcGFyYW1zLCBhdHRyaWJ1dGVzKTsNCn08L3NjcmlwdD4NChYCZg9kFgQCAg9kFgICAg8WAh4EaHJlZgUUL2NvbW1vbi9zZWxmdGVzdC5jc3NkAgQQZGQWDAIDDxYCHgRUZXh0BRFPbSBTcGVsaW5zdGl0dXRldGQCBQ8WAh8CBQdTdXBwb3J0ZAIHD2QWAgIBDxYCHwIFDFNpZGFuIDkgYXYgOWQCCQ9kFgYCAQ8PFgIeB1Zpc2libGVoZGQCAg8PFgIfA2dkFgoCAQ8WAh8CBRE8SDI+UkVTVUxUQVQ8L0gyPmQCAw8WAh8CBbECPGgyPiBEZXQgZmlubnMgZW4ga2xhcnQgZsO2cmjDtmpkIHJpc2sgYXR0IGR1IGthbiBmw6UgcHJvYmxlbSBhdiBkaXR0IHNwZWxhbmRlICA8L2gyPiBTcGVsIHZlcmthciBmw7ZyIGRpZyB2YXJhIGLDpWRlIG7DpWdvdCBsdXN0ZnlsbHQgb2NoIG7DpWdvdCBzb20gZGV0IGlibGFuZCBibGlyIGbDtnIgbXlja2V0IGF2IGLDpWRlIG7DpHIgZGV0IGfDpGxsZXIgdGlkIG9jaCBwZW5nYXIuIFR5Y2tlciBkdSBhdHQgZHUgaGFyIGZ1bGwga29sbCBww6Ugc3BlbGFuZGV0IGVsbGVyIGJlaMO2dmVyIGR1IGfDtnJhIG7DpWdvdCDDpXQgZGV0PyBkAgUPFgIfAgVpPHN0cm9uZz5UeWNrIHRpbGwhPC9zdHJvbmc+Jm5ic3A7PGEgaHJlZj0iIyIgaWQ9InNob3dDb21tZW50UG9wIj5IasOkbHAgb3NzIGbDtnJiw6R0dHJhIHNqw6RsdnRlc3RldCE8L2E+ZAIHDxYCHwIFDTxoMj5USVBTPC9oMj5kAgkPFgIfAgWXBCA8c3Ryb25nPlPDpHR0IGtsb2thIGdyw6Ruc2VyIGbDtnIgZGl0dCBzcGVsYW5kZTwvc3Ryb25nPg0KPGJyIC8+DQpEdSBrYW4gZ8O2cmEgZGluIHNwZWxidWRnZXQgdW5kZXIgIkluc3TDpGxsbmluZ2FyIiBmw7ZyIGRpdHQgQVRHIEtvbnRvLg0KPGJyIC8+DQo8YSBocmVmPSJodHRwczovL3d3dy5hdGcuc2UvP3BhdGg9c3BlbGFuc3ZhciZjaG9vc2VBdGdzZTI9dHJ1ZSIgdGFyZ2V0PSJfYmxhbmsiPkjDpHIga2FuIGR1IHPDpHR0YSBzcGVsZ3LDpG5zZXI8L2E+PGJyIC8+PGJyIC8+PHN0cm9uZz5EaXNrdXRlcmEgZGluYSBzcGVsdmFub3I8L3N0cm9uZz48YnIgLz5EaXNrdXRlcmEgZGluYSBzcGVsdmFub3IgbWVkIG7DpWdvbiBkdSBsaXRhciBww6UuIER1IGthbiBvY2tzw6UgYW5vbnltdCBkaXNrdXRlcmEgZGluYSBzcGVsdmFub3IgcMOlIFN0w7Zka29udGFrdGVuLjxiciAvPjxhIGhyZWY9Imh0dHA6Ly93d3cuc3BlbGluc3RpdHV0ZXQuc2Uvc3RvZGtvbnRha3RlbiJ0YXJnZXQ9Il9ibGFuayI+VGlsbCBTdMO2ZGtvbnRha3RlbjwvYT5kAgMPDxYCHhdFbmFibGVBamF4U2tpblJlbmRlcmluZ2hkFgICAQ9kFhYCAQ8WAh8CBRc8aDI+VmFkIHR5Y2tlciBkdT88L2gyPmQCAw8WAh8CBVdWYWQgdHlja2VyIGR1IG9tIHNqw6RsdnRlc3RldCBvY2ggZGVuIMOldGVya29wcGxpbmcgZHUgZsOldHQgb20gZGluYSBzcGVsdmFub3I/DQo8YnIgLz5kAgUPFgIfAgUPTXlja2V0IGRhzIpsaWd0ZAIHDxYCHwIFCk15Y2tldCBicmFkAgkPFCsAAg8WCB4MU2VsZWN0aW9uRW5kZh4EU2tpbgUFQmxhY2sfBGgeDlNlbGVjdGlvblN0YXJ0ZmRkZAILDxYCHwIFTUh1ciB0eWNrZXIgZHUgw6V0ZXJrb3BwbGluZ2VuIG9tIGRpbmEgc3BlbHZhbm9yIHN0w6RtbWVyIGluIHDDpSBkaWc/IA0KPGJyIC8+ZAINDxYCHwIFE1N0w6RtbWVyIGludGUgYWxscyBkAg8PFgIfAgUNU3TDpG1tZXIgaGVsdGQCEQ8UKwACDxYIHwVmHwYFBUJsYWNrHwRoHwdmZGRkAhMPFgIfAgU5U2tyaXYgZ8Okcm5hIGVuIGtvbW1lbnRhciBow6RyIG9tIGh1ciBkdSB1cHBsZXZkZSB0ZXN0ZXQuZAIXDw8WAh8CBQlTa2lja2EgaW5kZAILDw8WBB8GBQVCbGFjax8EaGQWAgIBDxYCHwIFywg8ZGl2IHN0eWxlPSJwYWRkaW5nOiAxMHB4OyBmb250OiAxMXB4LzE2cHggJ0x1Y2lkYSBHcmFuZGUnLCAnTHVjaWRhIFNhbnMgVW5pY29kZScsIEFyaWFsLCBWZXJkYW5hLCBzYW5zLXNlcmlmOyBjb2xvcjogIzAwMDsiPg0KPGltZyBzdHlsZT0iZmxvYXQ6IHJpZ2h0OyBtYXJnaW4tbGVmdDogMTBweDsgbWFyZ2luLWJvdHRvbTogMTBweDsiIHNyYz0iL2ltYWdlcy9zaV9sb2dvLmdpZiIgLz48c3BhbiBzdHlsZT0iZm9udC1zaXplOiAxNnB4OyI+T20gU3BlbGluc3RpdHV0ZXQ8L3NwYW4+DQo8YnIgLz4NCjxiciAvPg0KU3BlbGluc3RpdHV0ZXQgw6RyIGV0dCBzdmVuc2t0IGt1bnNrYXBzZsO2cmV0YWcgc29tIHNwZWNpYWxpc2VyYXQgc2lnIHDDpSBzcGVsIG9jaCBzcGVsYmVyb2VuZGUgb2NoIGVyYmp1ZGVyIHV0YmlsZG5pbmdhciwgc3BlbGFuc3ZhcnNsw7ZzbmluZ2FyIG9jaCBiZWhhbmRsaW5nYXIgdmlhIEludGVybmV0Lg0KPGJyIC8+DQo8YnIgLz4NCkbDtnJldGFnZXQgw6RyIHByaXZhdMOkZ3Qgb2NoIGhhciBpbmdhIGJpbmRuaW5nYXIgdGlsbCBuw6Vnb24gbXluZGlnaGV0LCBvcmdhbmlzYXRpb24gZWxsZXIgZsO2cmV0YWcsIG1lbiBzYW1hcmJldGFyIG1lZCBteW5kaWdoZXRlciBvY2ggcmVnbGVyYWRlIHNwZWxib2xhZy4gU3BlbGluc3RpdHV0ZXQgYXJiZXRhciBtZWQgZGUgZmxlc3RhIHNwZWxib2xhZ2VuIGkgZGUgTm9yZGlza2EgbMOkbmRlcm5hIG9jaCBoYXIgZmxlcmEgc2FtYXJiZXRzcHJvamVrdCB1dGFuZsO2ciBOb3JkZW4uIA0KPGJyIC8+DQo8YnIgLz4NClNwZWxpbnN0aXR1dGV0IGZpbm5zIGkgUGl0ZcOlLCBMdW5kIG9jaCBTdG9ja2hvbG0gb2NoIGdydW5kYWRlcyDDpXIgMTk5OSBhdiBUaG9tYXMgTmlsc3NvbiBvY2ggUm9nZXIgRWRsdW5kLg0KPGJyIC8+DQo8YnIgLz4NCjxkaXYgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgdGV4dC1hbGlnbjogY2VudGVyOyI+Q29weXJpZ2h0IMKpIDIwMDkgPGEgaHJlZj0iaHR0cDovL3d3dy5zcGVsaW5zdGl0dXRldC5zZSIgdGFyZ2V0PSJfYmxhbmsiPlNwZWxpbnN0aXR1dGV0PC9hPi4gQWxsYSByw6R0dGlnaGV0ZXIgZsO2cmJlaMOlbGxzLjwvZGl2Pg0KPC9kaXY+ZAINDw8WBB8GBQVCbGFjax8EaGQWAgIBD2QWDAIBDxYCHwIFlwI8aDI+UHJvYmxlbSBtZWQgc2rDpGx2dGVzdGV0PC9oMj4NCk9tIGR1IGhhciBwcm9ibGVtIG1lZCBzasOkbHZ0ZXN0ZXQga2FuIGR1IHNrcml2YSBkaW4gZnLDpWdhIHRpbGwgb3NzIG5lZGFuLiBEdSBtw6VzdGUgYW5nZSBlbiBlLXBvc3RhZHJlc3MgZsO2ciBhdHQgdmkgc2thIGt1bm5hIMOldGVya29tbWEgdGlsbCBkaWcuIFZpIHNhbWxhciBpbiBsaXRlIGRhdGEgb20gdmlsa2VuIHR5cCBhdiBkYXRvciBkdSBhbnbDpG5kZXIgbW0uIERlbiBkYXRhbiBzeW5zIG5lZGVyc3QgaSBzaWRhbi5kAgMPFgIfAgUNRS1wb3N0YWRyZXNzOmQCCg8WAh8CBRpEaW4gZnLDpWdhIHRpbGwgc3VwcG9ydGVuOmQCDw8WAh8CBSlJbmZvcm1hdGlvbiBvbSBkaW4gZGF0b3Igc29tIHNraWNrYXMgbWVkOmQCEQ8WAh8CBZsBPHNwYW4gaWQ9Im90aGVyaW5mbyIgc3R5bGU9InBhZGRpbmc6IDJweDsiPjk0Ljc2LjY4LjE1NSB8IE1vemlsbGEvNS4wIChXaW5kb3dzOyBVOyBXaW5kb3dzIE5UIDYuMTsgZW4tVVM7IHJ2OjEuOS4yLjEyKSBHZWNrby8yMDEwMTAyNiBGaXJlZm94LzMuNi4xMjwvc3Bhbj5kAhUPDxYCHwIFCVNLSUNLQSBJTmRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYFBSRjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNvbW1lbnRCb3gFNWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY29tbWVudENUUkwxJHNsaWRlckNvbW1lbnQxBTVjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNvbW1lbnRDVFJMMSRzbGlkZXJDb21tZW50MgUOY3RsMDAkYWJvdXRCb3gFEGN0bDAwJHN1cHBvcnRCb3hz80zAT2orStWzjXKw17D+jDofSQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=Cr6NY1haBII3CUWgTf-vRxkAVYzK1FJ6XORbJp5zHXYb1faJ2WnIXBUQYE-i4nGMszzp_Bd8NNpxf0uVdI32lDKWS0A1&amp;t=634220173474108750" type="text/javascript"></script>
+
+
+<script src="/Common/swfobject.js" type="text/javascript"></script>
+<script src="/selftest/Common/pluginDetect.js" type="text/javascript"></script>
+<script src="/selftest/Common/supportScripts.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=fqflH1zx2hN8lLHRWFVNpTOnJmxzoLgBiuTCFfnK3S32L4ZN_JDeCshLUxNEwTBVx3odjCHBQF4VLhF7Btn3qvo1gBL4PUfqmxdyj3-uNDVZ_8iihswCQCMqTcalW0JmBBg0xR9kxKKDLyZwHCWbGyOlibE1&amp;t=3d801308" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=plAVd7K5p45GDYZ6lTefe7tlvW-StRY1kx2NT32EpEOtLvo7AcX-e-DrKycXv89mzpsM1PBWlm49BTsE_nLzmZZZcW2UZ-f60H85s7jIfhA3CLNkHvL_vKt5263v0E8dq5aVTN57NBg1CWl1APzOiopdxe41&amp;t=379acd5e" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=h9yuYvvkDnqLrgeRnBB0dMd9r5VLVs-var5qlBKqXPrk4qZnqrl_JmijqNvx5OPPFbMuE2kB3gO1D6wXFHXS7rIt0_rR4Z0qkl3KONRqnaugCnfUITIUuCzHH3idDY9GqD3UWDzfGVDuQK8CI5bfZiPhqiOqoNoVMvrDpVa8qwRD4vxp0&amp;t=379acd5e" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=rQyOytm7E9b91kAirqV6ZdTLnooyzzGCE45_xCIXqDoLFV_rT7HzuF9aMV8TQpAQWU0oT1P8VbPo79GPQVilqK8f1IQmESYeaChmYg-BugWxNYEly9WvbyluyuS21u9R1kXotQ2&amp;t=47227832" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=GbjIth1qygTZzzzXkoHK9sluOZIABrRc3O90VM0djTmgo2lyjmEcqDILC-PZRY0pIAibrnZ_ge563OOQomJGGueitNZLjHWlIYki7WUz2TjlHbFYFV_W0MU9wH3XxD3t3kI0-3f_hqEoI2DDlPm1n3ByWxk1&amp;t=47227832" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=qt6-xSSXwS0-oq5Qh4Gs4Wv1MpxpZYOZrkuhTmqHU9qMIEKft1Mnqb3l9atOp7xtESqvoqj4nZ4zvQTE5jYfLqhS_B6pQIEVhKYHPK8eYcZ8kQg18v0juf8liAymEQ2x388f4Q2&amp;t=47227832" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=VT5MmOPwa9sMQyVq72J8kM7lq1Q4ETlNTRFyeePzFy4eF2iAqaAgSufvqxogadZ6nvXXuQ6qweCDUgLVceJcFS3GPI4ydf7xNqZahbnkOdv8cEyi0RqDT1l22tQNtDqny_Nxzg2&amp;t=47227832" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=NUV32beiEguT8-LA0lVg-TKNZhIIkVwvxumgnGyvpFXvk_o7hmUOBqHN3-mtFrnicAIhXBW1CMfYcFCuB4RmCfwDx1nLWAw5W6DEjpz4K4WHd4uNLCRtT1_AIWXZB_-x1ZX2GAvdNAOQTPGdLpDV3XpcXfs1&amp;t=47227832" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=pZKUSBuzEp5x47tMfuMKhV46Z5sKBUkbEP8riMVn_Q5amLroY2Td0jpxTLS6hflAI6DvJV8Vg66aNTORu41JvY04yQ7LZKP8WCASG6Df0h4C9uCj5cJ5l6H2iIcPqRqTubOxdg2&amp;t=47227832" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=SeYLdaTh_YB8j1kb-zPyZLeO-orEOtgZ9bhoBmJL-qcbi4SEwFQ7eIwE5p-Vpla6LWT2rafxRsXF8kJWTHWV27VtSFnRJ4NCHTxEix3Qv6eYHm6JwxrlKzxZVei-Ib0svbC3r5T-Bd9YPgL3ejUb3wJePZg1&amp;t=47227832" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=3mFPJOIhWAFHVldYQA-tnJo2Nsn-1jXka4mcF8AURVGwwl4eaxGBBH5M09u2_v_onWjd5wOCBNB0XWqgeStCHrW2wifIwRcKO9aBhQQeaMt9IZ9ES5piyJW6YQRm35BYHuUAgXb-Au7D_CxR2pD5LJOszxA1&amp;t=47227832" type="text/javascript"></script>
+<script src="clickLogger.asmx/js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwKGk4bhDAKIg+PzCgLtmcSKDAKU4KfkAgLV+7a0CALDg+7QAgKkqcvVA6my9koxwiry9OhsNStG21v5V4y3" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+    
+<div class="wrapper">
+	<div class="logobox" >
+	</div>
+	<div class="footerbox">
+    	<a href="#" id="showPopup">Om Spelinstitutet</a>
+    	<a href="#" id="showSupportPop">Support</a>
+	</div>
+
+	<div class="topbox">
+	    <div class="progressbox" >
+		    
+    Sidan 9 av 9
+
+        </div>
+	</div>
+	<div class="mainbox">
+		<div class="contentbox">
+              
+    
+      
+    
+    
+    
+    <div id="ctl00_ContentPlaceHolder1_pnlResult">
+	
+        
+        <div class="dropshadow" style="width: 453px; margin: auto; margin-top: 5px; min-height: 100px;" >
+            <H2>RESULTAT</H2>
+            <h2> Det finns en klart förhöjd risk att du kan få problem av ditt spelande  </h2> Spel verkar för dig vara både något lustfyllt och något som det ibland blir för mycket av både när det gäller tid och pengar. Tycker du att du har full koll på spelandet eller behöver du göra något åt det? 
+			<div style="margin-top: 4px;" >
+            	<div id="flashdiv"></div>
+	        </div>
+        </div>
+        
+        <div class="dropshadow" style="width: 453px; margin:auto; margin-top: 12px;" >
+            <strong>Tyck till!</strong>&nbsp;<a href="#" id="showCommentPop">Hjälp oss förbättra självtestet!</a>
+        </div>
+        
+        <div class="dropshadow" style="width: 453px; margin:auto; margin-top: 12px; min-height: 100px;" >
+	        <h2>TIPS</h2>
+	         <strong>Sätt kloka gränser för ditt spelande</strong>
+<br />
+Du kan göra din spelbudget under "Inställningar" för ditt ATG Konto.
+<br />
+<a href="https://www.atg.se/?path=spelansvar&chooseAtgse2=true" target="_blank">Här kan du sätta spelgränser</a><br /><br /><strong>Diskutera dina spelvanor</strong><br />Diskutera dina spelvanor med någon du litar på. Du kan också anonymt diskutera dina spelvanor på Stödkontakten.<br /><a href="http://www.spelinstitutet.se/stodkontakten"target="_blank">Till Stödkontakten</a>
+	    </div>
+	
+</div>
+	<br />
+
+<script language="javascript" type="text/javascript">
+
+    function OnClientShow(sender, eventArgs) {
+        var slider = $find("ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment1");
+        slider.repaint();
+
+        slider = $find("ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment2");
+        slider.repaint();
+    } 
+
+</script>
+
+    <div id="ctl00_ContentPlaceHolder1_commentBox" style="display:none;position:absolute;">
+	<!-- 2010.1.519.35 -->
+        
+
+<div style="width: 355px; height: 480px; margin: auto;">
+
+    <h2>Vad tycker du?</h2>
+    <p>
+    Vad tycker du om självtestet och den återkoppling du fått om dina spelvanor?
+<br />
+    <br />
+    <span style="width: 150px; float: left; height: 15px; text-align: left;">
+        Mycket dåligt
+    </span>
+    <span style="width: 150px; float: right; height: 15px; text-align: right;">
+        Mycket bra
+    </span>
+    <br />
+    <div id="ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment1" class="RadSlider RadSlider_Black" style="height:22px;width:350px;">
+		<input id="ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment1_ClientState" name="ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment1_ClientState" type="hidden" />
+	</div>
+    </p>
+    <p>
+    Hur tycker du återkopplingen om dina spelvanor stämmer in på dig? 
+<br />
+    <br />
+    <span style="width: 150px; float: left; height: 15px; text-align: left;">
+        Stämmer inte alls 
+    </span>
+    <span style="width: 150px; float: right; height: 15px; text-align: right;">
+        Stämmer helt
+    </span>
+    <br />
+    <div id="ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment2" class="RadSlider RadSlider_Black" style="height:22px;width:350px;">
+		<input id="ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment2_ClientState" name="ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment2_ClientState" type="hidden" />
+	</div>
+    </p>
+    <p>
+    Skriv gärna en kommentar här om hur du upplevde testet.
+    <br />    
+    <textarea name="ctl00$ContentPlaceHolder1$commentCTRL1$tbComment" rows="10" cols="20" id="ctl00_ContentPlaceHolder1_commentCTRL1_tbComment" style="width:350px;"></textarea>
+    </p>
+
+    <div align="right">
+        <div class="startbutton">
+            <a id="ctl00_ContentPlaceHolder1_commentCTRL1_btSaveComment" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$commentCTRL1$btSaveComment','')">Skicka in</a>
+        </div>
+    </div>
+</div>
+    <input id="ctl00_ContentPlaceHolder1_commentBox_ClientState" name="ctl00_ContentPlaceHolder1_commentBox_ClientState" type="hidden" />
+</div>
+
+
+        </div>
+    </div>
+</div>
+
+    <div id="ctl00_aboutBox" style="display:none;position:absolute;">
+	
+        <div style="padding: 7px;">
+            <div style="padding: 10px; font: 11px/16px 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif; color: #000;">
+<img style="float: right; margin-left: 10px; margin-bottom: 10px;" src="/images/si_logo.gif" /><span style="font-size: 16px;">Om Spelinstitutet</span>
+<br />
+<br />
+Spelinstitutet är ett svenskt kunskapsföretag som specialiserat sig på spel och spelberoende och erbjuder utbildningar, spelansvarslösningar och behandlingar via Internet.
+<br />
+<br />
+Företaget är privatägt och har inga bindningar till någon myndighet, organisation eller företag, men samarbetar med myndigheter och reglerade spelbolag. Spelinstitutet arbetar med de flesta spelbolagen i de Nordiska länderna och har flera samarbetsprojekt utanför Norden. 
+<br />
+<br />
+Spelinstitutet finns i Piteå, Lund och Stockholm och grundades år 1999 av Thomas Nilsson och Roger Edlund.
+<br />
+<br />
+<div style="font-size: 10px; text-align: center;">Copyright © 2009 <a href="http://www.spelinstitutet.se" target="_blank">Spelinstitutet</a>. Alla rättigheter förbehålls.</div>
+</div>
+        </div>
+    <input id="ctl00_aboutBox_ClientState" name="ctl00_aboutBox_ClientState" type="hidden" />
+</div>
+
+    <div id="ctl00_supportBox" style="display:none;position:absolute;">
+	
+		
+
+<div style="width: 375px; height: 500px; margin: auto;">
+
+    <h2>Problem med självtestet</h2>
+Om du har problem med självtestet kan du skriva din fråga till oss nedan. Du måste ange en e-postadress för att vi ska kunna återkomma till dig. Vi samlar in lite data om vilken typ av dator du använder mm. Den datan syns nederst i sidan.
+    <p>
+        E-postadress:
+        <br />    
+        <input name="ctl00$supportCTRL1$tbSupportEmail" type="text" id="ctl00_supportCTRL1_tbSupportEmail" style="width:350px;" /><span id="ctl00_supportCTRL1_rfvemail" style="color:Red;visibility:hidden;">*</span>
+         <span id="ctl00_supportCTRL1_RegularExpressionValidator1" title="Not a valid emailadress!" style="color:Red;visibility:hidden;">*</span>
+    </p>
+    <p>
+        Din fråga till supporten:
+        <br />    
+        <textarea name="ctl00$supportCTRL1$tbSupportQuestion" rows="10" cols="20" id="ctl00_supportCTRL1_tbSupportQuestion" style="width:350px;"></textarea><span id="ctl00_supportCTRL1_rfvSupportQ" style="color:Red;visibility:hidden;">*</span>
+    </p>
+    <p>
+        Information om din dator som skickas med:
+        <br />
+        <span id="otherinfo" style="padding: 2px;">94.76.68.155 | Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12</span>
+        <input type="hidden" name="ctl00$supportCTRL1$hfOtherInfo" id="ctl00_supportCTRL1_hfOtherInfo" />
+    </p>
+
+    <div align="right">
+        <div class="startbutton">
+            <a id="ctl00_supportCTRL1_btSaveSupport" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$supportCTRL1$btSaveSupport&quot;, &quot;&quot;, true, &quot;support&quot;, &quot;&quot;, false, true))">SKICKA IN</a>
+        </div>
+    </div>
+</div>
+    <input id="ctl00_supportBox_ClientState" name="ctl00_supportBox_ClientState" type="hidden" />
+</div>
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_supportCTRL1_rfvemail"), document.getElementById("ctl00_supportCTRL1_RegularExpressionValidator1"), document.getElementById("ctl00_supportCTRL1_rfvSupportQ"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_supportCTRL1_rfvemail = document.all ? document.all["ctl00_supportCTRL1_rfvemail"] : document.getElementById("ctl00_supportCTRL1_rfvemail");
+ctl00_supportCTRL1_rfvemail.controltovalidate = "ctl00_supportCTRL1_tbSupportEmail";
+ctl00_supportCTRL1_rfvemail.validationGroup = "support";
+ctl00_supportCTRL1_rfvemail.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_supportCTRL1_rfvemail.initialvalue = "";
+var ctl00_supportCTRL1_RegularExpressionValidator1 = document.all ? document.all["ctl00_supportCTRL1_RegularExpressionValidator1"] : document.getElementById("ctl00_supportCTRL1_RegularExpressionValidator1");
+ctl00_supportCTRL1_RegularExpressionValidator1.controltovalidate = "ctl00_supportCTRL1_tbSupportEmail";
+ctl00_supportCTRL1_RegularExpressionValidator1.errormessage = "*";
+ctl00_supportCTRL1_RegularExpressionValidator1.validationGroup = "support";
+ctl00_supportCTRL1_RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_supportCTRL1_RegularExpressionValidator1.validationexpression = "\\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b";
+var ctl00_supportCTRL1_rfvSupportQ = document.all ? document.all["ctl00_supportCTRL1_rfvSupportQ"] : document.getElementById("ctl00_supportCTRL1_rfvSupportQ");
+ctl00_supportCTRL1_rfvSupportQ.controltovalidate = "ctl00_supportCTRL1_tbSupportQuestion";
+ctl00_supportCTRL1_rfvSupportQ.validationGroup = "support";
+ctl00_supportCTRL1_rfvSupportQ.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_supportCTRL1_rfvSupportQ.initialvalue = "";
+//]]>
+</script>
+
+<script language="javascript" type="text/javascript">
+$(document).ready(function() { createRoundedCorners() }); function createRoundedCorners() {var tableHTML = '<table><tbody><tr><td class="tl"/><td class="tm"/><td class="tr"/></tr><tr><td class="ml"><td class="body"><div class="content">replaceMe</div></td><td class="mr"/></tr><tr><td class="bl"/><td class="bm"/><td class="br" /></tr></tbody></table>'; $('.contentbox .dropshadow').each(function(item) { var htmlStr = this.innerHTML; htmlStr = tableHTML.replace(/replaceme/i, htmlStr); this.innerHTML = htmlStr; });
+var flashvars = { results: '19:13:17:8:18:0', kattexts: 'Konsumtion tid:Den tid du lägger ner på spel:Konsumtion pengar:De pengar du lägger ner på spel:Ekonomiska konsekvenser:Hur spelandet påverkar din ekonomi:Sociala konsekvenser:Hur andra ser på ditt spelande:Känslomässiga konsekvenser:Hur spelandet påverkar hur du mår:Klicka här för att se din egen bedömning:Hur du själv har bedömt ditt spelande', totaltexts: 'Du är grön:Du är gul:Du är röd' };
+var attributes = { id: 'detailsFlash' };
+var params = { wmode: 'transparent', menu: 'false', allowScriptAccess: 'always' };
+swfobject.embedSWF('/Common/detailview.swf', 'flashdiv', '434', '155', '9.0.0', '', flashvars, params, attributes);
+}</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadSlider, {"_decreaseText":"","_dragText":"","_height":"22px","_increaseText":"","_skin":"Black","_uniqueID":"ctl00$ContentPlaceHolder1$commentCTRL1$sliderComment1","_width":"350px","clientStateFieldID":"ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment1_ClientState","itemData":[],"itemType":3,"maximumValue":10}, null, null, $get("ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadSlider, {"_decreaseText":"","_dragText":"","_height":"22px","_increaseText":"","_skin":"Black","_uniqueID":"ctl00$ContentPlaceHolder1$commentCTRL1$sliderComment2","_width":"350px","clientStateFieldID":"ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment2_ClientState","itemData":[],"itemType":3,"maximumValue":10}, null, null, $get("ctl00_ContentPlaceHolder1_commentCTRL1_sliderComment2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","clientStateFieldID":"ctl00_ContentPlaceHolder1_commentBox_ClientState","formID":"aspnetForm","height":"480px","hideEvent":4,"modal":true,"position":22,"relativeTo":2,"renderInPageRoot":true,"showCallout":false,"showEvent":2,"skin":"Black","targetControlID":"showCommentPop","width":"400px"}, {"show":OnClientShow}, null, $get("ctl00_ContentPlaceHolder1_commentBox"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","clientStateFieldID":"ctl00_aboutBox_ClientState","formID":"aspnetForm","height":"300px","hideEvent":4,"modal":true,"position":22,"relativeTo":2,"renderInPageRoot":true,"showCallout":false,"showEvent":2,"skin":"Black","targetControlID":"showPopup","width":"450px"}, null, null, $get("ctl00_aboutBox"));
+});
+
+document.getElementById('ctl00_supportCTRL1_rfvemail').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_supportCTRL1_rfvemail'));
+}
+
+document.getElementById('ctl00_supportCTRL1_RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_supportCTRL1_RegularExpressionValidator1'));
+}
+
+document.getElementById('ctl00_supportCTRL1_rfvSupportQ').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_supportCTRL1_rfvSupportQ'));
+}
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"","_manualCloseButtonText":"Close","clientStateFieldID":"ctl00_supportBox_ClientState","formID":"aspnetForm","height":"500px","hideEvent":4,"modal":true,"position":22,"relativeTo":2,"renderInPageRoot":true,"showCallout":false,"showEvent":2,"skin":"Black","targetControlID":"showSupportPop","width":"450px"}, null, null, $get("ctl00_supportBox"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

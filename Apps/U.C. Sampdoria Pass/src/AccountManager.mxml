@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/halo"					   
+					   width="800" height="600" minWidth="800" minHeight="600"
+					   creationComplete="onCreationComplete()" backgroundColor="#DDDDDD"					   
+					   xmlns:view="com.adobe.cairngorm.view.*"
+					   xmlns:business="com.adobe.cairngorm.business.*" 
+					   xmlns:control="com.adobe.cairngorm.control.*" 
+					   xmlns:model="com.adobe.cairngorm.model.*" 
+					   xmlns:sqlite="com.peterelst.air.sqlite.*" xmlns:components="com.adobe.cairngorm.view.components.*">
+	
+	<fx:Style source="style/style.css"/>
+	
+	<fx:Declarations>
+		<!-- ========================================================================== -->
+		
+		<!-- the ServiceLocator where we specify the remote services -->
+		<!--<business:Services id="services" />-->
+		
+		<!-- the FrontController, containing Commands specific to this appliation -->
+		<!--<control:ApplicationController id="controller" />-->
+		
+		<sqlite:SQLite id="base"
+					file="db/samp_access.db"
+					open="contactsTable_query.execute()" />
+		
+		<sqlite:Query id="contactsTable_query"
+				   connection="{base.connection}"
+				   sql="CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, lastname TEXT, borndate DATE, company_id INTEGER, image BLOB, deleted INTEGER)" 
+				   result="accessesTable_query.execute()"/>
+		
+		<sqlite:Query id="accessesTable_query"
+					  connection="{base.connection}"
+					  sql="CREATE TABLE IF NOT EXISTS accesses (id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, matches_id INTEGER, deleted INTEGER)" 
+					  result="seasonsTable_query.execute()"/>
+		
+		<sqlite:Query id="seasonsTable_query"
+					  connection="{base.connection}"
+					  sql="CREATE TABLE IF NOT EXISTS seasons (id INTEGER PRIMARY KEY AUTOINCREMENT, season TEXT)" 
+					  result="matchesTable_query.execute()"/>
+		
+		<sqlite:Query id="matchesTable_query"
+					  connection="{base.connection}"
+					  sql="CREATE TABLE IF NOT EXISTS matches (id INTEGER PRIMARY KEY AUTOINCREMENT, matchname TEXT, season TEXT, deleted INTEGER)" 
+					  result="companiesTable_query.execute()"/>
+		
+		<sqlite:Query id="companiesTable_query"
+					  connection="{base.connection}"
+					  sql="CREATE TABLE IF NOT EXISTS companies (id INTEGER PRIMARY KEY AUTOINCREMENT, company_name TEXT, deleted INTEGER)" 
+					  result="companiesTable_query_resultHandler(event)"/>
+		
+		
+		
+		<!-- ========================================================================== -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.model.ApplicationModelLocator;			
+			import flash.events.Event;
+			import flash.events.MouseEvent;
+			import flash.events.SQLEvent;
+			
+			import mx.core.IVisualElementContainer;
+			import mx.events.CollectionEvent;
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+			private function onCreationComplete():void {
+				(statusBar.parent as IVisualElementContainer).removeElement(statusBar);
+				var descriptor:XML = NativeApplication.nativeApplication.applicationDescriptor;
+				var ns:Namespace = descriptor.namespaceDeclarations()[0];
+				versionLabel.text = descriptor.ns::version;
+				//this.addListeners();
+			}
+			
+			private function addListeners():void {
+				model.matchesData.addEventListener(CollectionEvent.COLLECTION_CHANGE, refreshMatchesData, false, 0, true);
+				model.usersData.addEventListener(CollectionEvent.COLLECTION_CHANGE, refreshUsersData, false, 0, true);
+				model.companiesData.addEventListener(CollectionEvent.COLLECTION_CHANGE, refreshCompaniesData, false, 0, true);
+				model.seasonsData.addEventListener(CollectionEvent.COLLECTION_CHANGE, refreshSeasonsData, false, 0, true);			
+			}
+			
+			private function refreshUsersData($event:CollectionEvent):void {
+				model.usersData.refresh();
+			}
+			
+			private function refreshCompaniesData($event:CollectionEvent):void {
+				model.companiesData.refresh();
+			}
+			
+			private function refreshSeasonsData($event:CollectionEvent):void {
+				model.seasonsData.refresh();
+			}
+			
+			private function refreshMatchesData($event:CollectionEvent):void {
+				model.matchesData.refresh();
+			}
+
+			protected function companiesTable_query_resultHandler(event:SQLEvent):void {				
+				model.dbHandler = base;
+				
+			}
+
+
+			protected function selectUserContent_switchToPassHandler(event:Event):void {
+				tabs.selectedIndex = 1;
+				//passes.searchPasses();
+			}
+
+
+			protected function matchesview1_switchToPassHandler(event:Event):void {
+				tabs.selectedIndex = 1;
+				
+			}
+
+
+			protected function navigatorcontent1_showHandler(event:FlexEvent):void {
+				passes.refreshData();
+			}
+
+
+			protected function controlPanel_doubleClickHandler(event:MouseEvent):void {
+				controlBar.callRestore();
+			}
+
+
+			protected function navigatorcontent2_showHandler(event:FlexEvent):void {
+				selectUserContent.refreshData();
+			}
+
+
+			protected function navigatorcontent3_showHandler(event:FlexEvent):void {
+				matchesContent.refreshData();
+			}
+
+		]]>
+	</fx:Script>
+	
+	<s:Border id="controlPanel" width="100%" height="50" 
+		mouseDown="this.nativeWindow.startMove()"
+		doubleClickEnabled="true"
+		doubleClick="controlPanel_doubleClickHandler(event)"/>
+	
+	<s:BitmapImage source="@Embed('assets/background.png', scaleGridTop='90', scaleGridBottom='500',
+				   scaleGridLeft='550', scaleGridRight='560')"
+				   width="100%" height="100%"/>
+	
+	<s:VGroup width="100%" height="100%" right="5" top="5" bottom="5"
+		horizontalAlign="right">
+		<components:WindowControlBar id="controlBar"  
+			window="{this.nativeWindow}" />
+		
+		<s:HGroup height="100%" right="5" top="5" bottom="5" 
+				  verticalAlign="bottom">
+			<s:Label id="versionLabel" color="#ffffff"/>
+		</s:HGroup>
+		
+	</s:VGroup>
+	
+	
+	<mx:TabNavigator id="tabs" 
+					 top="60" left="20" right="20" bottom="50"
+					 width="100%" height="100%" 
+					 backgroundColor="#CDCBCA">
+		
+		<s:NavigatorContent label="Utenti" width="100%" height="100%" 
+							show="navigatorcontent2_showHandler(event)"
+							contentBackgroundColor="#CDCBCA">
+			<view:UsersView id="selectUserContent" 
+							switchToPass="selectUserContent_switchToPassHandler(event)"/>
+		</s:NavigatorContent>
+			
+		<s:NavigatorContent label="PASS" show="navigatorcontent1_showHandler(event)" 
+							width="100%" height="100%">
+			<view:PassesView id="passes"/>
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent label="Incontri" 
+							show="navigatorcontent3_showHandler(event)" 
+							width="100%" height="100%">			
+			<view:MatchesView id="matchesContent" 
+							  switchToPass="matchesview1_switchToPassHandler(event)"/>
+		</s:NavigatorContent>
+		
+	</mx:TabNavigator>
+	
+	
+</s:WindowedApplication>

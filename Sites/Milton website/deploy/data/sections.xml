@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<section name="Home" url="sections/home.swf"/>
+	<section name="Nieuws" url="sections/nieuws.swf"/>
+	<section name="Klanten" url="sections/klanten.swf"/>
+	<section name="Artfolio" url="sections/artfolio.swf"/>
+</data>

@@ -1,0 +1,17 @@
+How to install/uninstall a component:
+
+Before installing any component, please make sure that you're using the latest Adobe Extension manager. If you do not have it installed, you may download the latest version here:
+http://www.adobe.com/exchange/em_download/
+
+To install an extension (from inside Flash):
+1. Go to HELP > MANAGE EXTENSIONS
+2. Choose FILE > "Install Extension"
+3. Install EZform-AS3.mxp
+
+To install an extension from your desktop (recommended for Mac OS-X):
+1. Copy the EZform-AS3.mxp file to your desktop.
+2. Double click on the EZform-AS3.mxp. This will start the installation process through the Extension Manager.
+
+To remove an extension:
+Close Flash. Open the Extension Manager from outside of Flash, click on the component that you wish to remove and select "Remove Extension".
+

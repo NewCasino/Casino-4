@@ -1,0 +1,28 @@
+<xml>
+<player>
+<play_videos>
+  <video file="flv/01.flv" download_link="flv/video.mp4"/>
+  <video file="flv/01.flv" download_link="flv/01.flv"/>
+</play_videos>
+
+<end_playlist>
+	<video path="http://yahoo.com" image="images/1.jpg" title="Title 01" rating="100"  by="Admin 01" comments="70"/>
+	<video path="http://google.com" image="images/2.jpg" title="Title 02" rating="80"   by="Admin 02" comments="3"/>
+	<video path="http://msn.com" image="images/3.jpg" title="Title 03" rating="50"   by="Admin 03" comments="0"/>
+	<video path="http://hotmail.com" image="images/4.jpg" title="Title 04" rating="40"   by="Admin 04" comments="52"/>
+	<video path="http://adobe.com" image="images/5.jpg" title="Title 05" rating="10"   by="Admin 05" comments="1"/>
+</end_playlist>           
+
+<settings preroll="true">
+ <adv>
+  <preroll path="adv.xml" crossdomain="bla"/>
+ </adv>  
+ 
+ <codes>
+  <share_code><![CDATA[SOME SHARE CODE BLA BLA BLA BLA BLA BLA BLA BLA BLA]]></share_code>
+  <embed_code><![CDATA[SOME EMBED CODE]]></embed_code>
+ </codes>
+
+</settings>
+</player>
+</xml>

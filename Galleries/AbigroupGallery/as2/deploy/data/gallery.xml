@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<gallery thumbFolder="images/thumbs" fullFolder="images/full" thumbsGap="10" thumbWidth="151" thumbHeight="90" thumbBorder="true" thumbBorderColor="0xffffff">
+	<images>
+		<image url="1-1.jpg" thumbUrl="1.jpg" textLabel="image_1"/>
+		<image url="2.swf" thumbUrl="2.jpg" textLabel="image_2"/>
+		<image url="3-1.jpg" thumbUrl="3.jpg" textLabel="image_3"/>
+		<image url="4-1.jpg" thumbUrl="4.jpg" textLabel="image_4"/>
+		<image url="5-1.jpg" thumbUrl="5.jpg" textLabel="image_5"/>
+		<image url="6-1.jpg" thumbUrl="6.jpg" textLabel="image_6"/>
+		<image url="7-1.jpg" thumbUrl="7.jpg" textLabel="image_7"/>
+		<image url="8-1.jpg" thumbUrl="8.jpg" textLabel="image_8"/>
+	</images>
+</gallery>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pallettes>
+	<pallette title="Group 1">
+		<item id="6" title="Black" hexValue="0x000000" />
+		<item id="7" title="White" hexValue="0xFFFFFF" />
+		<item id="8" title="Light Blue" hexValue="0xB0E0E6" />
+		<item id="9" title="Olympic Blue" hexValue="0x00CCFF" />
+		<item id="10" title="Blue" hexValue="0x0066CC" />
+		<item id="11" title="Blueberry" hexValue="0x0000CD" />
+		<item id="12" title="Dark Blue" hexValue="0x003399" />
+		<item id="13" title="Navy Blue" hexValue="0x000080" />
+		<item id="14" title="Midnight Blue" hexValue="0x191970" />
+		<item id="15" title="Orange" hexValue="0xFF8000" />
+		<item id="16" title="Red" hexValue="0xFF0000" />
+		<item id="17" title="22k Engine Turn Gold Leaf" hexValue="0xFAD200"/>
+		<item id="18" title="22k Florentine Gold Leaf" hexValue="0xFAD200"/>
+		<item id="21" title="Stucco" hexValue="0xCD853F" />
+		<item id="22" title="Tan" hexValue="0xDEB887" />
+	</pallette>	
+	<pallette title="Group 2">
+		<item id="23" title="Brown" hexValue="0x663300" />
+		<item id="24" title="Imitation Gold Leaf" hexValue="0xa18d5a"/>
+		<item id="25" title="Imitation Silver Leaf" hexValue="0xb4bcbc"/>
+		<item id="26" title="Golden Yellow" hexValue="0xFFD700" />
+		<item id="27" title="Green" hexValue="0x008000" />
+		<item id="28" title="Pastel Green" hexValue="0x20B2AA" />
+		<item id="29" title="Forrest Green" hexValue="0x006400" />
+		<item id="30" title="Slate Green" hexValue="0x2F4F4F" />
+		<item id="31" title="Light Gray" hexValue="0xC0C0C0" />
+		<item id="32" title="Gray" hexValue="0xA9A9A9" />
+		<item id="33" title="Dark Gray" hexValue="0x808080" />
+		<item id="34" title="Gold Metallic" hexValue="0xBDB76B" />
+		<item id="35" title="Silver Metallic" hexValue="0xC0C0C0" />
+		<item id="36" title="Dark Red" hexValue="0xDC143C" />
+		<item id="37" title="Burgundy" hexValue="0x800000" />
+		<item id="38" title="Ivory" hexValue="0xFFF8DC" />
+		<item id="39" title="Violet" hexValue="0x9932CC" />
+		<item id="40" title="Sunflower" hexValue="0xFFFF00" />
+	</pallette>
+	<pallette title="Group 1">
+		<item id="6" title="Black" hexValue="0x000000" />
+		<item id="7" title="White" hexValue="0xFFFFFF" />
+		<item id="8" title="Light Blue" hexValue="0xB0E0E6" />
+		<item id="9" title="Olympic Blue" hexValue="0x00CCFF" />
+		<item id="10" title="Blue" hexValue="0x0066CC" />
+		<item id="11" title="Blueberry" hexValue="0x0000CD" />
+		<item id="12" title="Dark Blue" hexValue="0x003399" />
+		<item id="13" title="Navy Blue" hexValue="0x000080" />
+		<item id="14" title="Midnight Blue" hexValue="0x191970" />
+		<item id="15" title="Orange" hexValue="0xFF8000" />
+		<item id="16" title="Red" hexValue="0xFF0000" />
+		<item id="17" title="22k Engine Turn Gold Leaf" hexValue="0xFAD200"/>
+		<item id="18" title="22k Florentine Gold Leaf" hexValue="0xFAD200"/>
+		<item id="21" title="Stucco" hexValue="0xCD853F" />
+		<item id="22" title="Tan" hexValue="0xDEB887" />
+	</pallette>	
+</pallettes>

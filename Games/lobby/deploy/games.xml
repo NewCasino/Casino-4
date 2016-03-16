@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<gamegroup name="New">
+		<game imagesrc="images/Image_1.png" name="Paradise Club" gameurl="http://yahoo.com"/>
+		<game imagesrc="images/Image_2.png" name="Woods of Magic" gameurl="http://google.com"/>		
+		<game imagesrc="images/Image_3.png" name="Numbers" gameurl="http://clusty.com"/>		
+		<game imagesrc="images/Image_4.png" name="Maya Adventures" gameurl="http://bing.com"/>		
+		<game imagesrc="images/Image_5.png" name="Western" gameurl="http://altavista.com"/>		
+		<game imagesrc="images/Image_6.png" name="Marius K" gameurl="http://ebay.com"/>		
+	</gamegroup>
+	<gamegroup name="Single Line Slots">
+		<game imagesrc="images/Image_7.png" name="Fruit Machine" gameurl="http://yahoo.com"/>
+		<game imagesrc="images/Image_8.png" name="Medieval Slot" gameurl="http://yahoo.com"/>
+		<game imagesrc="images/Image_9.png" name="Paradise Club" gameurl="http://yahoo.com"/>
+		<game imagesrc="images/Image_10.png" name="The treasure Island" gameurl="http://yahoo.com"/>
+		<game imagesrc="images/Image_11.png" name="The Classic Slot" gameurl="http://yahoo.com"/>
+		<game imagesrc="images/Image_12.png" name="Paradise Club" gameurl="http://yahoo.com"/>
+		<game imagesrc="images/Image_13.png" name="The Golden Sultan" gameurl="http://yahoo.com"/>
+		<game imagesrc="images/Image_14.png" name="Hot Nights" gameurl="http://yahoo.com"/>
+	</gamegroup>
+	<gamegroup name="Multispin Slots">
+		<game imagesrc="images/Image_15.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_16.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_17.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_18.png" name="Paradise Club"/>
+	</gamegroup>
+	<gamegroup name="Video Slots">
+		<game imagesrc="images/Image_19.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_20.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_21.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_22.png" name="Paradise Club"/>
+	</gamegroup>
+	<gamegroup name="Video Poker">
+		<game imagesrc="images/Image_23.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_24.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_25.png" name="Paradise Club"/>
+	</gamegroup>
+	<gamegroup name="Table Games">
+		<game imagesrc="images/Image_26.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_27.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_28.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_29.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_30.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_31.png" name="Paradise Club"/>
+	</gamegroup>
+	<gamegroup name="Special Games">
+		<game imagesrc="images/Image_32.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_33.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_34.png" name="Paradise Club"/>
+		<game imagesrc="images/Image_35.png" name="Paradise Club"/>		
+	</gamegroup>	
+</data>

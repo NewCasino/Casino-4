@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index title="CLINIQUE ROOSEVELT Département Ophtalmologie">
+	<page type="text" url="data/text8.xml" title="Accueil"  bgurl="bgimages/city3.jpg">
+		<page type="text" url="data/text9.xml" title="Notre équipe" longtitle="Professionelle, Expérimentée, Engagée." />
+	</page>
+	<page type="text" url="data/cons.xml" title="Consultation" bgurl="bgimages/city5.jpg"/> 
+	<page type="text" url="data/explo.xml" title="Expl. Fonctionnelles" bgurl="bgimages/city6.jpg"/>
+	<page type="text" url="data/oeil.xml" title="Chirurgie de l'oeil" bgurl="bgimages/city7.jpg"/>
+	<page type="text" url="data/paup.xml" title="Chirurgie des paupières" bgurl="bgimages/city8.jpg"/>
+	<page type="text" url="data/laser.xml" title="Traitements par Laser" bgurl="bgimages/city9.jpg"/>
+	<page type="text" url="data/anato.xml" title="Anatomie de l'oeil" bgurl="bgimages/city10.jpg"/>
+	<page type="text" url="data/path.xml" title="Pathologies" bgurl="bgimages/city11.jpg"/>
+	<page type="text" url="data/centre.xml" title="Centre Laser Vision" bgurl="bgimages/city12.jpg"/>
+	<page type="index" url="data/photos.xml" title="Galerie photos" longtitle="Galerie photos de la clinique Roosevelt" frameid="white" >
+		<img src="images/couloir-bloc.jpg" fullsrc="images/couloir-bloc.jpg" title="Couloir du bloc opératoire" alt="" />
+		<img src="images/bloc2.jpg" fullsrc="images/bloc2.jpg" title="Bloc opératoire" alt="" />
+		<img id="germany" src="images/jardin.jpg" fullsrc="images/jardin.jpg" title="Coté jardin" alt="" />
+		<img src="images/Couloir.jpg" fullsrc="images/Couloir.jpg" title="Salle d'attente" alt="" />
+		<img id="sunset" src="images/bloc.jpg" fullsrc="images/bloc.jpg" title="Bloc opératoire" alt="" />
+		<video id="video" frameid="video_white" src="images/video.png" fullsrc="video/video.flv" title="Présentation Vidéo" alt="" controllerheight="15" />
+	</page>
+	<page type="form" url="data/contactus.xml" title="Contact" bgurl="bgimages/city4.jpg"/>
+	<page id="plan" hidden="1" type="text" url="data/plan.xml" title="Plan d'accès" />
+	<page id="mentions" hidden="1" type="text" url="data/mentions.xml" title="Mentions légales" />
+	<page id="delai" hidden="1" type="text" url="data/delai.xml" title="Délai-Sécurité" />
+	<page id="charte" hidden="1" type="text" url="data/charte.xml" title="Charte" />
+</index>

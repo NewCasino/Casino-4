@@ -1,0 +1,171 @@
+<content>
+	
+	<meta>
+		<background_photos location="assets/images/backgrounds/" />
+		<content_photos location="assets/images/content/" />
+		<work_videos location="assets/videos/" />
+	</meta>
+	
+	<homeReel>
+		<thumbnail src="reel-link-thumb.jpg" width="211" height="72" />
+		<video src="lf-reel.flv" width="640" height="360" />
+		<description>
+			<p>For sure, ours is a great gig! Check out the places we've been, people we've met, and the fun we've had lately.</p> 
+		</description>
+	</homeReel>
+	
+	<section id="whoWeAre" name="who we are">
+		<subSection id="whoWeAre" name="who we are">
+			<p>Specifically, we’re a tiny team that grows exponentially as necessary - a collective with decades of experience writing, producing, shooting, editing and otherwise massaging video, streaming media, and motion content.</p>
+			<p>On the whole, we’re a little young for a mid-life crisis, but sure enough, somewhere along the way we realized that producing straight-up, mainstream corporate video wasn’t really the perfect culmination of our life goals. No doubt, it was a wonderful way to make friends and fill the refrigerator but it certainly wasn’t curing the world’s ills, and in some very rare instances it was actually helping to make things worse. So, we decided it was time to wake up and do more.</p>
+			<p>It just seems like anything less would be keeping our heads in the sand.</p>
+		</subSection>
+		<subSection id="theBackstory" name="the backstory">
+			<p>From the very start, we’ve always believed in the magic of stories well told.</p>
+			<p>We also believed in the power of our medium. And yet when we began two decades ago, corporate video was dry, industrial and unwatchable. This just didn’t make sense to us. After all, why couldn’t your movies be creative and captivating? Inspiring and well told? Why couldn’t they be little films?</p>
+			<p>Today, nearly two decades later we produce creative movies in every format for every conceivable communications and marketing application. And we literally stream little films around the globe, giving our name new meaning.</p>
+			<p>And yet, the same truth remains...we will always believe in stories well told, and we’ll always be drawn to little films.</p>
+		</subSection>
+		<!-- 
+		<subSection id="bCorp" name="we're a b corporation">
+			<p><![CDATA[We’re proud to be a certified <a href="http://www.bcorporation.net" target="_blank">b corporation</a>. Hit the link for more info.]]></p>
+			<image src="b-corp-logo.jpg" width="60" height="95" />
+		</subSection>
+		 -->
+		<subSection id="team" name="meet the team">
+			<p>Most of us aren’t quite as round or pasty or poorly defined as our replicas. At least that’s the way we choose to see it.</p>
+			<crew>
+				<member id="brent" name="Brent Souter" title="Creative Director">
+					<thumbnail name="Brent" title="Creative Director" src="avatar-team-brent.png" width="114" height="185" />
+					<description>
+						<p>After two decades of making little films, Brent still lives for ideas and his eyes sparkle brightly as they are born.</p>
+						<p>Of course all that sounds great, but in a strange twist he’s also mastered the art of self-deprecation, and he uses it freely to his advantage. He’d have you believe that he’s socially awkward and physically unimpressive - that a lifetime of alienation is what has shaped him into a resourceful producer. Well, that may be true, but mostly we think he’s just smart and wants you to underestimate him. Or he’s just goofy. We’re not exactly sure.</p>
+						<p>Bottom line, he has a heart of gold and he’s no threat to you. And about the time you find yourself starting to like him he’ll suddenly have a lot of confidence and he’ll take control of your project. And it will turn out great.</p>
+					</description>
+				</member>
+				
+				<!--
+				<member id="lauren" name="Lauren Kriegler" title="Partnership Director">
+					<thumbnail name="Lauren" title="Partnership Director" src="avatar-team-lauren.png" width="116" height="185" />
+					<description>
+						<p>Dynamo, firecracker, go-getter – all are suitable terms when describing Lauren. Personable, friendly, engaging and fun – those fit perfectly too.  Needless to say we love her, especially after the espresso kicks in and we can match her pace.</p>
+						<p>Lauren hails from Washington, D.C. so her East Coast sensibility is the genuine article, as is she. A talented writer, editor and marketing professional, she’s worked in both the publishing and tech sectors. Today however, she’s all ours and we’re better for it. Lauren is a particularly good listener, a great client advocate, and is always hungry to find the next good story.</p>
+						<p>Of course, being Lauren, she still finds time to devour morning news programs, run, and klutz around the kitchen. She’s also warming up to fleece. </p>
+					</description>
+				</member>
+				-->
+				
+				<member id="erik" name="Erik Hutchison" title="Senior Editor">
+					<thumbnail name="Erik" title="Senior Editor" src="avatar-team-erik.png" width="116" height="187" />
+					<description>
+						<p>Erik is also known as Popey, due to his uncanny resemblance to someone we once interviewed. Perhaps the most upbeat and caring soul amongst us, he is a veritable wellspring of hope.</p>
+						<p>Of course all this optimism sometimes works against him. He has an off-putting passion for hand puppets that he assumes the rest of us can somehow embrace, and more tragically he harbors a misguided dream of a future NBA career despite the fact that he’s over 40 and 5’7”. Oh well, not to worry with Popey - when you stand so squarely on the side of good, there’s always something to be positive and excited about.</p>
+						<p>Of course we’ve failed to mention that he’s the best cutter there is, and he’s also a wonderful friend. Without a doubt, the quality of the work and the spirit around this place would be nothing close to what it is without him. Seriously.</p>
+					</description>
+				</member>
+				<member id="donna" name="Donna Souter" title="Best Girl/Photographer/Glue">
+					<thumbnail name="Donna" title="Best Girl" src="avatar-team-donna.png" width="112" height="184" />
+					<description>
+						<p>Donna is married to Brent. She saved him from what he might have been. Without a doubt, this is good.</p>
+						<p>She has an environmental science degree, is an incredibly talented professional photographer and cheerfully administrates our small business by default. It’s also worth noting that Donna has many more friends than the rest of us will ever have…combined. It’s very likely that she went to school with your cousin’s friend’s insurance agent’s dermatologist. Within four minutes of meeting you she will be able to confirm this.</p>
+						<p>Even so, her love of people is only her second best quality. Without concern for herself, Donna would rescue you from a burning building, immediately after saving your dog.</p>
+					</description>
+				</member>
+				<member id="christine" name="Christine Heine" title="Editor">
+					<thumbnail name="Christine" title="Editor" src="avatar-team-christine.png" width="115" height="183" />
+					<description>
+						<p>When not rolling her eyes or finding other ways to be subtly demeaning, Christine manages to belittle the rest of us by being so young and so damn smart. Of course we tease her right back because we’re slightly immature and maybe even a little bit jealous. Young, talented, filled with ideas, cares about this world - clearly she has it made. </p>
+						<p>And in all honesty, we love to have her around. She is a gifted editor and a total geeb. Her hobbies include filing clips in bins, rendering and encoding.</p>
+						<p>She is also a germaphobe.</p>
+					</description>
+				</member>
+				<member id="lyn" name="Lyn Porterfield" title="Studio Queen">
+					<thumbnail name="Lyn" title="Studio Queen" src="avatar-team-lyn.png" width="116" height="185" />
+					<description>
+						<p>If you lost it, Lyn will find it. If you need it, she can get it. Equal parts procurer, mind reader and owie-fixer – Lyn makes our office run super smooth.</p>
+						<p>We are very fortunate to share a lovely studio loft space with Barta Photography, a commercial photography business owned by Lyn and her husband Patrick. Beyond being terrific office-mates, they’re always watching out for us, and Lyn in particular does a ton to help little films run efficiently every single day.</p>
+						<p>From stage rentals to shipping to client greeting to fridge stocking to ethernet wrangling, Lyn sees all - and sees to it that we actually look like we know what the hell we’re doing!</p>
+					</description>
+				</member>
+				
+				<!-- 
+				<member id="barry" name="Barry Thompson" title="Supreme Motion Designer">
+					<thumbnail name="Barry" title="Motion Designer" src="avatar-team-barry.png" width="113" height="185" />
+					<description>
+						<p>These days we refer to Barry as BT. Not an overly creative nickname, but he was somewhat incensed by the others. Eventually we’ll come up with something better. </p>
+						<p>In the meantime, Barry continues to move often and rock motion design like few others. He is first and foremost a very decent and humble guy, and likely embarrassed that we would point that out. He’s also a rare breed of serious left and right brain talent and he likes us, which thrills us to no end.</p>
+						<p>Work closely with Barry and your design will be a thing of beauty. Leave him alone and it will be even better.</p>
+					</description>
+				</member>
+				-->
+				
+				
+			</crew>
+		</subSection>
+	</section>
+	<section id="whatWeDo" name="what we do">
+		<subSection id="whatWeDo" name="what we do">
+			<p>Mostly, we care. And we collaborate.</p>
+			<p>We’ve spent two decades honing our skills, working for some of the largest companies in the world, and today we leverage those skills to produce highly effective video and multimedia content for forward-thinking companies, social capitalists, grassroots efforts, good causes, corporate givers and non-profits.</p>
+			<p>Less formally, we just want to be a positive force. We aspire to be game-changers, playing field levelers, and unsung heroes to those we admire. We want to deliver great media to the folks and firms who need it most.</p>
+			<p>We also aim to pay our mortgages and raise our kids, so that’s a part of it too.</p>
+		</subSection>
+		<subSection id="tellMeMore" name="tell me more">
+			<p>No surprise, the world is changing – which is probably why you’ve chosen to take charge and do something worthwhile.</p>
+			<p>Well, that’s where we’re at too. We get it. The realities we face today are sobering, even daunting, but like many others we sincerely believe that with challenge comes tremendous opportunity. And great responsibility. Producing seriously decent video content is our strength. It’s what we can bring to the table to help promote ideas and positive change.</p>
+			<p>Of course it just so happens that these days media is also rapidly changing. Having a voice is no longer enough. To be heard you’ve got to be savvy, smart, current, creative, persistent and oftentimes relentless.</p>
+			<p>So, we were thinking that maybe we could be relentless together.</p>
+		</subSection>
+		<subSection id="funding" name="no funding?">
+			<p>Well, that’s a problem.</p>
+			<p>Of course there are worse problems. You could be spoiling streams and hoarding Humvees.</p>
+			<p>Even so, it’s essential to our livelihood that our clients have a budget. But that doesn’t mean that we don’t want to hear from you. We have a tremendous soft spot for all things altruistic and we can be inspired to help find ways to make things happen. To that end, we are actively exploring funding models that will allow us to work more closely and more often with non-profits and NGOs.</p>
+			<p>Needless to say, if you are a philanthropist, foundation, corporate giving department, social venture capitalist, or just have a pet cause and a little extra money under the mattress we’d love to discuss funding partnerships with you.</p>
+		</subSection>
+		<subSection id="good" name="good?">
+			<p>The question of good. A good question. And since we’re hanging our hat on it, maybe it’s something we should define.</p>
+			<p>For us, good is anything that is remotely positive, redeeming, refreshing, responsible or rewarding. It’s looking out for others, thinking globally, being inventive, proactive, having a conscience, being conscious, smiling and doing more than you have to, even if in the end it doesn’t mean a damn thing. </p>
+			<p>But most of all, our good is helping you to broadcast yours.</p>
+			<p>So you tell us…what’s your good?</p>
+		</subSection>
+	</section>
+	<section id="contactUs" name="contact us">
+		<subSection id="contactUs" name="contact us">
+			<p>p. 206.774.3632</p>
+			<p><![CDATA[2821 NW Market Street, Suite A<br>Seattle, WA  98107]]></p>
+			<p><![CDATA[<a href="mailto:info@littlefilms.net" target="_blank" style="color:#ff0000">info@littlefilms.net</a>]]></p>
+			<p><![CDATA[<a href="http://tinyurl.com/qzvp2a" target="_blank" style="color:#ff0000">map us</a>]]></p>
+		</subSection>
+	</section>
+	<section id="ourBlog" name="our blog" blogURL="http://creativemoviesforgood.blogspot.com/">something</section>
+	<section id="ourClients" name="our clients">
+		<subSection id="ourClients" name="our clients">
+			<p>It’s been our honor and privilege to be trusted by these organizations and many others. We place tremendous value on these relationships and look forward to future collaborations, particularly as they relate to the promotion of all things good.</p>
+			<image src="client-rwandafilmfestival.jpg" />
+			<image src="client-gatesfoundation.jpg" />
+			<!-- <image src="client-goodwill.jpg" /> -->
+			<image src="client-macys.jpg" />
+			<image src="client-boeing.jpg" />
+			<!-- <image src="client-gatesfoundation.jpg" /> -->
+			<image src="client-goodwill.jpg" />
+			<image src="client-microsoft.jpg" />
+			<image src="client-starbucks.jpg" />
+			<!-- <image src="client-naea.jpg" /> -->
+			<image src="client-nationalrestassoc.jpg" />
+			<image src="client-g2l.jpg" />
+			<image src="client-swedish.jpg" />
+			<image src="client-providence.jpg" />
+			<image src="client-redcross.jpg" />
+			<image src="client-safeco.jpg" />
+			<image src="client-path.jpg" />
+			<image src="client-pg.jpg" />
+			<image src="client-pitneybowes.jpg" />
+			<image src="client-ymca.jpg" />
+			<image src="client-wgha.jpg" />
+			<image src="client-portofseattle.jpg" />
+			<image src="client-sodexo.jpg" />
+		</subSection>
+	</section>
+	
+
+</content>

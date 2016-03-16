@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xml configId="0.0.1">
+
+<!-- scrollBarItems -->
+<!-- Scroll bar items var is reffering to the situation when the scrollbar appaears in the combobox -->
+<!-- If set to -1 the scroll bar wont appaear event if you have 1000 categories in the combobox -->
+<!-- If set to positive integer(5, 6, 7, ..., 666) the only so many items will be visible without scrolling -->
+	
+<!-- width -->
+<!-- Width of the scrollbar -->
+<config
+    scrollBarItems = "7"
+    width = "145"
+    color = "0x111111"
+/>
+
+<buttons>
+    <btn label="Animals" color="0x111111" path="xml/imageGallery/categories/animals.xml" />
+    <btn label="3D Objects" color="0x111111" path="xml/imageGallery/categories/3dobjects.xml" />
+	<btn label="Industrial" color="0x111111" path="xml/imageGallery/categories/industrial.xml" />
+    <btn label="Winter" color="0x111111" path="xml/imageGallery/categories/winter.xml" />
+	<btn label="Landscape" color="0x111111" path="xml/imageGallery/categories/landscape.xml" />
+    <btn label="Nature" color="0x111111" path="xml/imageGallery/categories/nature.xml" />
+	<btn label="Christmas" color="0x111111" path="xml/imageGallery/categories/christmas.xml" />
+    <btn label="City" color="0x111111" path="xml/imageGallery/categories/city.xml" />
+</buttons>
+</xml>
+
+

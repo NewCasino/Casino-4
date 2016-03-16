@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/halo" width="76" height="20">
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.view.skins.WindowControlButtonSkin;
+			
+			import flash.display.NativeWindow;
+			import flash.events.MouseEvent;
+			
+			
+			public var window:NativeWindow;
+			
+			private var maximized:Boolean = false;
+
+			protected function btnMinimize_clickHandler(event:MouseEvent):void {
+				if (window) {
+					window.minimize();
+				}
+			}
+			
+			public function callRestore():void {
+				this.btnRestore_clickHandler(null);
+			}
+			
+			protected function btnRestore_clickHandler(event:MouseEvent):void {
+				if (window && window.maximizable) {
+					if (maximized) {
+						window.restore();
+						maximized = false;
+					} else {
+						window.maximize();
+						maximized = true;
+					}
+					
+				}
+			}
+
+			protected function btnClose_clickHandler(event:MouseEvent):void {
+				if (window) {
+					window.close();
+				}
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:BitmapImage source="@Embed('../../../../../assets/WindowControlBarBack.png')"/>
+	
+	<s:Button id="btnMinimize" x="7" y="4"
+			  click="btnMinimize_clickHandler(event)"
+			  skinClass="com.adobe.cairngorm.view.skins.WindowControlButtonSkin"/>
+	<s:Button id="btnRestore" x="29" y="4"
+			  click="btnRestore_clickHandler(event)"
+			  skinClass="com.adobe.cairngorm.view.skins.WindowControlButtonSkin"/>
+	<s:Button id="btnClose" x="51" y="4"
+			  click="btnClose_clickHandler(event)"
+			  skinClass="com.adobe.cairngorm.view.skins.WindowControlButtonSkin"/>
+			  
+</s:Group>

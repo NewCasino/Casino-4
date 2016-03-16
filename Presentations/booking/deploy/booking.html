@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Booking ads</title>
+		
+		
+		
+		<!-- Load JQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		
+		
+		<!-- Embed Flash using swfobject. (Can use any method of embeding flash here) -->
+		<script type="text/javascript" src="swfobject.js"></script>
+		<script type="text/javascript">
+			var flashvars = {};
+			var params = {};
+			var attributes = {};
+			attributes.id = "booking";
+			params.wmode = "transparent";
+			swfobject.embedSWF("booking.swf", "website", "791", "494", "9.0.0", false, flashvars, params, attributes);
+		</script>
+		<script language="JavaScript">
+			function closeDocument() {
+				window.close();
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div id="website" style="position:relative;">
+			test
+			<!-- Flash Will Go Here -->
+		</div>
+		
+	</body>
+		
+</html>

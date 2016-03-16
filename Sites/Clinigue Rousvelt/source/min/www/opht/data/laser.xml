@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title>Traitements par les différents types de Laser</title>
+	<text>
+<h2>Photoablation et Photosection</h2>
+<h4>1. Laser Excimer et Femtoseconde :chirurgie réfractive</h4>
+<p></p>
+<h4>2. Myopie</h4>
+<p></p>
+<h4>3. Hypermétropie</h4>
+<p></p>
+<h4>4. Astigmatisme</h4>
+<p></p>
+<h4>5. Presbytie</h4>
+<p></p>
+
+<h2>Photocoagulation</h2>
+<h4>1. Laser diode: rétinien externe</h4>
+<p></p>
+<h4>2. Déchirures rétiniennes</h4>
+<p></p>
+<h4>3. Endolaser (laser endoculaire)</h4>
+<p></p>
+<h4>4. Rétinopathie diabètique, décollement de rétine...</h4>
+<p></p>
+
+<h2>Photodisruption</h2>
+<h4>1. Laser Yag</h4>
+<p></p>
+<h4>2. Capsulotomie</h4>
+<p></p>
+<h4>3. Iridotomie</h4>
+<p></p>
+<h4>4. Trabéculoplastie dans le glaucome,SLT</h4>
+<p></p> 
+
+<h2>Photothérapie</h2>
+<h4>1. Thérapie photodynamique</h4>
+<p></p>
+<h4>2. Rétinopathies vasculaires</h4>
+<p></p>
+<h4>3. DMLA</h4>
+<p></p>
+<br /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	</text>
+	<toc enabled="1" halign="left" valign="top" width="140" margin="20" tag="h2" marker="~~" heading="Mots clés" headspace="3" padding="6" />
+</mostlyText>

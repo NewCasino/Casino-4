@@ -1,0 +1,119 @@
+/* Required items - expected by the template code */
+.textBox{font-family:Arial, Helvetica, sans-serif;font-size:12px;leading:4px;}
+.nav{font-family:__HelveticaNeue;}
+.nav0{font-size:15;}
+.nav1{font-size:13;}
+.nav2{font-size:11;}
+.nav3{font-size:10;}
+/* text module */
+.toclink{font-family:Arial, Helvetica, sans-serif;font-size:12;}
+.tocheading{font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:bold}
+.toclinkover{color:#cc3333;}
+.pageheading{font-family:__HelveticaNeue;font-size:36;font-weight:bold;}
+.pageheadingspace{font-size:20;}
+/* form module */
+.formlabel{font-family:__HelveticaNeue;font-size:14;}
+.inputText{font-family:Arial;font-weight:normal;font-size:14;color:#112244;leading:4;}
+.inputDefaultText{font-family:Arial;font-size:12;font-weight:normal; font-style:italic;color:#99bbdd;}
+.formMessage{font-family:Arial;font-size:12;font-weight:normal; }
+.formMessageError{font-family:Arial;font-size:12;font-weight:bold;color:#993333; }
+.formResult{font-family:Arial;font-size:14;font-weight:normal;color:#333333;leading:6;}
+/*footer*/
+.footer{font-family:__FieryTurk;font-size:8px;text-align:center;}
+/* media page */
+.collection{font-family:__HelveticaNeue;font-size:22;}
+.collectionlink{font-family:__HelveticaNeue;text-decoration:none;font-size:22;}
+.counter{font-family:__HelveticaNeue;font-size:14;}
+.counterlink{text-decoration:none;font-size:14;}
+.returnlink{font-family:__HelveticaNeue;text-decoration:none;font-size:14;}
+.homelink{font-family:__HelveticaNeue;text-decoration:none;color:#76b4c4;font-size:14;}
+.controllerheight{font-size:20;}
+.thumbTextBox{font-family:__HelveticaNeue;font-size:16;leading:4px}
+.thumbTitle{}
+.thumbLongTitle{}
+.toolTipTitle{font-family:__HelveticaNeue;font-size:16px;color:#666666;leading:2;}
+.toolTipText{font-family:__FieryTurk;color:#333333;font-size:8;leading:3;}
+.mediaInfoTitle{font-family:__HelveticaNeue; font-size:14;color:#ccddee;leading:2;}
+.mediaInfoAlt{font-family:__FieryTurk;color:#aabbcc;font-size:8;leading:3;}
+
+/* optional formatting used in this example */
+strong{font-weight:bold;}
+.em{font-weight:bold;}
+h2{font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:normal;color:#996600}
+h3{font-size:18px;font-weight:bold;color:#999999}
+h4{font-size:12px;font-weight:normal;color:#777777}
+a{color:#006699; text-decoration:underline;}
+.a_lite{color:#ffbb88;}
+.bold{font-family:__Kyrou7b;}
+
+/* overrides - set colors of these to override theme colors for specific items */
+
+/* nav -  continue for as deep as you want to go. If defaults are set it will use these if no nav# is set */
+._nav{}
+._navover{}
+._navselected{}
+._nav0{}
+._nav0over{}
+._nav0selected{}
+._nav1{}
+._nav1over{}
+._nav1selected{}
+
+/* text module */
+
+._scrollSlider{}
+._scrollSliderOver{}
+._scrollTrack{}
+._scrollButtons{}
+._scrollButtonArrow{}
+._scrollButtonsOver{}
+
+._tocBullet{}
+
+/* form module */
+._inputbg{}
+._inputborder{}
+._inputbgactive{}
+._inputborderactive{}
+._inputbgerror{}
+._inputbordererror{}
+._inputerror{}
+._submitButton{font-family:__HelveticaNeue;font-size:14;color:#ccddee;}
+._submitButtonOver{color:#ffffff;}
+._submitButtonSelected{}
+._submitButtonBg{color:#336699;}
+._submitButtonBgOver{color:#CC6600;}
+._submitButtonBgSelected{}
+._msgbg{}
+._msgbgerror{}
+
+/* media page */
+._medianextprev{color:#ff9933;}
+._mediaInfoBackground{color:#336699;}
+
+/* content */
+
+._contentBorder{}
+._contentBackground{} 
+
+/* pagination buttons */
+._paginationButtons{font-family:__PixelFontBold;font-size:8px;}
+._paginationButtonsOver{}
+._paginationButtonsSelected{}
+._paginationButtonsBg{}
+._paginationButtonsBgOver{}
+._paginationButtonsBgSelected{}
+
+/* footer */
+._footerBackground{}
+
+/* video player control */
+._controllerBtnUp{}
+._controllerBtnOver{}
+._controllertrackbg{}
+._controllertrackbuffer{}
+._controllertrackplayed{}
+
+/* loader 
+Because the loader is the first thing created it can't use CSS - because the CSS appears after the loader is set up. So to change the loader color you need to change this in code. See src/com/mbudm/min/minLoader.as
+*/

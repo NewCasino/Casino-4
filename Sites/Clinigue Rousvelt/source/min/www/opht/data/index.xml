@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index title="WEBSITE DEMO">
+	<page type="text" url="data/text8.xml" title="Accueil"  bgurl="bgimages/city.jpg">
+		<page type="text" url="data/text9.xml" title="Notre équipe" longtitle="Professionelle, Expérimentée, Engagée." />
+	</page>
+	<page type="text" url="data/cons.xml" title="Consultation" bgurl="bgimages/beach.jpg"/> 
+		<page type="text" url="data/explo.xml" title="Expl. Fonctionnelles" bgurl="bgimages/mount.jpg"/>
+		<page type="text" url="data/oeil.xml" title="Chirurgie de l'oeil" bgurl="bgimages/beach.jpg"/>
+		<page type="text" url="data/paup.xml" title="Chirurgie des paupières" bgurl="bgimages/beach.jpg"/>
+		<page type="text" url="data/laser.xml" title="Traitements par Laser" bgurl="bgimages/beach.jpg"/>
+		<page type="text" url="data/anato.xml" title="Anatomie de l'oeil" bgurl="bgimages/beach.jpg"/>
+		<page type="text" url="data/path.xml" title="Pathologies" bgurl="bgimages/beach.jpg"/>
+	<page type="index" url="data/photos.xml" title="Galerie photo" longtitle="Galerie photo de la clinique Roosevelt" frameid="white" >
+		<img src="images/CAROLINHALL3.jpg" fullsrc="images/CAROLINHALL3.jpg" title="Accueil" alt="Lorem ipsum dolor amet sit nodor." />
+		<img src="images/couloir-copieur-fghj.gif" fullsrc="images/couloir-copieur-fghj.gif" title="Couloir principal" alt="Lorem ipsum dolor amet sit nodor." />
+		<img id="germany" src="images/jardin.jpg" fullsrc="images/jardin.jpg" title="Jardin central" alt="Lorem ipsum dolor amet sit nodor." />
+		<img src="images/Couloir.jpg" fullsrc="images/Couloir.jpg" title="Couloir de la salle de repos" alt="Lorem ipsum dolor amet sit nodor." />
+		<img id="sunset" src="images/salleexplo.jpg" fullsrc="images/salleexplo.jpg" title="Consultations et Explorations Ophtalmologiques spécialisée" alt="Lorem ipsum dolor amet sit nodor." />
+		<video id="video" frameid="video_white" src="images/video.png" fullsrc="video/video.flv" title="Présentation Vidéo" alt="Lorem ipsum dolor amet sit nodor." controllerheight="15" />
+	</page>
+	<page type="form" url="data/contactus.xml" title="Contact" bgurl="bgimages/beach.jpg"/>
+	<page type="url" url="http://www.derni.com/CR/orl/index.htm#" title="O.R.L. >>" />
+</index>
+

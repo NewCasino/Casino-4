@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Border xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo" 
+		  width="550" height="375"
+		  backgroundAlpha="0.90" backgroundColor="#525050" 
+		  borderColor="#000000" borderStyle="solid"
+		  show="this_showHandler(event)" creationComplete="border1_creationCompleteHandler(event)"		   
+		  xmlns:components="com.adobe.cairngorm.view.components.*" 
+		  xmlns:sqlite="com.peterelst.air.sqlite.*">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			
+			import flash.events.MouseEvent;
+			import flash.events.SQLEvent;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			import mx.managers.CursorManager;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+			private var editMode:Boolean = false;
+			private var currentEditPass:Object;
+
+			protected function btnSave_clickHandler(event:MouseEvent):void {
+				if (users.selectedIndex == -1) {
+					Alert.show("Seleziona l'Utente.");
+					return;						
+				} else if (matches.selectedIndex == -1) {
+					Alert.show("Selezionare l'Incontro.");
+					return;
+				} else if (fields.selectedItem == '' && !fields.editState) {
+					Alert.show("Selezionare Limitazione di accesso.");
+					return;
+				} else if (fields.selectedItem == '' && fields.editState) {
+					Alert.show("Inserisci il Limitazione di accesso.");
+					return;
+				} else if (fields.editState) {
+					fields.saveField();
+				}
+				
+				searchAccesses_query.parameters = [users.selectedItem.id, matches.selectedItem.id];
+				searchAccesses_query.execute();
+			}
+			
+			public function editPass(pass:Object):void {
+				if (!pass) {
+					return;
+				}
+				currentEditPass = pass;
+				editMode = true;
+				this.visible = true;
+			}
+			
+			protected function getFullname(item:Object):String {
+				return item.lastname + ' ' + item.name;
+			}
+
+
+			protected function this_showHandler(event:FlexEvent):void {
+				this.refresh();
+				fields.refresh();
+				//CursorManager.setBusyCursor();
+			}
+			
+			public function refresh():void {
+				getCompanies_query.execute();
+			}
+			
+			public function close():void {
+				editMode = false;
+				this.visible = false;
+			}
+			
+			protected function addAccess_query_resultHandler(event:SQLEvent):void {				
+				this.dispatchEvent(new Event('newPassAdded'));
+				fields.refresh();
+				this.close();
+			}
+
+
+			protected function getCompanies_query_resultHandler(event:SQLEvent):void {
+				if (event.target.data == null) {
+					return;
+				}
+				model.companiesData = new ArrayCollection(event.target.data);
+				getUsers_query.execute();
+			}
+
+
+			protected function getUsers_query_resultHandler(event:SQLEvent):void {
+				if (event.target.data == null) {
+					return;
+				}
+				model.usersData = new ArrayCollection(event.target.data);
+				if (model.searchPassByUserID != -1) {
+					setUser(model.searchPassByUserID)
+				}
+				getMatches_query.execute();
+			}
+
+
+			protected function getMatches_query_resultHandler(event:SQLEvent):void {
+				if (event.target.data == null) {
+					return;
+				}
+				model.matchesData = new ArrayCollection(event.target.data);
+				getSeasons_query.execute();
+			}
+
+			protected function getSeasons_query_resultHandler(event:SQLEvent):void {
+				if (event.target.data == null) {
+					return;
+				}
+				model.seasonsData = new ArrayCollection(event.target.data);
+				
+				if (editMode) this.fillCurrentPassData()
+				else fields.setFieldLabel('');
+			}
+			
+			protected function setUser(id:int):void {
+				for (var i:int = 0; i < model.usersData.length; i++) {
+					if (model.usersData.getItemAt(i).id == id) {
+						users.selectedIndex = i;
+						return
+					}
+				}
+			}
+				
+			
+			private function fillCurrentPassData():void {				
+				for (var i:int = 0; i < model.usersData.length; i++) {
+					if (model.usersData.getItemAt(i).id == currentEditPass.user_id) {
+						users.selectedItem = model.usersData.getItemAt(i);
+						break;
+					}
+				}
+				
+				for (i = 0; i < model.matchesData.length; i++) {
+					if (model.matchesData.getItemAt(i).id == currentEditPass.matches_id) {
+						matches.selectedItem = model.matchesData.getItemAt(i);
+						break;
+					}
+				}
+				
+				fields.setFieldLabel(currentEditPass.access_area);
+					
+			}
+
+
+			protected function searchAccesses_query_resultHandler(event:SQLEvent):void {
+				if (event.target.data != null && !this.editMode) {
+					Alert.show("Un pass per questo utente e per questo incontro è già stato creato.");
+					return;
+				}
+				
+				if (editMode) {
+					updateAccessTable_query.parameters = [users.selectedItem.id, matches.selectedItem.id, fields.selectedItem, currentEditPass.id];
+					updateAccessTable_query.execute();
+				} else {
+					addAccess_query.parameters = [users.selectedItem.id, matches.selectedItem.id, fields.selectedItem, 0];
+					addAccess_query.execute();
+				}
+			}
+
+
+			protected function border1_creationCompleteHandler(event:FlexEvent):void {
+				model.watchComboBox(users);
+				model.watchComboBox(matches);
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Metadata>
+		[Event(name="newPassAdded", type="flash.events.Event")]
+	</fx:Metadata>
+	
+	<fx:Declarations>
+		
+		<sqlite:Query id="searchAccesses_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM accesses WHERE deleted = 0 AND user_id = @USERID AND matches_id = @MATCHID"
+					  result="searchAccesses_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="getCompanies_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM companies WHERE deleted = 0"
+					  result="getCompanies_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="getUsers_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM users WHERE deleted = 0 ORDER BY lastname ASC, name ASC"
+					  result="getUsers_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="getMatches_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT * FROM matches WHERE deleted = 0"
+					  result="getMatches_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="getSeasons_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT DISTINCT * FROM seasons"
+					  result="getSeasons_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="addAccess_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="INSERT INTO accesses (user_id, matches_id, access_area, deleted) VALUES (@USERID, @MATCHESID, @ACCESSAREA, @DELETED)"
+					  result="addAccess_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="updateAccessTable_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="UPDATE accesses SET user_id=@USERID, matches_id=@MATCHESID, access_area=@ACCESSAREA WHERE id=@ID"
+					  result="addAccess_query_resultHandler(event)"/>
+		
+	</fx:Declarations>
+	
+	<s:VGroup top="10" bottom="10" left="10" right="10"
+			  width="100%" height="100%" gap="15">
+		
+		<s:HGroup height="30%">			
+			<s:Label text="Nuovo Pass" styleName="dialogHeader"/>
+			
+		</s:HGroup>
+		
+		<s:HGroup width="100%">
+			<s:VGroup width="50%">
+				<s:Label text="Utente" styleName="dialogLabel"/>
+				<mx:ComboBox id="users" 
+							 labelFunction="getFullname" prompt="Seleziona Utente"
+							 dataProvider="{model.usersData}"/>
+			</s:VGroup>
+			
+			<s:VGroup width="50%">
+				<s:Label text="Seleziona Incontro" styleName="dialogLabel"/>
+				<mx:ComboBox id="matches" 
+							 prompt="Seleziona Incontro" labelField="matchname"
+							 dataProvider="{model.matchesData}"/>
+			</s:VGroup>
+		</s:HGroup>
+		
+		
+			<s:VGroup width="50%" height="100%">
+				<s:Label text="Limitazioni di accesso" styleName="dialogLabel"/>
+				<components:FieldsManager id="fields"/>
+			</s:VGroup>			
+		
+		
+		
+		
+		<s:HGroup height="100%" verticalAlign="bottom">
+			<s:Button id="btnCancel" label="ANNULLA" click="this.close()"/>
+			<s:Button id="btnSave" label="SALVA" click="btnSave_clickHandler(event)"/>
+		</s:HGroup>
+		
+	</s:VGroup>
+	
+	<s:HGroup width="100%" height="100%"
+			  top="5" right="5"
+			  verticalAlign="top">
+		<s:VGroup width="100%" height="100%"				 
+				  horizontalAlign="right">
+			<s:Button id="btnClose" skinClass="com.adobe.cairngorm.view.skins.CloseButtonSkin"
+					  click="this.close()"/>
+		</s:VGroup>
+	</s:HGroup>
+	
+</s:Border>

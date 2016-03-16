@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title useParent="title" />
+	<text>
+		<p><strong>Text4.xml</strong></p><br/><br/>
+		<img src="images/sunset.jpg" hspace="4" vspace="4" align="right" />
+		<br/>
+		<p>
+Quisque rhoncus consectetur dui. Vivamus scelerisque dictum nisi. Suspendisse potenti. Donec fermentum varius nibh. Phasellus cursus posuere sem. Sed elit felis, laoreet sed, aliquet a, gravida hendrerit, purus. Donec quis quam in lorem cursus tempor. Duis condimentum. Cras aliquet fringilla tortor. Vestibulum sit amet ante vel massa bibendum dignissim. Cras nibh diam, convallis nec, vulputate ac, auctor non, sem. Cras ultrices imperdiet arcu. Quisque mauris lorem, malesuada vel, sagittis eget, sodales eu, libero. Nam id turpis. Duis sed purus non sem viverra viverra. Donec metus augue, euismod sit amet, suscipit at, porta ut, elit.
+</p><br/>
+<p>
+Phasellus sed nisi. Maecenas urna. Ut id eros eget arcu rhoncus eleifend. Integer porttitor commodo risus. Aenean porttitor tellus et quam. In tempor nisi sit amet mauris. Phasellus porttitor massa in massa imperdiet auctor. Fusce auctor, tortor sit amet tincidunt aliquam, lectus tortor facilisis erat, sit amet tincidunt justo dui ultricies erat. Vestibulum pulvinar, elit nec fermentum scelerisque, elit odio convallis dolor, sed convallis ligula sapien sit amet ipsum. Suspendisse semper eros vel est. Cras iaculis rhoncus risus. Sed iaculis mollis massa. Curabitur et orci eget nulla eleifend elementum. Integer nunc.
+</p><br/>
+<p>
+Aliquam erat volutpat. Suspendisse neque nunc, vestibulum consequat, facilisis sed, tincidunt vitae, libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla urna. Nullam tristique, odio eu lacinia laoreet, quam nunc suscipit felis, et egestas justo quam pharetra tortor. Quisque fermentum, nibh nec dapibus mollis, massa eros tristique quam, ac euismod augue diam suscipit mauris. Aliquam nec turpis et eros tincidunt interdum. Etiam vel leo quis mauris iaculis tincidunt. Vivamus varius. Proin ut urna sed est euismod rhoncus.
+</p><br/>
+	</text>
+</mostlyText>

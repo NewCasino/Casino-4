@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<gallery thumbFolder="images/thumbs" fullFolder="images/full" thumbsGap="10" thumbWidth="100" thumbHeight="68" thumbBorder="true" thumbBorderColor="0xffffff">
+	<images>
+		<image url="1.jpg" thumbUrl="1_th.jpg"/>
+		<image url="2.jpg" thumbUrl="2_th.jpg"/>
+		<image url="3.jpg" thumbUrl="3_th.jpg"/>
+		<image url="4.jpg" thumbUrl="4_th.jpg"/>
+		<image url="5.jpg" thumbUrl="5_th.jpg"/>
+		<image url="6.jpg" thumbUrl="6_th.jpg"/>
+		<image url="7.jpg" thumbUrl="7_th.jpg"/>
+		<image url="8.jpg" thumbUrl="8_th.jpg"/>
+		<image url="9.jpg" thumbUrl="9_th.jpg"/>
+		<image url="10.jpg" thumbUrl="10_th.jpg"/>
+		<image url="11.jpg" thumbUrl="11_th.jpg"/>
+		<image url="12.jpg" thumbUrl="12_th.jpg"/>
+		<image url="13.jpg" thumbUrl="13_th.jpg"/>
+		<image url="14.jpg" thumbUrl="14_th.jpg"/>
+	</images>
+</gallery>

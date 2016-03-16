@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Border xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo"
+		  xmlns:view="components.view.*"
+		  width="735" height="430" currentState="FileView"
+		  backgroundAlpha="0.90" backgroundColor="#525050" 
+		  borderColor="#000000" borderStyle="solid"
+		  show="this_showHandler(event)"
+		  xmlns:components="com.adobe.cairngorm.view.components.*" 
+		  xmlns:sqlite="com.peterelst.air.sqlite.*">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			
+			import flash.display.Bitmap;
+			import flash.display.BitmapData;
+			import flash.display.Loader;
+			import flash.events.Event;
+			import flash.events.MouseEvent;
+			import flash.events.SQLEvent;
+			import flash.utils.ByteArray;
+			
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			import mx.graphics.codec.JPEGEncoder;
+			import mx.managers.CursorManager;
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+			private var editMode:Boolean = false;
+			private var currentEditUser:Object;
+			
+			protected function btnSave_clickHandler(event:MouseEvent):void {
+				var photo:BitmapData;
+				
+				if (txtName.text == "") {
+					Alert.show("Inserisci il Nome dell'utente.");
+					return;
+				} else if (txtLastname.text == "") {
+					Alert.show("Inserisci il Cognome dell'utente.");
+					return;
+				} else if (borndate.selectedDate == null) {
+					Alert.show("Seleziona la data di nascita.");
+					return;
+				} else if (companiesBox.selectedItem == null && !companiesBox.editState) {
+					Alert.show("Seleziona l'Azienda di appartenenza.");
+					return;
+				}  else if (companiesBox.selectedItem == null && companiesBox.editState) {
+					companiesBox.saveCompany();
+					return;
+				}
+
+				this.saveUser();
+			}
+			
+			protected function saveUser():void {
+				if (editMode){
+					updateAccountTable_query.parameters = [txtName.text, txtLastname.text, borndate.selectedDate, companiesBox.selectedItem.id, imageToByteArray(model.currentUserPhoto), currentEditUser.id];
+					updateAccountTable_query.execute();
+				} else {
+					addAccountTable_query.parameters = [txtName.text, txtLastname.text, borndate.selectedDate, companiesBox.selectedItem.id, imageToByteArray(model.currentUserPhoto), 0];
+					addAccountTable_query.execute();
+				}
+			}
+			
+			protected function addAccountTable_query_resultHandler(event:SQLEvent):void {
+				this.close();
+				this.dispatchEvent(new Event('newUserAdded'));
+			}
+
+			protected function this_showHandler(event:FlexEvent):void {
+				companiesBox.clear();
+				if (editMode) {
+					txtName.text = currentEditUser.name;
+					txtLastname.text = currentEditUser.lastname;
+					borndate.selectedDate = currentEditUser.borndate;
+					companiesBox.selectCompanyById(currentEditUser.company_id);
+					if (currentEditUser.image != null) {
+						byteArrayToBitmapData(currentEditUser.image);
+					} else {
+						model.currentUserPhoto = new BitmapData(461, 638);
+					}
+				} else {
+					txtName.text = '';
+					txtLastname.text = '';
+					borndate.selectedDate = null;
+					model.currentUserPhoto = new BitmapData(461, 638);
+				}
+			}
+			
+			public function editUser(user:Object):void {
+				if (!user) {
+					return;
+				}
+				currentEditUser = user;
+				editMode = true;
+				this.visible = true;
+			}
+			
+			public function close():void {
+				editMode = false;
+				this.visible = false;
+			}
+			
+			public function on():void {
+				imageCropper.enabled = false;				
+				this.invalidateDisplayList();
+				imageCropper.invalidateDisplayList();				
+				imageCropper.enabled = true;
+			}
+			
+			public function off():void {
+				
+			}			
+			
+
+			protected function webcamfoto1_snapshotTakenHandler(event:Event):void {
+				//currentState = 'FileView';
+				buttonBar.selectedIndex = 0;
+				//imageToolsStack. = fileCropContent;
+				imageCropper.source = model.currentUserPhoto;
+			}
+			
+			private function byteArrayToBitmapData(ba:ByteArray):void {
+				var loader:Loader = new Loader();
+				loader.contentLoaderInfo.addEventListener(Event.COMPLETE, loaderReady, false, 0, true);
+				loader.loadBytes(ba);
+			}
+			
+			private function loaderReady(event:Event):void {
+				event.currentTarget.loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, loaderReady, false);
+				var bmp:Bitmap = event.currentTarget.content as Bitmap;
+				model.currentUserPhoto = bmp.bitmapData;
+			}
+			
+			private function imageToByteArray(img:BitmapData):ByteArray {
+				CursorManager.setBusyCursor();
+				var encodedImg:JPEGEncoder = new JPEGEncoder();
+				if (img) {
+					var ba:ByteArray = encodedImg.encode(img)
+					CursorManager.removeBusyCursor();
+					return ba;
+				} else {
+					CursorManager.removeBusyCursor();
+					return null;
+				}
+								
+			}
+
+		]]>
+	</fx:Script>
+	
+	<s:states>
+		<s:State name="FileView"/>
+		<s:State name="WebcamView"/>
+	</s:states>
+	
+	<fx:Declarations>
+		<sqlite:Query id="addAccountTable_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="INSERT INTO users ('name', 'lastname', 'borndate', 'company_id', 'image', 'deleted') VALUES (@NAME, @LASTNAME, @BORNDATE, @COMPANY_ID, @PHOTO, @DELETED)"
+					  result="addAccountTable_query_resultHandler(event)"/>
+		
+		<sqlite:Query id="updateAccountTable_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="UPDATE users SET name=@NAME, lastname=@LASTNAME, borndate=@BORNDATE, company_id=@COMPANY_ID, image=@PHOTO WHERE id = @ID"
+					  result="addAccountTable_query_resultHandler(event)"/>
+		
+		<mx:DateFormatter id="dateFormat" formatString="DD/MM/YYYY"/>
+		
+	</fx:Declarations>
+	
+	<fx:Metadata>
+		[Event(name="newUserAdded", type="flash.events.Event")]
+	</fx:Metadata>
+	
+	
+	
+	<s:VGroup top="10" bottom="10" left="10" right="10"
+			  width="100%" height="100%" gap="15">
+		
+		<s:HGroup height="25">
+			<s:Label text="Nuovo Utente" styleName="dialogHeader"/>
+		</s:HGroup>
+			
+		<s:HGroup height="100%" width="100%"
+				  gap="20">
+			
+			<s:VGroup>
+				
+			
+				<s:VGroup>
+					<s:Label text="Nome" styleName="dialogLabel" />
+					<s:TextInput id="txtName" />
+				</s:VGroup>
+				
+				<s:VGroup>
+					<s:Label text="Cognome" styleName="dialogLabel" />
+					<s:TextInput id="txtLastname"/>
+				</s:VGroup>
+				
+				<s:VGroup>
+					<s:Label color="#ffffff" text="Data di Nascita"/>
+					<mx:DateField id="borndate" yearNavigationEnabled="true"  formatString="DD/MM/YYYY"
+								  dayNames="{['D', 'L', 'M', 'M', 'G', 'V', 'S']}" firstDayOfWeek="1"
+								  monthNames="{['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre']}"
+								  disabledRanges="{{rangeStart: new Date()}}"
+								  width="120" editable="true"/>
+				</s:VGroup>	
+					
+				<s:VGroup width="50%">
+					<s:Label text="Azienda" styleName="dialogLabel"/>
+					<components:CompaniesManager id="companiesBox"
+												 companySaved="this.saveUser()"/>
+				</s:VGroup>
+				
+				
+				
+			</s:VGroup>
+		
+		
+		
+			<s:VGroup width="100%" height="100%">
+				
+				<s:ButtonBar id="buttonBar" dataProvider="{imageToolsStack}"/> 
+				
+				<mx:ViewStack width="100%" height="100%"
+							  id="imageToolsStack" 
+							  borderStyle="none"> 
+					
+					<s:NavigatorContent id="photoContent" label="Foto"> 
+						<components:ImageCropperComp id="imageCropper" width="100%" height="100%"
+													 mouseOut="{imageCropper.invalidateDisplayList()}" 
+													 mouseOver="{imageCropper.invalidateDisplayList()}"/>
+					</s:NavigatorContent> 
+					
+					<s:NavigatorContent id="fileCropContent" label="Webcam"> 
+						<components:WebcamFoto snapshotTaken="webcamfoto1_snapshotTakenHandler(event)"/>
+					</s:NavigatorContent> 					
+				</mx:ViewStack> 
+				<!--<s:VGroup>
+					<s:Label text="Foto" styleName="dialogLabel"/>
+					<s:Button id="btnFileView" label="File" fontSize="11" width="100" click="currentState='FileView'"/>
+					<s:Button id="btnWebcamView" label="Webcam" fontSize="11" width="100" click="currentState='WebcamView'"/>
+				</s:VGroup>
+				
+				-->
+			</s:VGroup>
+			
+		</s:HGroup>
+		
+		<s:HGroup verticalAlign="bottom">
+			<s:Button id="btnCancel" label="ANNULLA" click="this.close()"/>
+			<s:Button id="btnSave" label="SALVA" click="btnSave_clickHandler(event)"/>
+		</s:HGroup>
+	</s:VGroup>
+	
+	<s:HGroup width="100%" height="100%"
+			  top="5" right="5"
+			  verticalAlign="top">
+		<s:VGroup width="100%" height="100%"				 
+				  horizontalAlign="right">
+			<s:Button id="btnClose" skinClass="com.adobe.cairngorm.view.skins.CloseButtonSkin"
+					  click="this.close()"/>
+		</s:VGroup>
+	</s:HGroup>
+	
+</s:Border>

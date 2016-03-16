@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mostlyText>
+	<title useParent="title" />
+	<text>
+		<p>	Contrôle de la vision
+		</p>
+		<p>	Consultation d'ophtalmologie 
+</p>
+<h2>Bilans avant chirurgie réfractive</h2><!---->
+		<p>	
+Myopie, 
+<br/>
+Hypermétropie, 
+<br/>
+Astigmastisme, 
+<br/>
+Presbytie,
+<br/>
+Chirurgie réfractive au laser excimer,
+<br/>
+Chirurgie phaco-réfractive et presbytie,
+<br/>
+Chirurgie de la presbytie au laser
+</p>
+<h2>Bilan avant chirurgie de la cataracte</h2>
+<p>
+Acuité visuelle, test de sensibilité au contraste, biométrie- calcul d'implants, microscopie spéculaire, analyse de la rétine (macula et nerf optique), évaluation des éléments associés.
+</p>
+<h2>Bilan de glaucome</h2>
+<p>Mesure de tension, mesure du champ visuel, mesure de la pression intra-oculaire après compensation cornéenne (IOPcc), analyse de la tête du nerf optique par mesure de l'excavation papillaire, mesure de l'épaisseur des fibres péri-optiques, analyse de l'angle irido-cornéen et mesure de la profondeur de la chambre antérieure.
+</p>
+<h2>Bilan cornéen du kératocône</h2>
+<p>Topographie cornéenne, pachymétrie optique , mesure de élasticité cornéenne, mesure de l'aberrométrie. 
+</p>
+<h2>Bilan avant greffe de cornée</h2>
+<p>Détermination de la vision, mesure de l'épaisseur cornéenne, de la densité endothéliale,analyse des facteurs de risque de rejet, choix du type de greffe (transfixiante, lamellaire antérieure, lamellaire postérieure,...
+</p>
+<h2>Bilan du diabète</h2>
+<p>Contrôle du cristallin, de la rétine, rétinophotographie, angiographie rétinienne,..
+</p>
+	<h2>Bilan de strabisme</h2>
+<p>Bilan orthoptique, Lancaster, étude de la perception du relief, photographies, analyse de la réfraction, recherche d'amblyopie,  analyse des possibilités de correction  des amétropies, réfraction sous cycloplégie, analyse des possibilités de rééducation, des possibilités chirurgicales.
+</p>
+<h2>Bilan maculaire</h2>
+<p>Analyse de la macula, OCT maculaire, Angiographie rétinienne à la fluorescéine, au vert d'indocyanine.Analyse en vue de l'indication de injection introculaires d'anti-VEFG , de photothérapie dynamique, d'injecton d'acetonide de triamcinolone,... 
+</p>
+<h2>Consultations d'anesthésie</h2>
+<p>
+Consultation plusieurs jours avant l'intervention
+<br>
+Visite pré-anesthésique le jour de l'intervention.
+</p>
+</text>
+	<toc enabled="1" halign="right" valign="top" width="200" margin="20" tag="h2" marker="~~" heading="Our Team" headspace="3" padding="6" />
+</mostlyText>

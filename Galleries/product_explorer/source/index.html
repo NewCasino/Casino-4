@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Smart XML Image Gallery</title>
+        <script type="text/javascript" src="js/swfobject/swfobject.js"></script>
+        <style type="text/css">
+            html {
+                height: 100%;
+                overflow: hidden;
+		overflow-y: hidden;
+            }
+            #flashcontent {
+                height: 100%;
+            }
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #000000;
+				overflow-y: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="flashcontent">
+
+        </div>
+        <script type="text/javascript">
+        // <![CDATA[
+            var so = new SWFObject('imageGallery.swf','container','100%','100%','9','#000000');
+            so.useExpressInstall('js/expressinstall.swf');
+	    	so.addParam('allowFullScreen','true');  
+            so.addParam('menu','false');
+			so.addVariable('dev', 'true');
+            so.write('flashcontent');
+        // ]]>
+        </script>
+    </body>
+
+</html>

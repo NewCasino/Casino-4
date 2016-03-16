@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data folder="images" animationDelay="450" frameFlySeconds="0.5" imageFlySeconds="1.2" background="images/4.jpg">
+	<image source="1.jpg"/>
+	<image source="2.jpg"/>
+	<image source="3.jpg"/>
+	<image source="4.jpg"/>
+	<image source="5.jpg"/>
+	<image source="6.jpg"/>
+	<image source="7.jpg"/>
+	<image source="8.jpg"/>
+	<image source="9.jpg"/>
+	<image source="10.jpg"/>
+	<image source="11.jpg"/>
+	<image source="12.jpg"/>
+	<image source="4.jpg"/>
+	<image source="5.jpg"/>
+	<image source="6.jpg"/>
+	<image source="7.jpg"/>
+	<image source="8.jpg"/>
+	<image source="9.jpg"/>
+	<image source="4.jpg"/>
+	<image source="5.jpg"/>
+	<image source="6.jpg"/>
+	<image source="7.jpg"/>
+	<image source="8.jpg"/>
+	<image source="9.jpg"/>
+	<image source="4.jpg"/>
+	<image source="5.jpg"/>
+	<image source="6.jpg"/>
+	<image source="7.jpg"/>
+	<image source="8.jpg"/>
+	<image source="9.jpg"/>
+</data>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/halo" 
+		  width="100%" height="100%"
+		  xmlns:sqlite="com.peterelst.air.sqlite.*"
+		  creationComplete="vgroup1_creationCompleteHandler(event)">
+	
+	<fx:Declarations>
+		<sqlite:Query id="getFields_query"
+					  connection="{model.dbHandler.connection}"
+					  sql="SELECT DISTINCT access_area FROM accesses WHERE deleted = 0"
+					  result="getFields_query_resultHandler(event)"/>
+		
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.cairngorm.model.ApplicationModelLocator;
+			
+			import flash.events.SQLEvent;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			import spark.events.TextOperationEvent;			
+			
+			[Bindable]
+			private var model:ApplicationModelLocator = ApplicationModelLocator.getInstance();
+			
+			public var selectedItem:String = '';
+			
+			public var editState:Boolean = false;
+
+			protected function getFields_query_resultHandler(event:SQLEvent):void {
+				if (event.currentTarget.data == null) {
+					model.fieldsNames = new Array();
+				} else {					
+					model.fieldsNames = event.currentTarget.data as Array;
+					
+					 
+					/*fieldsNames.slice(fieldsNames.length-1, 0); */
+				}
+				
+			}
+			
+			public function setFieldLabel(field:String):void {
+				if (field == '') {
+					fields.selectedIndex = -1;
+					selectedItem = ''
+					return;
+				}
+				for (var i:int = 0; i < model.fieldsNames.length; i++) {
+					if (model.fieldsNames[i].access_area == field) {
+						fields.selectedIndex = i;
+						selectedItem = fields.selectedLabel
+						return;
+					}
+				}
+			}
+			
+			protected function newFieldName_enterHandler(event:FlexEvent):void {				
+				model.fieldsNames.push({access_area:newFieldName.text}); 
+				//model.fieldsNames.selectedItem = model.fieldsNames.length;
+				newFieldName.text = "";
+				//currentState = 'normalState';
+			}
+			
+			protected function switchToNormalState():void {
+				currentState = 'normalState';
+				selectedItem = fields.selectedLabel;
+				fields.enabled = true;
+				editState = false; 
+			}
+			
+			protected function switchToAddState():void {
+				currentState = 'addField';
+				selectedItem = newFieldName.text;
+				fields.enabled = false;
+				editState = true;
+			}
+			
+			public function saveField():void {
+				model.fieldsNames.push({access_area:newFieldName.text}); 
+			}
+			
+			public function clear():void {
+				if (newFieldName) {
+					newFieldName.text = '';
+				}				
+				//fieldsNames = new ArrayCollection();
+				this.switchToNormalState();
+			}
+			
+			public function refresh():void {
+				this.clear();
+				getFields_query.execute()
+			} 
+			
+			protected function newFieldName_changeHandler(event:TextOperationEvent):void {
+				selectedItem = event.currentTarget.text;
+			}
+			
+			protected function getLabel(item:Object):Object {
+				return item.access_area;
+			}
+
+
+			protected function vgroup1_creationCompleteHandler(event:FlexEvent):void {
+				this.refresh();
+				model.watchComboBox(fields);
+			}
+
+		]]>
+	</fx:Script>
+	
+	<s:states>
+		<s:State name="normalState"/>
+		<s:State name="addField"/>
+	</s:states>
+	
+	<s:HGroup height="25">		
+		<mx:ComboBox id="fields" dataProvider="{model.fieldsNames}"
+					 labelFunction="getLabel"
+					 close="{selectedItem = fields.selectedLabel}"
+					 prompt="Seleziona Settore"/>
+		
+		<s:Button label="+" textAlign="center"
+				  fontWeight="bold"
+				  width="30" fontSize="15"
+				  click.normalState="{switchToAddState()}" click.addField="{switchToNormalState()}"/>
+	</s:HGroup>
+	
+	
+	<!--enter="newFieldName_enterHandler(event)" -->
+	<s:TextInput id="newFieldName" 
+				 change="newFieldName_changeHandler(event)"
+				 width="120" includeIn="addField"/>
+	
+</s:VGroup>

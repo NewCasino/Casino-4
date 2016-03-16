@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #000;
+	color: #fff;
+}
+
+#wrapper {
+	width: 735px;
+	margin: 30px auto 0px auto;
+}
+
+
+
+
+/* -- NAVIGATIE -- */
+#navbalk {
+	height: 30px;
+	width: 735px;
+	background-image:url(images/navbalk.gif);
+	margin-top: 8px;
+	margin-bottom: 5px;
+	word-spacing: 10px;
+	
+}
+#navlinks {
+	float:left;
+}
+
+#navrechts {
+	float:right;
+	padding-top: 8px;
+	margin-right: 10px;
+}
+
+/* -- HOTSPOTS -- */
+
+#hotspotcontainer {
+	width: 735px;
+
+}
+#hotspot1 {
+	width: 239px;
+	height: 305px;
+	background-image:url(images/flexspotbg.jpg);
+	float: left;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 1px;
+
+}
+#hotspot2 {
+	width: 239px;
+	height: 305px;
+	background-image:url(images/flexspotbg.jpg);
+	float: left;
+	margin-left: 8px;
+	vertical-align: middle;
+}
+#hotspot3 {
+	width: 239px;
+	height: 305px;
+	background-image:url(images/flexspotbg.jpg);
+	float: left;
+	margin-left: 9px;
+	vertical-align: middle;
+}
+
+#hotspot1bg {
+	height: 200px;
+	width: 230px;
+	background-image:url(images/hotspots/hotspot1bg.jpg);	
+}
+
+#hotspot2bg {
+	height: 200px;
+	width: 230px;
+	background-image:url(images/hotspots/hotspot2bg.jpg);	
+}
+#hotspot3bg {
+	height: 200px;
+	width: 230px;
+	background-image:url(images/hotspots/hotspot3bg.jpg);	
+}
+#spottitle {
+	padding-top: 170px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+
+/* -- HOTSPOT CONTENT -- */
+
+#hotspotcontent {
+	height: 200px;
+	width: 230px;
+	margin-left: 5px;
+	margin-top: 10px;
+
+	
+}
+
+#hotspottext {
+	height:70px;
+	width:230px;
+}
+
+
+
+#hotspotarrow {
+	height: 20px;
+	width: 230px;
+	text-align: right;
+
+}
+/* -- CONTENT -- */
+
+#contentcontainer {
+	width: 735px;
+	height: 306px;
+	background-image:url(images/content/contentbg.gif);
+	margin-top: 10px;
+}
+
+#contentblockleft {
+	width: 300px;
+	height:300px;
+	padding-left: 2px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	float: left;
+}
+
+#contentblockright {
+	width: 400px;
+	height: 250px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 3px;
+	float: right;
+}
+#contentblockarrow {
+	height: 10px;
+	width: 400px;
+	float:right;
+	padding-right: 10px;
+	margin-top: 25px;
+}
+/* -- FOOTER -- */
+
+#footer {
+	text-align: center;
+
+}
+/* -- TEKST OPMAAK -- */
+p {
+	color: #fff;
+	font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	padding-top: 8px;
+	padding-left: 5px;
+	font-weight: lighter;
+}
+
+#navbalk p {
+	padding-left: 12px;
+}
+
+#hotspottext p, #footer p {
+	text-transform: none;
+}
+
+#footer p {
+	font-size: 70%;
+}
+
+#spottitle p {
+	font-size: 120%;
+	font-weight: lighter;
+}
+a:link {
+	color:#fff;
+	text-decoration: none;
+	border: none;
+	font-weight: bold;
+}
+a:visited {
+	color:#fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	color:#000;
+	font-weight: bold;
+}
+
+img {
+	border: none;
+}
+#footer img {
+	padding-top: 10px;
+}
+
+#contentblockright h1, #contentblockright p {
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform: none;
+}
+
+#contentblockright h1 {
+	font-size: 150%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+}
+
+#hotspotarrow img {
+	padding-right: 5px;
+}
+
